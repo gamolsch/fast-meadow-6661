@@ -43,6 +43,8 @@ gem 'rails_12factor', group: :production
 
 group :test do
 	gem 'rspec-rails', '~> 2.14.2'
+	gem 'capybara', '~> 2.2.1'
+	gem 'launchy', '~> 2.4.2'
 end
 
 ruby "2.1.0"
