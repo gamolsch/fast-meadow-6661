@@ -30,7 +30,7 @@ gem 'spring',        group: :development
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-gem 'unicorn'
+gem 'unicorn', '~> 4.8.3'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -40,6 +40,10 @@ gem 'unicorn'
 
 # Adds functionality for static asset serving and logging
 gem 'rails_12factor', group: :production
+
+group :test do
+	gem 'rspec-rails', '~> 2.14.2'
+end
 
 ruby "2.1.0"
 
