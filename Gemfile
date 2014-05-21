@@ -47,6 +47,6 @@ group :test do
 	gem 'launchy', '~> 2.4.2'
 end
 
-ruby "2.1.0"
+# ruby "2.1.0"
 
 

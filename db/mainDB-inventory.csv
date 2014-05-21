@@ -1,0 +1,427 @@
+storage,manufacturer,name,lot_number,manufactured_on,expired_on
+"Gatorade Lab, Hazardous",PepsiCo,Apple Pear Flavor 9A809*01 Version 1,816151,9/19/2013,3/19/2015
+"Gatorade Lab, Hazardous",Givaudan,Natural & Artificial Orange Grapefruit,EH00086988,10/31/2013,4/31/15
+"Gatorade Lab, Hazardous",Givaudan,Nat Yuzu Flavor Type,42100101269,2/7/2013,8/7/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,Nat Watermelon Flavor WONF,42100101376,2/8/2013,8/8/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,Natural Kiwi Flavor WONF,42100101353,2/8/2013,8/8/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,Nat Cucumber Flavor WONF,DFS1022L01,2/8/2013,8/8/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,Nat Mango Lemon Flavor WONF,gwt1014m07,10/15/2013,4/15/2015
+"Gatorade Lab, Non-Hazardous",Givaudan,Nat Yuzu Flavor ,MMS1004M04,10/8/2013,4/8/2015
+"Gatorade Lab, Non-Hazardous",Givaudan,Nat Yuzu Kiwi Flavor,JMT0429M02,5/1/2013,11/1/2014
+"Gatorade Lab, Hazardous",Givaudan,Nat Mango Lemon Flavor,JMT0429M05,5/1/2013,11/1/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,Nat Yuzu Flavor Type,mms1004m04,10/15/2013,4/15/2015
+"Gatorade Lab, Hazardous",Givaudan,Nat. Alphonso Mango Flavor Key Type,at1022m04,10/15/2013,4/15/2015
+"Gatorade Lab, Non-Hazardous",Givaudan,Nat Yuzu Kiwi Type Flavor ,gwt1014m03,10/15/2013,4/15/2015
+"Gatorade Lab, Non-Hazardous",Takasago,Natural Strawberry Flavor WONF ,23677,1/18/2013,7/18/2014
+"Gatorade Lab, NOn-Hazardous",Takasago,Natural Flavor Strawberry Q Type,PPLC-13-066,1/18/2013,7/18/2014
+"Gatorade Lab, Non-Hazardous",Firmenich,Nat Fl (Iced Tea Type) 37856912S,1304016419,4/23/2013,4/23/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat. Lime Flavor,1001234584,2/5/2013,11/5/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat flavor (Acai Berry Type),81985575,12/3/2013,5/3/2015
+"Gatorade Lab, Hazardous",Synergy ,Natural Chamomile Essence,18596,2/1/2013,8/1/2014
+"Gatorade Lab, Hazardous",Synergy ,Natural Concentrated Green Tea,18704,11/1/2013,5/1/2015
+"Gatorade Lab, Hazardous",GNT,"Shade 'Bordeaux""",L13S75994,2/5/2014,8/5/2015
+"Gatorade Lab, Hazardous",GNT,"Shade 'Bordeaux""",L12S26052,2/5/2014,8/5/2015
+"Gatorade Lab, Hazardous",Synergy ,Natural Concentrated Tea Essence,FT00196,1/1/2014,7/1/2015
+"Gatorade Lab, Hazardous",GNT,"Shade ""Scarlet Red""",L-12S17936,2/15/2014,8/15/2015
+"Gatorade Lab, Hazardous",GNT,"Shade ""Blood Orange A""",L13-N02150,2/5/2014,8/5/2015
+"Gatorade Lab, Hazardous",Synergy ,Natural Concentrated Rooibos Essence,18676,10/15/2013,4/15/2015
+"Gatorade Lab, Hazardous",Synergy ,Jasmine Essence,18597,10/1/2013,4/1/2015
+"Gatorade Lab, Hazardous",GNT,"Shade ""Bordeaux""",L-12S32459,2/19/2013,8/19/2014
+"Gatorade Lab, Hazardous",Firmenich ,New Blend,560685T,11/26/2013,5/26/2015
+"Gatorade Lab, Non-Hazardous",PepsiCo,Cucumber Melon,822150,12/16/2013,6/16/2015
+"Gatorade Lab, Non-Hazardous",PepsiCo,Mango Lemon Flavor,822149,12/16/2013,6/16/2015
+"Gatorade Lab, Non-Hazardous",Givaudan,Nat Lemonade Type Flavor,C3A0000594,4/26/2013,4/26/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,N&A Peanut Butter Fl Type,TRH0422M05,6/3/2013,6/3/2014
+"Gatorade Lab, Non-Hazardous",Symrise,Symlife (R) Nat Fl Sweet Type SWL,SL13-2503-15,5/21/2013,5/21/2014
+"Gatorade Lab, Non-Hazardous",Symrise,N&A Vanilla Flavor,SL13-3101-1,6/6/2013,6/6/2014
+"Gatorade Lab, Non-Hazardous",Symrise,"Nat Fl, Phosphoric Acid Type",SL13-2803-3,6/4/2013,6/4/2014
+"Gatorade Lab, Non-Hazardous",Symrise,Sweet Enhancer Nat Fl Solubilisat,SL13-0805-7,5/22/2013,5/22/2014
+"Gatorade Lab, Non-Hazardous",Symrise,Evospray Nat Fl Lemonade Type,SD13-2805-2,6/13/2013,6/13/2014
+"Gatorade Lab, Non-Hazardous",Symrise,N&A Grape Fl Powder,40100006,6/14/2013,6/14/2014
+"Gatorade Lab, Non-Hazardous",Symrise,"N&A Fl Powder, Chocolate Fudge Type",40100001,6/13/2013,6/13/2014
+"Gatorade Lab, Non-Hazardous",Symrise,Nat Peach Tea Fl WONF,1010002,6/13/2013,6/13/2014
+"Gatorade Lab, Non-Hazardous",Takasago,Nat Fl Green Tea Type,PPLC-13-1131,7/1/2013,7/1/2014
+"Gatorade Lab, Non-Hazardous",Takasago,Nat Spice Flavor Chai Type,PPLC-13-1433,10/22/2013,10/22/2014
+"Gatorade Lab, Non-Hazardous",Takasago,Vivd (R) Natural Fl. Coffee Arabica Type,PPLC-13-1757,10/22/2013,10/22/2014
+"Gatorade Lab, Non-Hazardous",Takasago,Nat Coffee Fl WONF,PPLC-13-1758,10/22/2013,10/22/2014
+"Gatorade Lab, Non-Hazardous",Symrise,Nat Mixed Berry Fl WONF,SL13-0406-4,6/4/2013,6/4/2014
+"Gatorade Lab, Non-Hazardous",Symrise,Nat Expresso Fl WONF,SL13-1406-2,6/14/2013,6/14/2014
+"Gatorade Lab, Non-Hazardous",Symrise,Nat Banana Fl WONF Cream Type,SL12-0911-5,6/13/2013,6/13/2014
+"Gatorade Lab, Non-Hazardous",Symrise,Nat Fl Cream Type,Sl13-0606-1,6/6/2013,6/6/2014
+"Gatorade Lab, Non-Hazardous",Symrise,N&A Flavor Key Peanut Butter Type,2605091302,5/13/2013,5/13/2014
+"Gatorade Lab, Non-Hazardous",Symrise,N&A Vanilla Fl Key,2605101301,5/13/2013,5/13/2014
+"Gatorade Lab, Non-Hazardous",Symrise,Nat Fl Dark Chocolate Type Key,2605131301,5/13/2013,5/13/2014
+"Gatorade Lab, Non-Hazardous",Symrise,Nat Blackberry Currant Fl WONF,SL13-0306-9,6/6/2013,6/6/2014
+"Gatorade Lab, Non-Hazardous",Symrise,St. John's Bread SE (ex Pepsi),17,5/13/2013,5/13/2014
+"Gatorade Lab, Non-Hazardous",Symrise,Natural Strawberry Fl WONF,6,6/13/2013,6/13/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,Nat Mango Fl,300014678,7/25/2013,7/25/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,TasteEssentials (TM) Nat Lemon Emulsion Fl,C3A0000340,4/26/2013,4/26/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,Nat Hazelnut Fl Type,SDU0104M01,6/3/2013,6/3/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,N&A Peanut Butter Fl Type,TRH0418M06,6/3/2013,6/3/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,Nat Molasses Fl WONF,AMH0603L03,6/3/2013,6/3/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,N&A Peanut Butter Fl Type,TRH0322M03,6/3/2013,6/3/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,N&A Peanut Butter Flavor Type,TRH0425M06,4/25/2013,4/25/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,N&A Cookies & Cream Fl Type,TRH0521M05,6/12/2013,6/12/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,Apple,MMF0419M06,5/13/2013,5/13/2014
+"Gatorade Lab, Non-Hazardous",Takasago,Nat Coffee Fl WONF,PPLC-13-1758,10/22/2013,10/22/2014
+"Gatorade Lab, Non-Hazardous",Takasago,Vivid (R) Nat Fl Coffee Arabica Type,PPLC-13-1757,10/22/2013,10/22/2014
+"Gatorade Lab, Non-Hazardous",Takasago,Nat Fl Green Tea Type,PPLC-13-1131,7/1/2013,7/1/2014
+"Gatorade Lab, Non-Hazardous",Takasago,Nat Fl Honey Green Tea Type,PPLC-13-1035,6/14/2013,6/14/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,Nat Apple with Tamarind Fl WONF,at0723m02,7/25/2013,7/25/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,GivaudanCollections (TM) Nat Mango Fl,dfs0430I01,7/25/2013,7/25/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,Nat Mango Fl,c300014678,7/25/2013,7/25/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,N&A Peanut Butter Fl Type,TRH0418M06,6/3/2013,6/3/2014
+"Gatorade Lab, Non-Hazardous",Symrise,Nat Pomegranate Acai Fl WONF,11,6/6/2013,6/6/2014
+"Gatorade Lab, Non-Hazardous",Symrise,Nat Pomegranate Acai Fl WONF,11,6/13/2013,6/13/2014
+"Gatorade Lab, Non-Hazardous",Firmenich,Nat Fl (Sweet Type) Sweetgem,1303700028,2/6/2013,2/6/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,Nat Ranch Fl,IVO1121M01,11/22/2013,11/22/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,Nat Bloody Mary Fl,C3A0001920,11/22/2013,11/22/2014
+"Gatorade Lab, Non-Hazardous",Firmenich,Nat Masking Fl,121213,12/12/2013,12/12/2014
+"Gatorade Lab, Non-Hazardous",Takasago,Micron (R) Intensates (R) Nat Fl Blend,PPSD-13-395,12/6/2013,TBD
+"Gatorade Lab, Non-Hazardous",Takasago,Micron (R) Intensates (R) Nat Fl Blend (2),PPSD-13-395,12/10/2013,TBD
+"Gatorade Lab, Non-Hazardous",Takasago,Micron (R) Sensweet (R) Nat Fl Sweet Type,PPSD-13-394,12/11/2013,TBD
+"Gatorade Lab, Non-Hazardous",Takasago,Micron (R) Vivid (R) Nat Mixed Berry Fl WONF,PPSD-13-393,12/11/2013,TBD
+"Gatorade Lab, Non-Hazardous",GC Chemicals,Tartaric Acid Nat,3183-MA,5/1/2011,5/1/2016
+"Gatorade Lab, Non-Hazardous",GC Chemicals,Tartaric Acid Nat,3183-MA,5/1/2011,5/1/2016
+"Gatorade Lab, Non-Hazardous",Firmenich,Nat Flavor (Upfront Sweetness Type),101513,10/15/2013,10/15/2014
+"Gatorade Lab, Non-Hazardous",Firmenich,Nat Flavor(Upfront Sweetness Type),101513,10/15/2013,10/15/2014
+"Gatorade Lab, Non-Hazardous",Firmenich,Nat Ethyl Butyrate,1001429188,10/30/2013,10/30/2014
+"Gatorade Lab, Non-Hazardous",Firmenich,Nat Pineapple Citrus WONF,1310F016200,10/17/2013,10/17/2014
+"Gatorade Lab, Non-Hazardous",Firmenich,Nat Fl (Orange Key),1310F021202,10/21/2013,10/21/2014
+"Gatorade Lab, Non-Hazardous",Kerry,Nat Citrus Fl WONF,TS-32504,11/6/2013,11/6/2014
+"Gatorade Lab, Non-Hazardous",Kerry,Nat Orange Fl WONF,1000788894,11/6/2013,11/6/2014
+"Gatorade Lab, Non-Hazardous",Kerry,Nat Orange Fl WONF,1000788894,8/5/2013,8/5/2014
+"Gatorade Lab, Non-Hazardous",Kerry,Nat Citrus Fl WONF,54131901,8/5/2013,8/5/2014
+"Gatorade Lab, Non-Hazardous",Kerry,Nat Orange Fl WONF,1000788894,8/5/2013,8/5/2014
+"Gatorade Lab, Non-Hazardous",Kerry,Nat Citrus Fl WONF,54131901,8/5/2013,8/5/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,Cinnamon Roll Type Flavor,42100154952,2/19/2014,2/19/2015
+"Gatorade Lab, Non-Hazardous",Givaudan,Chocolate Flavor WONF,42100155700,3/10/2014,3/10/2015
+"Gatorade Lab, Non-Hazardous",Kerry,17208PEP,S-656238 (ID),ref. 3/11/14,
+"Gatorade Lab, Non-Hazardous",Kerry,N&A Dark Chocolate FL,TS-33432,3/6/2014,3/6/2015
+"Gatorade Lab, Non-Hazardous",Givaudan ,Chocolate Chip Cookie Type Flavor,42100155749,3/10/2014,3/10/2015
+"Gatorade Lab, Non-Hazardous",Givaudan,N&A Chocolate Fl.,42100155738,3/10/2014,3/10/2015
+"Gatorade Lab, Hazardous",Symrise,Sweet Enhancer Nat Fl Symlife(R) Sweet,SL13-0406-7,6/4/2013,6/4/2014
+"Gatorade Lab, Hazardous",Symrise,Nat Fl Pomegranate Type,SL13-2405-1,6/14/2013,6/14/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Lemon-Lime Ginger Flavor WONF,SL13-2905-4,5/30/2013,5/30/2014
+"Gatorade Lab, Hazardous",Symrise,"Tropical Punch Nat Fl, Papaya Type",SL13-2405-6,6/14/2013,6/14/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Lemon-Lime Flavor,SL13-0705-5,5/22/2013,5/22/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Tangerine Flavor WONF,SL13-0705-10,5/22/2013,5/22/2014
+"Gatorade Lab, Hazardous",Symrise,Tropical Punch Fl Nat Papaya TY,SL13-2405-5,6/14/2013,6/14/2014
+"Gatorade Lab, Hazardous",Symrise,Symlife(R) Sweet Nat Sweetness Enhancer Fl,SL13-2803-6,6/4/2013,6/4/2014
+"Gatorade Lab, Hazardous",Symrise,"Natural Flavor, Masking Type",SL13-0406-9,6/4/2013,6/4/2014
+"Gatorade Lab, Hazardous",Symrise,Nat Strawberry Kiwi Flavor WONF,10100006,5/22/2013,5/22/2014
+"Gatorade Lab, Hazardous",Symrise,"Nat Grapefruit Fl WONF, Ruby Red Type",SL13-2905-5,5/30/2013,5/30/2014
+"Gatorade Lab, Hazardous",Symrise,Nat Tangerine Ginger Flavor WONF,SL13-3005-4,5/30/2013,5/30/2014
+"Gatorade Lab, Hazardous",Symrise,Sweetness Enhancer Fl Symlife(R) Sweet Nat,SL13-0506-6,6/6/2013,6/6/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Grapefruit Flavor,SL13-3005-1,5/30/2013,5/30/2014
+"Gatorade Lab, Hazardous",Symrise,Sweetness Enhancer Fl Symlife(R) Sweet Nat,SL13-2503-14,6/6/2013,6/6/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat Fl (Sweet Type) Sweetgem,1303700028,2/6/2014,2/6/2015
+"Gatorade Lab, Hazardous",Firmenich,Nat Fl (Orange Key),1309F026185,9/27/2013,9/27/2014
+"Gatorade Lab, Hazardous",Symrise,Cooling Flavor Natural,SL13-0406-6,6/4/2013,6/4/2014
+"Gatorade Lab, Hazardous",Symrise,Lime Natural Flavor,SL13-0402-8,5/21/2013,5/21/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Black Cherry Flavor WONF,10100001,6/13/2013,6/13/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Seven Citrus Flavor,SL13-0705-11,5/22/2013,5/22/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Cherry Flavor WONF,SL13-3005-2,5/30/2013,5/30/2014
+"Gatorade Lab, Hazardous",Symrise,Symlife Mask(R) Nat Bitterness Masking Fl,SL13-1305-4,5/21/2013,5/21/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Blaack and Blue Berry Flavor WONF,SL13-0702-7,5/30/2013,5/30/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Blueberry Flavor WONF,SL13-1306-6,6/14/2013,6/14/2014
+"Gatorade Lab, Hazardous",Symrise,N&A Grape Flavor,SL13-1405-1,5/21/2013,5/21/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Mango Flavor WONF,10100002,6/14/2013,6/14/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Lemon Flavor,10100001,5/21/2013,5/21/2014
+"Gatorade Lab, Hazardous",Givaudan,N&A Cookies & Cream Flavor Type,TRH0521M02,6/12/2013,6/12/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Mango Flavor WONF,SL13-0405-3,5/22/2013,5/22/2014
+"Gatorade Lab, Hazardous",Givaudan,N&A Peanut Butter Chocolate Flavor Type,TRH0521M07,5/30/2013,5/30/2014
+"Gatorade Lab, Hazardous",Givaudan,N&A Peanut Butter Chocolate Flavor Type,TRH0521M10,5/30/2013,5/30/2014
+"Gatorade Lab, Hazardous",Givaudan,N&A Cookies and Cream Flavor Type,TRH0521M05,5/30/2013,5/30/2014
+"Gatorade Lab, Hazardous",Givaudan,N&A Peanut Butter Chocolate Flavor Type,TRH0521M13,5/30/2013,5/20/2014
+"Gatorade Lab, Hazardous",Givaudan,N&A Cookies and Cream Flavor Type,TRH0521M02,5/30/2013,5/30/2014
+"Gatorade Lab, Hazardous",Takasago,Intensates Natural Salivation Flavor,PPLC-13-656,7/30/2013,7/30/2014
+"Gatorade Lab, Hazardous",Takasago,Intensates Natural Flavor Modifier Acid Blocker,PPLC-13-1185,7/30/2013,7/30/2014
+"Gatorade Lab, Hazardous",Takasago,Intensates Natural Flavor Blend X-Cool,248655,7/30/2013,7/30/2014
+"Gatorade Lab, Hazardous",Takasago,Intensates Natural FlavorBlend X-Cool,245604,7/30/2013,7/30/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Flavor Mikan Type,PPLC-13-1072,7/29/2013,7/29/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Flavor Seet Sugar Type,PPLC-13-1169,7/29/2013,7/29/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Flavor Sweet Sugar Type,PPLC-13-1169,7/29/2013,7/29/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Grapefruit Flavor,PPLC-13-1142,7/12/2013,7/12/2014
+"Gatorade Lab, Hazardous",Takasago,Intensates Natural Enhancing Flavor,PPLC-13-266,7/30/2013,7/30/2014
+"Gatorade Lab, Hazardous",Takasago,Intensates (R) Natural Flavor Modifier (Acid Blocker),PPLC-13-112,7/30/2013,7/30/2014
+"Gatorade Lab, Hazardous",Takasago,Intensates Natural Flavor Blend Cooling Type,PPLC-13-1184,7/30/2013,7/30/2014
+"Gatorade Lab, Hazardous",Takasago,Intensates NaturalSalivationn Flavor,PPLC-14-029,1/21/2014,1/21/2015
+"Gatorade Lab, Hazardous",Takasago,Natural Strawberry Flavor WONF,252212,6/13/2013,6/13/2014
+"Gatorade Lab, Hazardous",Takasago,Vivid Natural Lemon Juic Flavor WONF,PPLC-13-1149,7/12/2013,7/12/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Noni Flavor WONF,PPLC-13-1143,7/12/2013,7/12/2014
+"Gatorade Lab, Hazardous",Takasago,Vivid Natural Rasepberry Flavor WONF Scottish Type,PPLC-13-1139,7/16/2013,7/16/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Strawberry Flavor WONF,PPLC-13-1001,6/13/2013,6/13/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Strawberry Kiwi Flavor WONF,PPLC-13-1002,6/10/2013,6/10/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Blackberry Flavor WONF,PPLC-13-025,6/13/2013,6/13/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Golden Pineapple Falvor WONF,PPLC-13-1150,7/16/2013,7/16/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Flavor Sweet Sugar Type,236053,6/13/2013,6/13/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Peach Flavor WONF,PLLC-13-641,6/13/2013,6/13/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Lemon Lime Flavor WONF Key,PLLC-13-1151,7/16/2013,7/16/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Peach Mango Flavor WONF,PPLC-13-360,6/13/2013,6/13/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Acai Berry Flavor WONF,PPLC-13-362,6/13/2013,6/13/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Peach Flavor WONF,238525,6/13/2013,6/13/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Flavor Blend,247681,6/13/2013,6/13/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Flavor Red Plum Type,PPLC-13-668,6/13/2013,6/13/2014
+"Gatorade Lab, Hazardous",Symrise,Sweetness Enhancing Nat. FL,SL13-3105-2,6/4/2013,6/4/2014
+"Gatorade Lab, Hazardous",Symrise,Orange Blood Nat. FL WONF,10100003,6/14/2013,6/14/2014
+"Gatorade Lab, Hazardous",Symrise,Nat. Roasted Coffee FL WONF,SL13-1206-6,6/13/2013,6/13/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Flavor Dragonfruit,SL-13-0406-5,6/4/2013,6/4/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Flavor Flavor Enhancer type,SL13-0505-11,6/6/2013,6/6/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Mango Flavor WONF,SL13-111305-1,5/21/2013,5/21/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Orange Tangerine Flavor WONF,10100002,6/6/2013,6/6/2014
+"Gatorade Lab, Hazardous",Symrise,Nat. Citrus Ginger Flavor WONF,SL13-2905-2,5/30/2013,5/30/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Mixed Berry Grape Flavor WONF,SL13-3105-1,6/4/2013,6/4/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Citrus Ginger Flavor,SL13-07-5-5,5/22/2013,5/22/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Blueberry FL WONF,SL13-1306-2,6/14/2013,6/14/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Cherry Flavor WONF,SL13-1305-2,5/21/2013,5/21/2014
+"Gatorade Lab, Hazardous",Symrise,Bitter Masking NAT FLV,SL13-08-5-8,5/22/2013,5/22/2014
+"Gatorade Lab, Hazardous",Symrise,Nat. Seven Citrus Ginger Flavor,SL13-0705-7,5/22/2013,5/22/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Flavor Enhancer,SL13-0506-12,6/6/2013,6/6/2014
+"Gatorade Lab, Hazardous",PepsiCo,Gala Apple Flavor,TN783889,5/13/2013,5/13/2014
+"Gatorade Lab, Hazardous",PepsiCo,Gala Apple Flavor,TN783889,5/13/2013,5/13/2014
+"Gatorade Lab, Hazardous",PepsiCo,Gala Apple Flavor,TN783889,5/13/2013,5/13/2014
+"Gatorade Lab, Hazardous",PepsiCo,Gala Apple Flavor,TN783889,5/13/2013,5/13/2014
+"Gatorade Lab, Hazardous",PepsiCo,93450-02,8/1/1389,8/14/2013,8/14/2014
+"Gatorade Lab, Hazardous",PepsiCo,93450-02,4/1/1389,6/6/2013,6/6/2014
+"Gatorade Lab, Hazardous",PepsiCo,93450-02,7/1/1389,7/17/2013,7/17/2014
+"Gatorade Lab, Hazardous",Givaudan,Chocolate Peanut Butter Flavor,TRH0429M04,4/29/2013,4/29/2014
+"Gatorade Lab, Hazardous",Firmenich,Mojito Flavor,1310.BJ67122,10/22/2013,10/22/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat Fl Orange Key,1309F026186,9/26/2013,9/26/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Fuji Apple Flavor WONF,NULL,5/6/2013,5/6/2014
+"Gatorade Lab, Hazardous",Takasago,Vivid Intensates Natural FujiFlavor WONF,NULL,5/6/2013,5/6/2014
+"Gatorade Lab, Hazardous",Takasago,Vivid Natural mixed Berry Flavor WONF,PPLC-13-1629,10/7/2013,10/7/2014
+"Gatorade Lab, Hazardous",Takasago,Intensates Natural Flavor Blend,253947,10/23/2013,10/23/2014
+"Gatorade Lab, Hazardous",Takasago,Vivid Natural Mixed Berry Flavor WONF,PPLC-13-1629,10/23/2013,10/23/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Fuji Apple Flavor Conc WONF,PPLC-13-1144,7/12/2013,7/12/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Garden Mint Flavor WONF,PPLC-13-800,10/22/2013,10/22/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Peppermint Flavor WONF,PLC-13-803,10/22/2013,10/22/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Spearmint Flavor,PPLC-13-140,10/22/2013,10/22/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Flavor Mojito Type,PPLC-13-1074,10/22/2013,10/22/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Flavor Chai Spice Type,PPLC-13-1698,10/22/2013,10/22/2014
+"Gatorade Lab, Hazardous",Firmenich,Art Taste Modulator,35731305001T,5/14/2013,5/14/2014
+"Gatorade Lab, Hazardous",Kerry,Strawberry Key,TS-32421,10/21/2013,10/21/2014
+"Gatorade Lab, Hazardous",Givaudan,N&A Chocolate dark Type Flavor,AT0425M04,4/25/2013,4/25/2014
+"Gatorade Lab, Hazardous",Givaudan,Nat Vanilla Flavor Type,42100140892,5/23/2013,5/23/2014
+"Gatorade Lab, Hazardous",Givaudan,N&A French Vanilla Type Flavor,42100141009,9/18/2013,9/18/2014
+"Gatorade Lab, Hazardous",Givaudan,N&A Vanilla Flavor Type,42100141007,9/19/2013,9/19/2014
+"Gatorade Lab, Hazardous",Firmenich,Art Green Tea,1305.BJ74110,5/10/2013,5/10/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Lemon Tea Flavor WONF,NULL,5/6/2013,5/6/2014
+"Gatorade Lab, Hazardous",Pepsico,N&A Peanut Butter Chocolate Flavor,790232,7/15/2013,7/15/2014
+"Gatorade Lab, Hazardous",Takasago,intensates(R) Nat Fl BL Masking Type,PPLC-13-1182,7/30/2013,7/30/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Honey Ginseng Tea Flavor WONF,244835,7/29/2013,7/29/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Granny Fuji Apple Flavor WONF,250100,7/29/2013,7/29/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Guarana Flavor WONF,PPLC-13-648,7/29/2013,7/29/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Pomegranate Flavor WONF,PPLC-13-1171,7/29/2013,7/29/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Flavor Jostaberry Type,PPLC-13-1016,7/16/2013,7/16/2014
+"Gatorade Lab, Hazardous",Takasago,Vivid Natural Strawberry Flavor WONF,PPLC-13-1132,7/16/2013,7/16/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Flavor Rainforest Acai Berry Type,PPLC-13-235,7/16/2013,7/16/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Vanilla Flavor WONF,252272,7/29/2013,7/29/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Peach Flavor WONF,PPLC-13-1173,7/29/2013,7/29/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Honey Green Tea,PPLC-13-1035,7/29/2013,7/29/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Watermelon Flavor WONF,PPLC-13-1126,7/29/2013,7/29/2014
+"Gatorade Lab, Hazardous",Takasago,Nat Flavor Red Plum Type,PPLC-13-1170,7/29/2013,7/29/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Honey Flavor WONF,241330,7/29/2013,7/29/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Juicy Lemonade Flavor,PPLC-13-1147,7/16/2013,7/16/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Flavor Masking Type,243968,7/30/2013,7/30/2014
+"Gatorade Lab, Hazardous",Givaudan,N&A Cookies and Cream Flavor,TRH0429M06,4/29/2013,4/29/2014
+"Gatorade Lab, Hazardous",Givaudan,Apple Flavor Key,JMT0430M01,4/30/2013,4/30/2014
+"Gatorade Lab, Hazardous",Firmenich,N&A Fl Peanut Type,0513L08336,5/5/2013,5/5/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat Garden Mint WONF,82423144,8/6/2013,8/6/2014
+"Gatorade Lab, Hazardous",Givaudan,N&A Peanut Butter Chocolate Flavor Type,SDU0618M01,6/19/2013,6/19/2014
+"Gatorade Lab, Hazardous",Givaudan,Nat. Apple Flavor WONF,C3A0003517,5/13/2013,5/13/2014
+"Gatorade Lab, Hazardous",Givaudan,N&A Peanut Butter Chocolate Flavor Type,SDU0613M02,6/13/2013,6/13/2014
+"Gatorade Lab, Hazardous",Givaudan,N&A Peanut Butter Chocolate Flavor Type,TRH0521M10,6/12/2013,6/12/2014
+"Gatorade Lab, Hazardous",Givaudan,N&A Peanut Butter Chocolate Flavor Type,TRH0521M13,6/12/2013,6/12/2014
+"Gatorade Lab, Hazardous",Givaudan,N&A Peanut Butter Chocolate Flavor Type,TRH0521M07,6/12/2013,6/12/2014
+"Gatorade Lab, Hazardous",Symrise,Seet Enhancer Nat Fl,SL13-3005-6,5/30/2013,5/30/2014
+"Gatorade Lab, Hazardous",Symrise,Artifical Flacor Royal Champ Type,Sl13-1206-12,6/13/2013,6/13/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Peach Tea Flavor WONF,SL13-1305-5,5/21/2013,5/21/2014
+"Gatorade Lab, Hazardous",Symrise,Sweet Enhance Nat. Fl,SL13-3005-7,5/30/2013,5/30/2014
+"Gatorade Lab, Hazardous",Symrise,Pineapple Type Nat Fl,SL13-0506-3,6/6/2013,6/6/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Passionfruit Flavor WONF,SL13-0503-5,5/21/2013,5/21/2014
+"Gatorade Lab, Hazardous",Symrise,Natural Strawberry Kiwi Flavor WONF,10100007,5/30/2013,5/30/2014
+"Gatorade Lab, Hazardous",Kerry,Nat Lemon Iced Tea Type Fl,PS051413-4,5/14/2013,5/14/2014
+"Gatorade Lab, Hazardous",Kerry,Apple 2500X Cider Type Essence,13040915A,5/3/2013,5/3/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Flavor Honey Green Tea Type,NULL,5/13/2013,5/13/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Flavor Honey Green Tea Type,NULL,6/12/2013,6/12/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Flavor Green Tea Flavor WONF,NULL,5/6/2013,5/6/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Lemon Tea Flavor WONF,NULL,5/6/2013,5/6/2014
+"Gatorade Lab, Hazardous",Kerry,Strawberry Key,TS-32423,10/21/2013,10/21/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat Flav Mouth Watering Type,82379663,8/16/2013,8/16/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat Flav Mouth Watering Type,82316124,8/16/2013,8/16/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat Fl Orange Key,1307BJ822008,7/11/2013,7/11/2014
+"Gatorade Lab, Hazardous",Givaudan,Nat Cranberry Raspberry Flavor Type,42100133949,9/27/2013,9/27/2014
+"Gatorade Lab, Hazardous",Givaudan,Natural Swetness Improver Type Flavor,42100133543,6/22/2013,6/22/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Marion Blackberry Flavor WONF,279216,2/5/2014,2/5/2015
+"Gatorade Lab, Hazardous",Takasago,Vivid Natural Fuji Apple Flavor WONF,249432,2/5/2014,2/5/2015
+"Gatorade Lab, Hazardous",Takasago,Natural Peach Appricott Flavor,255589,2/5/2014,2/5/2015
+"Gatorade Lab, Hazardous",Takasago,Natural Peach Flavor WONF,PPLC-13-1605,2/5/2014,2/5/2015
+"Gatorade Lab, Hazardous",Takasago,Natural Juicy Pear Flavor WONF,PPLC-13-1566,2/5/2014,2/5/2015
+"Gatorade Lab, Hazardous",Firmenich,Nat Strawberry Kiwi WONF,82402949,10/9/2013,10/9/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat Strawberry Kiwi WONF,82402949,10/9/2013,10/9/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat Strawberry Kiwi WONF,82402949,10/9/2013,10/9/2014
+"Gatorade Lab, Hazardous",Kerry,Nat Fl MOD Masking FMT,NULL,8/9/2013,8/9/2014
+"Gatorade Lab, Hazardous",Givaudan,Nat Cranberry Raspberry Flavor Type,42100133922,9/27/2013,9/27/2014
+"Gatorade Lab, Hazardous",Givaudan,Nat Vanilla Flavor Type,42100116458,5/23/2013,5/23/2014
+"Gatorade Lab, Hazardous",PepsiCo,GNS Strawberry Flv.,30621791,8/26/2013,8/26/2014
+"Gatorade Lab, Hazardous",Kerry,GNS Strawberry Flv.,305508626,8/26/2013,8/26/2014
+"Gatorade Lab, Hazardous",PepsiCo,Apple Pear Flavor,9A809*01,9/19/2013,9/19/2014
+"Gatorade Lab, Hazardous",PepsiCo,Blue Bolt Thailand,93901*01,4/24/2013,4/24/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat Fl Orange Pekoe Type,82209670,5/28/2013,5/28/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat Fl Orange Pekoe Type,82209670,5/28/2013,5/28/2014
+"Gatorade Lab, Hazardous",Firmenich,Art Green Tea,1306.BJ78713,6/13/2013,6/13/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat Pineapple Orange WONF,1039F027188,9/27/2013,9/27/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat Pineapple Orange WONF,1309F027190,9/27/2013,9/27/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat Orange Fl WONF Key,54960301,1/24/2014,1/24/2015
+"Gatorade Lab, Hazardous",Givaudan,N&A Orange Grapefruit Flavor,42100134891,7/1/2013,7/1/2014
+"Gatorade Lab, Hazardous",Givaudan,Nat Lemon Chai Flavor,AT0522M10,10/21/2013,10/21/2014
+"Gatorade Lab, Hazardous",Givaudan,Nat Chai Flavor,C3A0003336,10/21/2013,10/21/2014
+"Gatorade Lab, Hazardous",Givaudan,TasteEssentials(TM) Nat Latte Coffee Flavor WONF,C3A0002853,10/21/2013,10/21/2014
+"Gatorade Lab, Hazardous",Givaudan,Nat Mojito Flavor,C3A0001716,10/21/2013,10/21/2014
+"Gatorade Lab, Hazardous",Givaudan,Nat Chili Pepper Flavor,c300014679,7/25/2013,7/25/2014
+"Gatorade Lab, Hazardous",Givaudan,TasteEssentials(TM) Nat Garden Mint Flavor,c3M0029572,10/21/2013,10/21/2014
+"Gatorade Lab, Hazardous",Givaudan,Nat Chocolate Peanut Butter Flavor Type,TRH0816L01,6/3/2013,6/3/2014
+"Gatorade Lab, Hazardous",Givaudan,N&A Cookies & Cream Flavor Type,SDU0913L01,6/3/2013,6/3/2014
+"Gatorade Lab, Hazardous",Givaudan,N&A Chocolate (dark) Type Flavor,AT0419M02,6/3/2013,6/3/2014
+"Gatorade Lab, Hazardous",Givaudan,TasteEssentials(TM) Nat Vanilla Marshmallow Flavor WONF,C3O0012898,6/3/2013,6/3/2014
+"Gatorade Lab, Hazardous",Givaudan,Nat Capsicum Flavor,c300014680,7/25/2013,7/25/2014
+"Gatorade Lab, Hazardous",Givaudan,Nat Sangrita Flavor,c300013940,7/25/2013,7/25/2014
+"Gatorade Lab, Hazardous",Givaudan,Nat Lime Flavor,ed00022762,7/25/2013,7/25/2014
+"Gatorade Lab, Hazardous",Takasago,Vivid(R) Natural Concord Grape Flavor WONF,PPLC-13-1019,7/16/2013,7/16/2014
+"Gatorade Lab, Hazardous",Takasago,Vivid(R) Natural Concord Grape Flavor WONF,232932,7/16/2013,7/16/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Watermelon Flavor WONF,PPLC-13-1126,7/16/2013,7/16/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Golden Pineapple Flavor WONF,PPLC-13-1172,7/29/2013,7/29/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Pomegranate Flavor WONF,243772,7/16/2013,7/16/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Peach Flavor WONF,241739,7/16/2013,7/16/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Peach Flavor WONF,PPLC-13-1135,7/16/2013,7/16/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Blueberry Flavor WONF,PPLC-13-1015,7/16/2013,7/16/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Peach Flavor Conc WONF,PPLC-13-1133,7/16/2013,7/16/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Citrus Spice Flavor WONF,PPLC-13-1127,7/16/2013,7/16/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Blackberry Flavor WONF,PPLC-13-025,7/16/2013,7/16/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Pomegranate Flavor WONF,PPLC-13-1138,7/16/2013,7/16/2014
+"Gatorade Lab, Hazardous",Takasago,Vivid(R) Natural Lemon Juice Flavor WONF,PPLC-13-1146,7/16/2013,7/16/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Pomegranate Flavor WONF,245550,7/16/2013,7/16/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Banana Flavor WONF,PPLC-13-361,7/16/2013,7/16/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Watermelon Flavor WONF,PPLC-13-27,7/16/2013,7/16/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Gold Kiwi Flavor WONF,PPLC-13-1145,7/16/2013,7/16/2014
+"Gatorade Lab, Main Inventory",Cargill,Food Grade xanthan gum Keltrol-T,NULL,NULL,NULL
+"Gatorade Lab, Main Inventory",Corn Products Int.,Monohydrate Dextrose,1423047103,9/17/2013,9/17/2015
+"Gatorade Lab, Main Inventory",Morten,Sodium Chloride,2460001513,7/1/2012,7/1/2014
+"Gatorade Lab, Main Inventory",Pepsico,White Corn Flour,K29MAY13C,5/29/2013,NULL
+"Gatorade Lab, Main Inventory",Pepsico,Calcium Carbonate,A232413,11/19/2012,NULL
+"Gatorade Lab, Main Inventory",Pepsico,Sodium Bicrabonate,FF3069,3/10/2013,NULL
+"Gatorade Lab, Main Inventory",Pepsico,Brown Sugar,2/1/7249,12/4/2012,NULL
+"Gatorade Lab, Main Inventory",GPC,Maltrin M150,M123645513,12/29/2012,NULL
+"Gatorade Lab, Main Inventory",Pepsico,Sugar Bulk Fine,4/1/7316,4/18/2013,NULL
+"Gatorade Lab, Main Inventory",Pepsico,Dextrose-granulation,142047103,2/16/2013,NULL
+"Gatorade Lab, Main Inventory",Pepsico,Calcium Hydroxide,VCH060313,6/3/2013,NULL
+"Gatorade Lab, Main Inventory",C&H,Sucrose,C10572492,9/17/2013,9/17/2015
+"Gatorade Lab, Main Inventory",PepsiCo,Beverage Base,07037*18*01M,NULL,NULL
+"Gatorade Lab, Main Inventory",Food Grade DPK,Dipostasium Phosphate,GM2627410000,7/1/2014,NULL
+"Gatorade Lab, Main Inventory",Krystar,Crystalline Fructose,LKB3192A,NULL,NULL
+"Gatorade Lab, Main Inventory",ICL Proformance ,Monopatassium Phosphate,222026494,11/24/2009,NULL
+"Gatorade Lab, Main Inventory",ADM,Trisodium Citrate,5909134,8/29/2012,8/29/2014
+"Gatorade Lab, Main Inventory",GPC,M 180,4115037512,NULL,NULL
+"Gatorade Lab, Main Inventory",DSM,Ascorbic Acid,TL 130759,4/2/2013,4/2/2016
+"Gatorade Lab, Main Inventory",Mays Chemical,Calcium Carbonate,A300823,1/8/2013,1/8/2015
+"Gatorade Lab, Main Inventory",Domino C + H,Fine Sugar,43363,9/4/2013,9/4/2014
+"Gatorade Lab, Main Inventory",Cargill,Citric Acid,FECCC3545 A,10/10/2013,10/10/2015
+"Gatorade Lab, Main Inventory",Davisco,Whey Protein Isolate Non GMO,JE001-2-425,3/14/2014,12/14/2014
+"Gatorade Lab, Main Inventory",Carberry,Whey Protein Instantized Powder,165B,10/24/2013,10/24/2014
+"Gatorade Lab, Main Inventory",CP Kelco,Carrageenan DX2015,085219SK01400,3/14/2014,12/14/2014
+"Gatorade Lab, Main Inventory",Kerry,N&A Vanilla Flavor,175Z10VA,6/17/2013,12/17/2014
+"Gatorade Lab, Main Inventory",Sensient,Natural Mouthfeel Dairy Flavor,175ZZFLR,1/1/2014,1/1/2015
+"Gatorade Lab, Main Inventory",Phoeniz Aroma,Vanillin,R11123201,1/1/2014,1/1/2015
+"Gatorade Lab, Main Inventory",Sensient,Titanium Dioxide Powder,I107876,11/6/2013,11/6/2014
+"Gatorade Lab, Main Inventory",Bartek Ingredients,Malic Acid,NULL,10/1/2013,10/1/2014
+"Gatorade Lab, Main Inventory",Mallinckrodt Chemicals,Magnesium Oxide,J44636,NULL,NULL
+"Gatorade Lab, Main Inventory",Nutrinova,Potassium Sorbate,NULL,NULL,NULL
+"Gatorade Lab, Main Inventory",Cargill,Potassium Chloride,PMD5310,2/23/2010,NULL
+"Gatorade Lab, Main Inventory",Morton,Potassium Chloride,MAY159HB,1/1/2009,NULL
+"Gatorade Lab, Main Inventory",Cargill,Tripotassium Citrate,NULL,3/24/2010,NULL
+"Gatorade Lab, Main Inventory",Phase,Sodium Acid Sulfate,F205X3,6/20/2005,NULL
+"Gatorade Lab, Main Inventory",Huber,Calcium Silicate,NDG5363365,NULL,NULL
+"Gatorade Lab, Main Inventory",Purac,Sodium Lactate Purasal ,1106002476,2/14/2012,6/22/2014
+"Gatorade Lab, Main Inventory",Purac,Lactic Acid Liquid (88%),1007000180,NULL ,NULL
+"Gatorade Lab, Main Inventory",DSM,Beta Carotene 1% Powder,UT12060003,6/2/2012,6/2/2014
+"Gatorade Lab, Main Inventory",PepsiCo,Reb A,173BHz,9/28/2010,NULL
+"Gatorade Lab, Main Inventory",Tate & Lyle,Sucralose ,XM2M035301,12/18/2012,12/18/2014
+"Pilot Plant, Non-Hazardous",Pepsico,Orange Flavor 3F,LYK-010414-3F,1/22/2014,1/22/2015
+"Pilot Plant, Non-Hazardous",Pepsico,Orange Flavor 1F,2YK-010414-1F,1/22/2014,1/22/2015
+"Pilot Plant, Non-Hazardous",Pepsico,Orange Flavor,LYKDCO-F,1/30/2014,1/30/2015
+"Pilot Plant, Non-Hazardous",Pepsico,Orange Flavor 2F,LYK-010414-2F,1/22/2014,1/22/2015
+"Pilot Plant, Non-Hazardous",The Concentrate Manufacturing Company of Ireland,Gatorade Orange Color Component,13-8900-0010,8/14/2013,11/14/2014
+"Pilot Plant, Hazardous",Pepsico,N&A Peanut Butter Chocolate Flavor,790232,7/15/2013,7/15/2014
+"Pilot Plant, Non-Hazardous",The Concentrate Manufacturing Company of Ireland,Gatorade Starch Cloud,13-8902-0016,7/23/2013,10/21/2014
+"Pilot Plant, Non-Hazardous",The Concentrate Manufacturing Company of Ireland,Gatorade Orange Flavour,13-89020012,6/26/2013,6/23/2014
+"Pilot Plant, Non-Hazardous",The Concentrate Manufacturing Company of Ireland,Gatorade Berry Flavor,13-8902-0010,8/21/2013,5/19/2014
+"Pilot Plant, Non-Hazardous",Givaudan,Nat Mango Lemon Flavor WONF,NULL,6/28/2013,6/28/2014
+"Pilot Plant, Non-Hazardous",Givaudan,Nat Yuzu Kiwi Type Flavor,NULL,6/28/2013,6/28/2014
+"Pilot Plant, Non-Hazardous",Givaudan,Nat Cucumber Melon Flavor WONF,NULL,10/1/2013,10/1/2014
+"Pilot Plant, Non-Hazardous",Pepsico,Color Component 35009-70-53A,13-8924-0003,3/13/2013,6/1/2014
+"Pilot Plant, Non-Hazardous",Pepsico,Color Component 35009-70-53A,13-8924-0003,3/13/2013,6/1/2014
+"Pilot Plant, Non-Hazardous",The Concentrate Manufacturing Company of Ireland,Gatorade Starch Cloud,NULL,5/29/2013,11/24/2014
+"Pilot Plant, Non-Hazardous",The Concentrate Manufacturing Company of Ireland,Gatorade Starch Cloud Component,12-8902-0028,12/10/2012,6/13/2014
+"Pilot Plant, Non-Hazardous",The Concentrate Manufacturing Company of Ireland,Gatorade Starch Cloud,13-8902-0025,11/18/2013,5/17/2015
+"Pilot Plant, Non-Hazardous",Pepsico R&D Little Island,Lemonade,NULL,11/2/2013,5/4/2014
+"Pilot Plant, Non-Hazardous",The Concentrate Manufacturing Company of Ireland,Gatorade G2 Raspberry Lemon Flavor,13-8902-0008,9/23/2013,9/22/2014
+"Pilot Plant, Non-Hazardous",The Concentrate Manufacturing Company of Ireland,Gatorade Starch Cloud Component,12-8902-0028,12/10/2012,5/8/2014
+"Pilot Plant, Non-Hazardous",Pepsico R&D Little Island,Lemonade,NULL,11/2/2013,5/4/2014
+"Pilot Plant, Non-Hazardous",The Concentrate Manufacturing Company of Ireland,Gatorade Starch Cloud Component,13-8902-0004,2/14/2013,5/8/2014
+"Pilot Plant, Non-Hazardous",DairyChem,Antifoam FG10,0006497464,4/27/2011,7/11/2014
+"Pilot Plant, Non-Hazardous",The Concentrate Manufacturing Company of Ireland,Propel Lemon Flavor ,13-8900-0002,4/5/2013,10/5/2014
+"Pilot Plant, Non-Hazardous",The Concentrate Manufacturing Company of Ireland,Gatorade G2 Dark Green Color,13-8902-0005,6/10/2013,12/10/2014
+"Pilot Plant, Non-Hazardous",The Concentrate Manufacturing Company of Ireland,Mandarin Flavor,13-8900-0003,4/2/2013,4/14/2014
+"Pilot Plant, Hazardous",Kerry, Orange Key ,179z8DC0,3/21/2014,9/21/2015
+"Gatorade Lab, Non-Hazardous",PepsiCo,Peach Mango Flavor,,3/21/2014,9/21/2015
+"Gatorade Lab, Non-Hazardous",PepsiCo,Peach Flavor 95814*04,,3/21/2014,9/21/2015
+"Gatorade Lab, Hazardous",PepsiCo,Orange Passion 93719*04,,3/21/2014,9/21/2015
+"Gatorade Lab, Hazardous",PepsiCo,Passion Flavor 9B110*01,,3/21/2014,9/21/2015
+"Gatorade Lab, Hazardous",Kerry,N&A Watermelon Citrus Emulsion ,,3/27/2013,9/27/2014
+"Gatorade Lab, Hazardous",Takasagor,N&A Flavor Watermelon on Type Key,,2/14/2013,8/14/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,Nat. Lemon Flavor WONF,42100101759,2/12/2013,8/12/2014
+"Gatorade Lab, Non-Hazardous",Firmenich,Nat. Lime Flavor,RPN04101,4/5/2013,10/5/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat. Pomgranate WONF,1303F00751,3/7/2013,9/7/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Flavor Watermelon Type Key,TAK-130573,2/14/2013,8/14/2014
+"Gatoarde Lab, Hazardous",Firmenich,Lime Flavor,4913418640,1/17/2013,7/17/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat. Flavor (Guava Type),1303F004045,3/14/2013,9/14/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat. Lime Flavor,RPN03051,2/28/2013,8/28/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat. Tangelo WONF,N02271,2/27/2013,8/27/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat. Pineapple WONF,10303F004047,3/4/2013,9/4/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat. Flavor (Guava Type),1303F004044,3/4/2013,9/4/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Juicy Pear Flavor Key,NA,2/8/2013,8/8/2014
+"Gatorade Lab, Non-Hazardous",Firmenich,Nat. Blackberry,N04021,4/2/2013,10/2/2014
+"Gatorade Lab, Non-Hazardous",Firmenich,Nat. Peach WONF,81985562,11/5/2012,5/5/2014
+"Gatorade Lab, Non-Hazardous",Firmenich,Nat Passion Fruit WONF,819885573,10/24/2012,4/24/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat. Pineapple WONF,1303F004046,3/4/2013,9/4/2014
+"Gatorade Lab, Hazardous",Firmenich,Tangleo Flavor,4913521588,3/20/2013,9/20/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat. Apple WONF Green Type,81985559,12/13/2012,6/13/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat. Pomgranate WONF,1303F007052,3/7/2013,9/7/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat. Pomgranate WONF,8198556,1/17/2013,7/17/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat. Pineapple WONF,81985570,1/9/2013,7/9/2014
+"Gatorade Lab, Hazardous",Takasago,Natural Key Mandarin Kumquat,TAK-130487,2/8/2013,8/8/2014
+"Gatorade Lab, Hazardous",PepsiCo,Phosphoric Acid Lot #: 1389-1,,2/20/2013,8/20/2014
+"Gatorade Lab, Hazardous",PepsiCo,Fierce Berry Color Component,94605*04*03A,2/5/2013,8/5/2014
+"Gatorade Lab Main Inventory, Non-Hazardous",GPC,M40,M1229302,1/1/2004,1/1/2015
+"Gatorade Lab Main Inventory, Non-Hazardous",Palatinase,Isomaalturlose,0637393L12993,8/1/2011,8/1/2014
+"Gatorade Lab, Non-Hazardous",Givaudan,N&A Peach Flavor Type,jmt0509m02,3/12/2014,9/12/2015
+"Gatorade Lab, Non-Hazardous",Givaudan,Nat Ginger Flavor WONF,th0329m01,3/12/2014,9/12/2015
+"Gatorade Lab, Non-Hazardous",Givaudan,Nat Ginger Wash WONF,gwt0822m02,3/12/2014,9/12/2015
+"Gatorade Lab, Non-Hazardous",PepsiCo,Peach Flavor 95814*04,NA,3/11/2014,9/11/2015
+"Gatorade Lab, Non-Hazardous",PepsiCo,Peach Mango Flavor,NA,3/12/2014,9/12/2015
+"Gatorade Lab, Non-Hazardous",PepsiCo,Peach 9B518801,NA,3/6/2014,6/6/2014
+"Gatorade Lab, Non-Hazardous",PepsiCo,Orange Propel Flavor,93919*01,3/24/2013,9/24/2014
+"Gatorade Lab, Non-Hazardous",PepsiCo,Cloud Component,94646*01*02A,3/24/2013,9/24/2014
+"Gatorade Lab, Non-Hazardous",PepsiCo,Mandarin Flavor,93437*02,3/24/2013,9/24/2014
+"Gatorade Lab, Non-Hazardous",PepsiCo,Lemon Ice Flavor,93249*01,3/24/2013,9/24/2014
+"Gatorade Lab, Hazardous",PepsiCo,Propel lLemon Flavor,93946*01,3/24/2013,9/24/2014
+"Gatorade Lab, Hazardous",Firmenich,Nat. Apple Pear WONF,1001832530,3/28/2014,9/28/2015
+"Gatorade Lab, Non-Hazardous",Givaudan,N&A Orange Grapefruit Flavor,EH00061080,3/27/2014,9/27/2015
+"Gatorade Lab, Non-Hazardous",Nutrinova,21016251 Qorus Dolce 2100,64813QR01,3/27/2014,9/27/2015
+"Gatorade Lab, Non-Hazardous",Nutrinova,21016250 Qorus Dolce 1100,647045QR01,3/27/2014,9/27/2015
+"Gatorade Lab, Non-Hazardous",Kerry,Dry Powder Orange,7D124101,3/24/2014,9/24/2015
+"Gatorade Lab, Non-Hazardous",Kerry,Dry Powder Chocolate,70028501,3/24/2014,9/24/2015
+"Gatorade Lab, Non-Hazardous",Kerry ,Dry Powder Lemon Lime,70127601,3/24/2014,9/24/2015
+"Gatorade Lab, Non-Hazardous",Kerry ,Dry Powder Vanilla,70091101,3/24/2014,9/24/2015
+"Gatorade Lab, Non-Hazardous",Kerry ,Dry Powder Lemon Lime,70076001,3/24/2014,9/24/2015
