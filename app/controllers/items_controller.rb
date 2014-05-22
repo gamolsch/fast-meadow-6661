@@ -4,7 +4,9 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
+    expired_percent = Item.where(["expired_on < ?", Time.now]).count.to_f / Item.count.to_f
+    @expired_percent = (expired_percent * 100).round(2)
+    # @items = Item.all
   end
 
   # GET /items/1
