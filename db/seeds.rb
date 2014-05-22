@@ -7,7 +7,7 @@ def determine_if_hazardous(location_type_pair)
 end
 
 def convert_date_format(date)
-  if date = "TBD" || date = "NULL"
+  if date == "TBD" || date == "NULL"
     return "01/01/1900"
   else
     return DateTime.strptime(date, "%m/%d/%Y").strftime("%d/%m/%Y")
