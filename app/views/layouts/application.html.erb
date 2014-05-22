@@ -8,6 +8,20 @@
 </head>
 <body>
 
+  <nav>
+    <span id="homepage_link">
+      <%= link_to "Homepage", root_path %>
+    </span>
+
+    <span>
+      <% if session[:user_id] %>
+        <%= link_to "Logout", root_path %>
+
+      <% else %>
+      <% end %>
+    </span>
+  </nav>
+
 <%= yield %>
 
 </body>
