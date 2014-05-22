@@ -25,6 +25,12 @@ describe User do
   	expect(user.password).to eq("1234")
   end
 
+  describe "#full_name" do
+  	it "should return the full name" do
+  		expect(user.full_name).to eq("George Amolsch")
+  	end
+  end
+
   #ENDTEST
 
 ############################################################
