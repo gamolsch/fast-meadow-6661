@@ -52,7 +52,7 @@ end
 CSV.parse(csv_text, headers: true).each do |row|
   # split_string = split_location_string(row[0])
   # is_hazardous = determine_if_hazardous(split_string)
-  p Item.create(storage_id: determine_storage_loc(row[0]), manufacturer: row[1], name: row[2], lot_number: row[3], manufactured_on: convert_date_format(row[4]), expired_on: convert_date_format(row[5]))
+  p Item.create(category_id: rand(1..40), manufacturer: row[1], name: row[2], lot_number: row[3], manufactured_on: convert_date_format(row[4]), expired_on: convert_date_format(row[5]))
 end
 
 
