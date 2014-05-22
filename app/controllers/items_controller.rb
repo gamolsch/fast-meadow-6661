@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
   # GET /items.json
   def index
     @expired_percent = Item.expired_percent
-    @almost_expired_percent = Item.almost_expired_percent
+    @almost_expired = Item.almost_expired_percent
     @not_pending_expired = Item.not_pending_expired
   end
 

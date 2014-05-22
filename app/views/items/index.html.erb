@@ -2,5 +2,6 @@
 <h3>Compounds Overview</h3>
   <p id="percent_expired"><%= @expired_percent.round(2) %>% expired</p>
   <p id="percent_expired"><%= @almost_expired.round(2) %>% will expire within 14 days</p>
+  <p id="percent_expired"><%= @not_pending_expired.round(2) %>% will not expire soon</p>
 
 </div>
