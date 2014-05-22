@@ -42,6 +42,11 @@ gem 'unicorn', '~> 4.8.3'
 # Adds functionality for static asset serving and logging
 gem 'rails_12factor', group: :production
 
+group :development, :test do
+  gem "pry"
+  gem "pry-nav"
+end
+
 group :test do
 	gem 'rspec-rails', '~> 2.14.2'
 	gem 'capybara', '~> 2.2.1'

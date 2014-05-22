@@ -4,10 +4,8 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    expired_percent = Item.where(["expired_on < ?", Time.now]).count.to_f / Item.count.to_f
-    @expired_percent = (expired_percent * 100).round(2)
-    almost_expired = Item.where(expired_on: Time.now..14.days.from_now).count.to_f / Item.count.to_f
-    @almost_expired = (almost_expired * 100).round(2)
+    @expired_percent = Item.expired_percent
+    @almost_expired_percent = Item.almost_expired_percent
     # @items = Item.all
   end
 
@@ -73,6 +71,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:storage, :hazardous, :manufacturer, :name, :lot_number, :manufactured_on, :expired_on)
+      params.require(:item).permit(:manufacturer, :name, :lot_number, :manufactured_on, :expired_on)
     end
 end
