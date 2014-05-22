@@ -36,8 +36,8 @@ describe Storage do
 
 	describe "#get_number_of_colors" do
 		it "should return the correct number" do
-			first_color, second_color = [ Color.new, Color.new ]
-			storage.colors << [first_color, second_color]
+			first_category, second_category = [ Category.new, Category.new ]
+			storage.colors << [first_category, second_category]
 
 			expect(storage.get_number_of_colors).to eq(2)
 		end
