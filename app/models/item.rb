@@ -1,3 +1,3 @@
 class Item < ActiveRecord::Base
-	belongs_to :storage
+  belongs_to :category
 end
