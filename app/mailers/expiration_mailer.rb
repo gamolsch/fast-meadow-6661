@@ -1,6 +1,6 @@
 class ExpirationMailer < ActionMailer::Base
-	ActionMailer::Base.default :from => 'default@development-server.com'
-	#ActionMailer::Base.default :from => 'default@production-server.com'
+	# ActionMailer::Base.default :from => 'default@development-server.com'
+	ActionMailer::Base.default :from => 'default@production-server.com'
   
   def expiration_confirmation(email)
    @items = Item.all

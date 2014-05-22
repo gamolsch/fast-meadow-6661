@@ -5,7 +5,7 @@
 
 # Example:
 #
-# set :output, "/path/to/my/cron_log.log"
+#set :output, "/path/to/my/cron_log.log"
 #
 # every 2.hours do
 #   command "/usr/bin/some_great_command"
@@ -22,6 +22,6 @@
 # 	runner "User.daily_update", :environment => 'development'
 # end
 
-every 1.minutes do
-	runner "User.daily_update", :environment => 'development', :output => 'log/cron.log'
-end
+# every 1.minutes do
+# 	runner "User.daily_update", :environment => 'development', :output => 'log/cron.log'
+# end
