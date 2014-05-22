@@ -33,5 +33,32 @@ describe Storage do
 			expect(storage.size).to eq(3)
 	  	end
 	end
+
+	describe '#get_optimization_number' do
+		it "should return 8 when recommendation is greater than 8" do
+			dozen_items = Array.new(12) { Item.new }
+			storage.items << dozen_items
+
+			expect(storage.get_optimization_number).to eq(8)
+		end
+
+		it "should return 2 when storage size is 5" do
+			five_items = Array.new(5) { Item.new }
+			storage.items << five_items
+
+			expect(storage.get_optimization_number).to eq(2)
+		end
+
+		it "should return 1 when storage size is 1" do
+			one_item = Item.new
+			storage.items << one_item
+
+			expect(storage.get_optimization_number).to eq(1)
+		end
+
+		it "should return 0 when storage size is 0" do
+			expect(storage.get_optimization_number).to eq(0)
+		end
+	end
 end
 
