@@ -42,7 +42,7 @@ describe Storage do
 		first_category, second_category = [Category.new, Category.new]
 		storage.colors << [first_category, second_category]
 
-		expect(storage.colors).to match_array([first_category, second_category])
+		expect(storage.categories).to match_array([first_category, second_category])
 	end
 
 	describe "#get_number_of_items" do
