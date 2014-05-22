@@ -1,21 +1,41 @@
 require 'spec_helper'
 
 describe Storage do
-	let(:storage) {Storage.create(name: "Gatorade Lab")}
+
+	let(:storage) { Storage.create(name: "Gatorade Lab") }
+
+############################################################
+# 			The following tests are ATTRIBUTE tests							#
+############################################################
 
 	it("should return correct name") do
 		expect(storage.name).to eq("Gatorade Lab")
 	end
+
+	it "should have a storage capacity of 8,192" do
+		expect(Storage::CAPACITY).to eq(8_192)
+	end
+
+	it "should be valid with a name" do
+		expect(storage.name).to be_valid
+	end
+
+	it "should be invalid without a name" do
+		storage.name = nil
+		expect(storage.name).not_to be_valid
+	end
+
+#ENDTEST
+
+############################################################
+# 			The following tests are ASSOCIATION tests							#
+############################################################
 
 	it("should return an array of items") do
 		first_item, second_item, third_item = [ Item.new, Item.new, Item.new ]
 		storage.items << [first_item, second_item, third_item]
 
 		expect( Array(storage.items) ).to match_array([first_item, second_item, third_item])
-	end
-
-	it "should have a storage capacity of 8,192" do
-		expect(Storage::CAPACITY).to eq(8_192)
 	end
 
 	it "should return an array of categories" do
@@ -34,7 +54,7 @@ describe Storage do
 		  	end
 		end
 
-	describe "#get_number_of_colors" do
+	describe "#get_number_of_categories" do
 		it "should return the correct number" do
 			first_category, second_category = [ Category.new, Category.new ]
 			storage.colors << [first_category, second_category]
@@ -42,6 +62,8 @@ describe Storage do
 			expect(storage.get_number_of_colors).to eq(2)
 		end
 	end
+
+#ENDTEST
 
 	context "assigning a code to an item belonging to color" do
 
