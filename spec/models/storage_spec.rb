@@ -15,13 +15,11 @@ describe Storage do
 		expect(storage.items).to eq([first_item, second_item, third_item])
 	end
     
-
-
 	describe "#size" do
 		it("should return the storage size") do
-		storage.items.create(Item.new, Item.new, Item.new)
-		expect(storage.size).to eq(3)
-	  end
-	end
-	
+			storage.items.create(Item.new, Item.new, Item.new)
+			expect(storage.size).to eq(3)
+	  	end
+	end	
 end
+
