@@ -22,6 +22,6 @@
 # 	runner "User.daily_update", :environment => 'development'
 # end
 
-every 5.minutes do
+every 1.minutes do
 	runner "User.daily_update", :environment => 'development', :output => 'log/cron.log'
 end
