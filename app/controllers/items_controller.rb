@@ -6,6 +6,8 @@ class ItemsController < ApplicationController
   def index
     expired_percent = Item.where(["expired_on < ?", Time.now]).count.to_f / Item.count.to_f
     @expired_percent = (expired_percent * 100).round(2)
+    almost_expired = Item.where(expired_on: Time.now..14.days.from_now).count.to_f / Item.count.to_f
+    @almost_expired = (almost_expired * 100).round(2)
     # @items = Item.all
   end
 
