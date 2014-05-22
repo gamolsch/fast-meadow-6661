@@ -31,9 +31,9 @@ ActiveRecord::Schema.define(version: 20140522131406) do
 
   create_table "storages", force: true do |t|
     t.string   "name"
+    t.boolean  "hazardous"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "hazardous"
   end
 
 end

@@ -14,7 +14,7 @@ def convert_date_format(date)
   end
 end
 
-# csv_text = File.read("db/mainDB-inventory.csv")
+csv_text = File.read("db/mainDB-inventory.csv")
 
 storage_one = Storage.create!(name: "Gatorade Lab", hazardous: true)
 storage_two = Storage.create!(name: "Gatorade Lab", hazardous: false)
@@ -39,9 +39,9 @@ def determine_storage_loc(location)
 end
 
 CSV.parse(csv_text, headers: true).each do |row|
-  split_string = split_location_string(row[0])
-  is_hazardous = determine_if_hazardous(split_string)
-  p Item.create(storage: split_string[0], hazardous: is_hazardous, manufacturer: row[1], name: row[2], lot_number: row[3], manufactured_on: convert_date_format(row[4]), expired_on: convert_date_format(row[5]))
+  # split_string = split_location_string(row[0])
+  # is_hazardous = determine_if_hazardous(split_string)
+  p Item.create(storage_id: determine_storage_loc(row[0]), manufacturer: row[1], name: row[2], lot_number: row[3], manufactured_on: convert_date_format(row[4]), expired_on: convert_date_format(row[5]))
 end
 
 
