@@ -25,13 +25,22 @@ describe Storage do
 		expect(storage.colors).to match_array([first_color, second_color])
 	end
 
-	describe "#size" do
+	describe "#get_number_of_items" do
 		it("should return the storage size") do
 			first_item, second_item, third_item = [ Item.new, Item.new, Item.new ]
 			storage.items << [first_item, second_item, third_item]
 
-			expect(storage.size).to eq(3)
+			expect(storage.get_number_of_items).to eq(3)
 	  	end
+	end
+
+	describe "#get_number_of_colors" do
+		it "should return the correct number" do
+			first_color, second_color = [ Color.new, Color.new ]
+			storage.colors << [first_color, second_color]
+
+			expect(storage.get_number_of_colors).to eq(2)
+		end
 	end
 
 	describe '#get_optimization_number' do
