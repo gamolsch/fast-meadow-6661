@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  storage: MyString
+  hazardous: false
+  manufacturer: MyString
+  name: MyString
+  lot_number: MyString
+  manufactured_on: 2014-05-21
+  expired_on: 2014-05-21
+
+two:
+  storage: MyString
+  hazardous: false
+  manufacturer: MyString
+  name: MyString
+  lot_number: MyString
+  manufactured_on: 2014-05-21
+  expired_on: 2014-05-21
