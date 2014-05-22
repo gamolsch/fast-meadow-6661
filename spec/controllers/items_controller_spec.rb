@@ -14,9 +14,20 @@ describe ItemsController do
       expect(assigns(:almost_expired_percent)).to eq(100)
     end
 
-    # it "gives the percent of items not expired or soon to be expired" do
-    #   expect(Item).to recieve(:self.not_pending_expired).and_return(100)
-    # end
+    it "gives the percent of items not expired or soon to be expired" do
+      expect(Item).to receive(:not_pending_expired).and_return(100)
+      get :index
+      expect(assigns(:not_pending_expired)).to eq(100)
+    end
   end
 end
+
+
+
+
+
+
+
+
+
 

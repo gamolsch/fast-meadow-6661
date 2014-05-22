@@ -6,7 +6,7 @@ class ItemsController < ApplicationController
   def index
     @expired_percent = Item.expired_percent
     @almost_expired_percent = Item.almost_expired_percent
-    # @items = Item.all
+    @not_pending_expired = Item.not_pending_expired
   end
 
   # GET /items/1
