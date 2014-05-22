@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140521225302) do
+ActiveRecord::Schema.define(version: 20140522005329) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(version: 20140521225302) do
     t.string   "lot_number"
     t.date     "manufactured_on"
     t.date     "expired_on"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "storage_id"
+  end
+
+  add_index "items", ["storage_id"], name: "index_items_on_storage_id", using: :btree
+
+  create_table "storages", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
