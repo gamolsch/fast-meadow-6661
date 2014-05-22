@@ -17,7 +17,7 @@ end
 # csv_text = File.read("db/mainDB-inventory.csv")
 
 storage_one = Storage.create!(name: "Gatorade Lab", hazardous: true)
-# storage_two = Storage.create!(name: "Gatorade Lab", hazardous: false)
+storage_two = Storage.create!(name: "Gatorade Lab", hazardous: false)
 storage_three = Storage.create!(name: "Gatorade Lab", hazardous: false)
 storage_four = Storage.create!(name: "Pilot Plant", hazardous: true)
 storage_five = Storage.create!(name: "Pilot Plant", hazardous: true)
