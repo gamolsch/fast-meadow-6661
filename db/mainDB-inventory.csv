@@ -1,6 +1,6 @@
 storage,manufacturer,name,lot_number,manufactured_on,expired_on
 "Gatorade Lab, Hazardous",PepsiCo,Apple Pear Flavor 9A809*01 Version 1,816151,9/19/2013,3/19/2015
-"Gatorade Lab, Hazardous",Givaudan,Natural & Artificial Orange Grapefruit,EH00086988,10/31/2013,4/31/15
+"Gatorade Lab, Hazardous",Givaudan,Natural & Artificial Orange Grapefruit,EH00086988,10/31/2013,4/30/2015
 "Gatorade Lab, Hazardous",Givaudan,Nat Yuzu Flavor Type,42100101269,2/7/2013,8/7/2014
 "Gatorade Lab, Non-Hazardous",Givaudan,Nat Watermelon Flavor WONF,42100101376,2/8/2013,8/8/2014
 "Gatorade Lab, Non-Hazardous",Givaudan,Natural Kiwi Flavor WONF,42100101353,2/8/2013,8/8/2014
@@ -77,10 +77,10 @@ storage,manufacturer,name,lot_number,manufactured_on,expired_on
 "Gatorade Lab, Non-Hazardous",Givaudan,Nat Ranch Fl,IVO1121M01,11/22/2013,11/22/2014
 "Gatorade Lab, Non-Hazardous",Givaudan,Nat Bloody Mary Fl,C3A0001920,11/22/2013,11/22/2014
 "Gatorade Lab, Non-Hazardous",Firmenich,Nat Masking Fl,121213,12/12/2013,12/12/2014
-"Gatorade Lab, Non-Hazardous",Takasago,Micron (R) Intensates (R) Nat Fl Blend,PPSD-13-395,12/6/2013,TBD
-"Gatorade Lab, Non-Hazardous",Takasago,Micron (R) Intensates (R) Nat Fl Blend (2),PPSD-13-395,12/10/2013,TBD
-"Gatorade Lab, Non-Hazardous",Takasago,Micron (R) Sensweet (R) Nat Fl Sweet Type,PPSD-13-394,12/11/2013,TBD
-"Gatorade Lab, Non-Hazardous",Takasago,Micron (R) Vivid (R) Nat Mixed Berry Fl WONF,PPSD-13-393,12/11/2013,TBD
+"Gatorade Lab, Non-Hazardous",Takasago,Micron (R) Intensates (R) Nat Fl Blend,PPSD-13-395,12/6/2013,01/01/1900
+"Gatorade Lab, Non-Hazardous",Takasago,Micron (R) Intensates (R) Nat Fl Blend (2),PPSD-13-395,12/10/2013,01/01/1900
+"Gatorade Lab, Non-Hazardous",Takasago,Micron (R) Sensweet (R) Nat Fl Sweet Type,PPSD-13-394,12/11/2013,01/01/1900
+"Gatorade Lab, Non-Hazardous",Takasago,Micron (R) Vivid (R) Nat Mixed Berry Fl WONF,PPSD-13-393,12/11/2013,01/01/1900
 "Gatorade Lab, Non-Hazardous",GC Chemicals,Tartaric Acid Nat,3183-MA,5/1/2011,5/1/2016
 "Gatorade Lab, Non-Hazardous",GC Chemicals,Tartaric Acid Nat,3183-MA,5/1/2011,5/1/2016
 "Gatorade Lab, Non-Hazardous",Firmenich,Nat Flavor (Upfront Sweetness Type),101513,10/15/2013,10/15/2014
@@ -96,7 +96,7 @@ storage,manufacturer,name,lot_number,manufactured_on,expired_on
 "Gatorade Lab, Non-Hazardous",Kerry,Nat Citrus Fl WONF,54131901,8/5/2013,8/5/2014
 "Gatorade Lab, Non-Hazardous",Givaudan,Cinnamon Roll Type Flavor,42100154952,2/19/2014,2/19/2015
 "Gatorade Lab, Non-Hazardous",Givaudan,Chocolate Flavor WONF,42100155700,3/10/2014,3/10/2015
-"Gatorade Lab, Non-Hazardous",Kerry,17208PEP,S-656238 (ID),ref. 3/11/14,
+"Gatorade Lab, Non-Hazardous",Kerry,17208PEP,S-656238 (ID),3/11/14,01/01/1900
 "Gatorade Lab, Non-Hazardous",Kerry,N&A Dark Chocolate FL,TS-33432,3/6/2014,3/6/2015
 "Gatorade Lab, Non-Hazardous",Givaudan ,Chocolate Chip Cookie Type Flavor,42100155749,3/10/2014,3/10/2015
 "Gatorade Lab, Non-Hazardous",Givaudan,N&A Chocolate Fl.,42100155738,3/10/2014,3/10/2015
