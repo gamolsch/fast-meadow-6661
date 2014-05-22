@@ -14,13 +14,6 @@ def convert_date_format(date)
   end
 end
 
-csv_text = File.read("db/mainDB-inventory.csv")
-
-storage_one = Storage.create!(name: "Gatorade Lab", hazardous: true)
-storage_two = Storage.create!(name: "Gatorade Lab", hazardous: false)
-storage_three = Storage.create!(name: "Gatorade Lab", hazardous: false)
-storage_four = Storage.create!(name: "Pilot Plant", hazardous: true)
-storage_five = Storage.create!(name: "Pilot Plant", hazardous: true)
 
 def determine_storage_loc(location)
   case location
@@ -35,7 +28,25 @@ def determine_storage_loc(location)
   when "Pilot Plant, Non-Hazardous"
     return 5
   end
+end
 
+csv_text = File.read("db/mainDB-inventory.csv")
+
+p Storage.create!(name: "Gatorade Lab", hazardous: true)
+p Storage.create!(name: "Gatorade Lab", hazardous: false)
+p Storage.create!(name: "Gatorade Lab", hazardous: false)
+p Storage.create!(name: "Pilot Plant", hazardous: true)
+p Storage.create!(name: "Pilot Plant", hazardous: true)
+
+5.times do |color|
+  p Category.create!(color: "red", storage_id: color)
+  p Category.create!(color: "blue", storage_id: color)
+  p Category.create!(color: "orange", storage_id: color)
+  p Category.create!(color: "yellow", storage_id: color)
+  p Category.create!(color: "green", storage_id: color)
+  p Category.create!(color: "indigo", storage_id: color)
+  p Category.create!(color: "purple", storage_id: color)
+  p Category.create!(color: "pink", storage_id: color)
 end
 
 CSV.parse(csv_text, headers: true).each do |row|
