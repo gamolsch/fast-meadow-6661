@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Storage do
-	let(:storage) {Storage.new(name: "gatorade lab")}
+	let(:storage) {Storage.create(name: "gatorade lab")}
 
 	it("should return correct name of the storage") do
 		expect(storage.name).to eq("gatorade lab")
@@ -11,8 +11,8 @@ describe Storage do
 		first_item = Item.new
 		second_item = Item.new
 		third_item = Item.new
-		storage.items.create(first_item, second_item, third_item)
-		expect(storage.items).to eq([first_item, second_item, third_item])
+		storage.items << ([first_item, second_item, third_item])
+		expect(storage.items.to_a).to eq([first_item, second_item, third_item])
 	end
     
 	describe "#size" do
