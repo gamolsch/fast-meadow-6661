@@ -14,8 +14,8 @@ describe Storage do
 		expect( Array(storage.items) ).to match_array([first_item, second_item, third_item])
 	end
 
-	xit "should have a storage limit of 8,192" do
-		expect(Storage::StorageLimit).to eq(8_192)
+	xit "should have a storage capacity of 8,192" do
+		expect(Storage::Capacity).to eq(8_192)
 	end
 
 	xit "should return an array of colors" do
