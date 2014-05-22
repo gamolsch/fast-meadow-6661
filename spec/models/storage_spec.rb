@@ -15,7 +15,7 @@ describe Storage do
 	end
 
 	it "should have a storage capacity of 8,192" do
-		expect(Storage::Capacity).to eq(8_192)
+		expect(Storage::CAPACITY).to eq(8_192)
 	end
 
 	it "should return an array of categories" do
