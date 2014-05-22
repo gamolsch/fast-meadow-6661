@@ -65,7 +65,7 @@ describe Storage do
 
 #ENDTEST
 
-	context "assigning a code to an item belonging to color" do
+	context "assigning a code to an item belonging to a category" do
 
 		describe '#get_optimization_number' do
 			xit "should return 8 when recommendation is greater than 8" do
