@@ -1,23 +1,33 @@
-<h1>Listing storages</h1>
+<h1>Your Storages</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<section>
+  <h1>Gatorade Lab</h1>
+  <p>Put your d3 goodness here!</p>
+  <button>Checkout Storage</button>
+  <button>Add Groceries</button>
+  <div class='recent-activity'>
+    <h1>Recent Activity</h1>
+    <p>4 minutes ago | Andrew Younge has added a Pineapple into the Gatorade Lab</p>
+    <p>20 minutes ago | George Amolsch has removed Orange Flavor from the Gatorade Lab</p>
+    <p>3 hours ago | Jonathon Nordquist has added a Pineapple into the Gatorade Lab</p>
+  </div>
+</section>
 
-  <tbody>
-    <% @storages.each do |storage| %>
-      <tr>
-        <td><%= link_to 'Show', storage %></td>
-        <td><%= link_to 'Edit', edit_storage_path(storage) %></td>
-        <td><%= link_to 'Destroy', storage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<section></section>
 
-<br>
 
-<%= link_to 'New Storage', new_storage_path %>
+<!-- Used for development purposes only -->
+<style type="text/css">
+
+  section {
+    border: 1px dashed gray;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .recent-activity h1 {
+    font-size: 16px;
+  }
+
+</style>
