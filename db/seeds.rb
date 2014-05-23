@@ -41,10 +41,10 @@ p Storage.create!(name: "Pilot Plant", hazardous: true)
 User.create!(first_name: "Jimmy", last_name: "James")
 
 5.times do |x|
-  Transaction.create!(user_id: 1, item_id: x, action: "added", ammount_changed: 100, created_at: (20 * x))
-  Transaction.create!(user_id: 1, item_id: x, action: "removed", ammount_changed: 100, created_at: (20 * x))
-  Transaction.create!(user_id: 1, item_id: x, action: "expired", ammount_changed: 100, created_at: (20 * x))
-  Transaction.create!(user_id: 1, item_id: x, action: "updated", ammount_changed: 100, created_at: (20 * x))
+  Transaction.create!(user_id: 1, item_id: x + 1, action: "added", ammount_changed: 100, created_at: (20 * (x + 1)).minutes.ago)
+  Transaction.create!(user_id: 1, item_id: x + 1, action: "removed", ammount_changed: 100, created_at: (40 * (x + 1)).minutes.ago)
+  Transaction.create!(user_id: 1, item_id: x + 1, action: "expired", ammount_changed: 100, created_at: (60 * (x + 1)).minutes.ago)
+  Transaction.create!(user_id: 1, item_id: x + 1, action: "updated", ammount_changed: 100, created_at: (80 * (x + 1)).minutes.ago)
 end
 
 5.times do |color|
