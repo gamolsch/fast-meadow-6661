@@ -38,6 +38,15 @@ p Storage.create!(name: "Gatorade Lab", hazardous: false)
 p Storage.create!(name: "Pilot Plant", hazardous: true)
 p Storage.create!(name: "Pilot Plant", hazardous: true)
 
+User.create!(first_name: "Jimmy", last_name: "James")
+
+5.times do |x|
+  Transaction.create!(user_id: 1, item_id: x, action: "added", ammount_changed: 100, created_at: (20 * x))
+  Transaction.create!(user_id: 1, item_id: x, action: "removed", ammount_changed: 100, created_at: (20 * x))
+  Transaction.create!(user_id: 1, item_id: x, action: "expired", ammount_changed: 100, created_at: (20 * x))
+  Transaction.create!(user_id: 1, item_id: x, action: "updated", ammount_changed: 100, created_at: (20 * x))
+end
+
 5.times do |color|
   p Category.create!(color: "red", storage_id: color)
   p Category.create!(color: "blue", storage_id: color)
