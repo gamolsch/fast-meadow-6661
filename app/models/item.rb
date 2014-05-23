@@ -1,5 +1,6 @@
 class Item < ActiveRecord::Base
   belongs_to :category
+  has_many   :transactions
 
   scope :expired, -> { where(["expired_on < ?", Time.now]) }
   scope :almost_expired, -> { where(expired_on: Time.now..14.days.from_now) }
