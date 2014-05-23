@@ -1,29 +1,39 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Manufacturer:</strong>
-  <%= @item.manufacturer %>
-</p>
+<h1>Item 1:</h1>
 
-<p>
-  <strong>Name:</strong>
-  <%= @item.name %>
-</p>
+<section style='border: 1px dashed gray; padding: 20px;'>
+  <p>
+    <strong>Manufacturer:</strong>
+    <%= @item.manufacturer %>
+  </p>
 
-<p>
-  <strong>Lot number:</strong>
-  <%= @item.lot_number %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @item.name %>
+  </p>
 
-<p>
-  <strong>Manufactured on:</strong>
-  <%= @item.manufactured_on %>
-</p>
+  <p>
+    <strong>Lot number:</strong>
+    <%= @item.lot_number %>
+  </p>
 
-<p>
-  <strong>Expired on:</strong>
-  <%= @item.expired_on %>
-</p>
+  <p>
+    <strong>Manufactured on:</strong>
+    <%= @item.manufactured_on %>
+  </p>
 
+  <p>
+    <strong>Expired on:</strong>
+    <%= @item.expired_on %>
+  </p>
+</section>
+
+<section style="border: 1px dashed gray; margin: 20px 0;padding:20px;">
+  <h3>SHOW ME TRANSACTIONS DONE TO THIS ITEM:</h3>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fermentum enim ac dui venenatis ultrices. Quisque sit amet fringilla nunc. Morbi a adipiscing lacus, eu lacinia nulla. Vivamus euismod scelerisque mauris id lacinia. Morbi quis lacus mattis, faucibus risus pretium, porta metus. Mauris mi tortor, molestie a elit ac, consequat tristique elit. Aenean in aliquet odio, nec varius quam. Cras malesuada nunc sit amet velit pellentesque vestibulum. Suspendisse eu facilisis felis, at pharetra erat. Morbi blandit dignissim erat. Sed ullamcorper lacinia quam, vel congue mauris malesuada nec. Morbi a diam porta, condimentum erat sit amet, rhoncus massa.</p>
+</section>
+>>>>>>> feature-implement-prototype
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>

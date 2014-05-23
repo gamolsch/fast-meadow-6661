@@ -53,6 +53,8 @@ group :test do
 	gem 'launchy', '~> 2.4.2'
 end
 
+gem 'whenever', '~> 0.9.2', :require => false
+
 # ruby "2.1.0"
 
 
