@@ -10,5 +10,8 @@ Rails.application.routes.draw do
   get '/items/new', to: 'items#new'
   get '/items/1', to: 'items#show'
 
+  #AngularJS entry-point:
+  get '/search', to: 'search#search'
+
   root 'welcome#index'
 end
