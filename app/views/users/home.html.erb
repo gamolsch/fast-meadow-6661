@@ -20,10 +20,9 @@
 <section class='recent-activity'>
   <h1>Recent Activity</h1>
   <div class='feed'>
-    <p>4 minutes ago | <a href="">Andrew Younge</a> added <a href="/items/1">Natural Orange Flavor</a> to <a href="">Gatorade Lab</a>.</p>
-    <p>30 minutes ago | <a href="">George Amolsch</a> removed <a href="">Peach Mango</a> to <a href="">Gatorade Lab</a>.</p>
-    <p>2 hours ago | <a href="">Red Tomato</a> expired in <a href="">Pilot Plant</a>.</p>
-    <p>3 hours ago | <a href="">Kel Kanhirun</a> updated <a href="">Nat Orange Fl WONF</a> to <a href="">Gatorade Lab</a>.</p>
+    <% @transactions.each do |trans| %>
+    <p><%= trans.how_long_ago %> | <%= trans.get_actor.first_name %> <%= trans.get_actor.last_name %> <%= trans.action %> <%= link_to trans.get_item.name, item_path(trans.get_item.id) %> to <%= link_to trans.get_item.category.storage.name, storage_path(trans.get_item.category.storage.id) %></p>
+    <% end %>
   </div>
 </section>
 
