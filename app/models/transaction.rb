@@ -20,4 +20,24 @@ class Transaction < ActiveRecord::Base
     user = User.find(self.user_id)
     return "#{user.first_name} #{user.last_name}"
   end
+
+  def get_item
+    item = Item.find(self.item_id)
+    return item.name
+  end
+
+  def get_location
+    item = Item.find(self.item_id)
+    return item.category.storage.name
+  end
 end
+
+
+
+
+
+
+
+
+
+
