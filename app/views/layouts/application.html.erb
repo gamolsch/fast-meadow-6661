@@ -2,27 +2,29 @@
 <html>
 <head>
   <title>Harpoon</title>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap.min.css">
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-  <nav>
-    <span id="homepage_link">
-      <%= link_to "Homepage", root_path %>
-    </span>
+<div class='container'>
+  <header>
+  	<h2 style="width: 50%;display:inline"><a href="/home">Harpoon</a></h2>
+  	<h4 style="margin-right:10%;display:inline;float:right"><a href="/#douche">Sir Kel Insisted His Name Be Here</a></h4>
+  </header>
 
-    <span>
-      <% if session[:user_id] %>
-        <%= link_to "Logout", root_path %>
+  <div class='body'>
+    <%= yield %>
+  </div>
 
-      <% else %>
-      <% end %>
-    </span>
-  </nav>
-
-<%= yield %>
+  <footer style="margin-top:20%">
+  	<h3 style="display:inline">© Project Harpoon</h3>
+  	<h3 style="display:inline;float:right"><a href="#">Meet the Dev Team</a></h3>
+  </footer>
+</div>
 
 </body>
 </html>

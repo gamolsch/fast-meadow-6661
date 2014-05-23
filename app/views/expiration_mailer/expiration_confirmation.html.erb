@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Expired Samples</h1>
+    <p>
+      The samples that have expired today are <br>
+      <% @items.each do |item| %>
+      <%= item.name %>
+      <% end %>
+    </p>
+  </body>
+</html>
