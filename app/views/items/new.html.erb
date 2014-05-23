@@ -1,5 +1,41 @@
-<h1>New item</h1>
+<h1>Growing New Items</h1>
 
 <%= render 'form' %>
 
+<div class='draggable'>I'm a draggable Item!</div>
+
+<div class='storage'>
+  <h3>Gatorage Lab</h3>
+  <p>Drop me in here!</p>
+</div>
+
+<div class='storage'>
+  <h3>Pilot Plant</h3>
+  <p>And here!</p>
+</div>
+
 <%= link_to 'Back', items_path %>
+
+<!-- USED FOR DEVELOPMENT PURPOSES -->
+
+<style type="text/css">
+
+form  {
+  border: 1px dashed gray;
+  padding: 20px;
+}
+
+  .storage {
+    border: 1px solid gray;
+    width: 200px;
+    height: 200px;
+  }
+
+  .draggable {
+    background-color: pink;
+    width: 200px;
+    height: 20px;
+    margin: 100px;
+  }
+
+</style>
