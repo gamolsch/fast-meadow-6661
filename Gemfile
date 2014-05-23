@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
+gem 'jekyll'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -41,12 +42,17 @@ gem 'unicorn', '~> 4.8.3'
 # Adds functionality for static asset serving and logging
 gem 'rails_12factor', group: :production
 
+group :development, :test do
+  gem "pry"
+  gem "pry-nav"
+end
+
 group :test do
 	gem 'rspec-rails', '~> 2.14.2'
 	gem 'capybara', '~> 2.2.1'
 	gem 'launchy', '~> 2.4.2'
 end
 
-ruby "2.1.0"
+# ruby "2.1.0"
 
 

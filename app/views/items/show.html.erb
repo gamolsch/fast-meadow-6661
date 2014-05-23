@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @item.manufacturer %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @item.name %>
+</p>
+
+<p>
+  <strong>Lot number:</strong>
+  <%= @item.lot_number %>
+</p>
+
+<p>
+  <strong>Manufactured on:</strong>
+  <%= @item.manufactured_on %>
+</p>
+
+<p>
+  <strong>Expired on:</strong>
+  <%= @item.expired_on %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

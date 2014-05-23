@@ -1,0 +1,6 @@
+require 'spec_helper'
+require_relative '../app/models/item.rb'
+
+describe "New item object" do
+
+end
