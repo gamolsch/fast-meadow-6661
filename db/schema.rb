@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20140522225046) do
     t.string   "lot_number"
     t.date     "manufactured_on"
     t.date     "expired_on"
+    t.string   "unit_of_measure"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "category_id"
@@ -44,6 +45,8 @@ ActiveRecord::Schema.define(version: 20140522225046) do
   create_table "transactions", force: true do |t|
     t.integer  "user_id"
     t.integer  "item_id"
+    t.string   "action"
+    t.integer  "ammount_changed"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
