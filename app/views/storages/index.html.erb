@@ -7,7 +7,7 @@
 
     <p>Put your d3 goodness here!</p>
 
-    <a href="/storages/1"><button>Checkout Storage</button></a>
+    <button><%= link_to 'Checkout Storage', storage_path(storage.id) %></button>
     <a href="/items/new"><button>Add Items</button></a>
     <div class='recent-activity'>
       <h1>Recent Activity</h1>
