@@ -19,9 +19,14 @@
 
 <section class="overall-health">
   <h3>Global Inventory Status</h3>
-  <p><%= @expired_percent.round(2) %></p>
-  <p><%= @almost_expired.round(2) %></p>
-  <p><%= @not_pending_expired.round(2) %></p>
+
+  <div id="health-chart">
+
+  </div>
+
+  <p hidden id="expired_percent"><%= @expired_percent.round(2) %></p>
+  <p hidden id="almost_expired"><%= @almost_expired.round(2) %></p>
+  <p hidden id="not_pending_expired"><%= @not_pending_expired.round(2) %></p>
 </section>
 
 <section class='recent-activity'>
