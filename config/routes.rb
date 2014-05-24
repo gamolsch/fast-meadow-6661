@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   resources :items
   resources :transaction
 
+  # Used for testing purposes
+  get '/api', to: 'api#index'
+
   get '/home', to: 'users#home'
   get '/storages', to: 'storages#index'
   get '/storages/1', to: 'storages#show'
