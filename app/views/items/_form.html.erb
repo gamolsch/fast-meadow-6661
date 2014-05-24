@@ -24,6 +24,12 @@
     <%= f.text_field :lot_number %>
   </div>
   <div class="field">
+    <%= f.radio_button(:unit_of_measure, "ml") %>
+    <%= f.label("Milliliters") %>
+    <%= f.radio_button(:unit_of_measure, "g") %>
+    <%= f.label("Grams") %><br>
+  </div>
+  <div class="field">
     <%= f.label :manufactured_on %><br>
     <%= f.date_select :manufactured_on %>
   </div>
