@@ -61,42 +61,124 @@ $(document).ready(function(){
   //     return d + "px";
   //   });
 
-    var w = 400;
-    var h = 400;
-    var health_chart_svg = d3.select("#health-chart").append("svg");
+    // If you want an amazingly kick ass bar chart, look here
+    // ======================================================
+    // var w = 300;
+    // var h = 250;
+    // var health_chart_svg = d3.select("#health-chart").append("svg");
     var bar_colors = ["red", "yellow", "green"]
-    health_chart_svg.attr("width", w).attr("height", h);
+    // health_chart_svg.attr("width", w).attr("height", h);
 
-    health_chart_svg.selectAll("rect")
-                    .data(dataset)
-                    .enter()
-                    .append("rect")
-                    .attr("x", function(d, i){
-                      return (i * 100) + 5;
-                    })
-                    .attr("y", function(d){
-                      return h - ((d * 3) - 3);
-                    })
-                    .attr("width", 90)
-                    .attr("height", function(d){
-                      return d * 3;
-                    })
-                    .attr("fill", function(d ,i){
-                      return bar_colors[i];
-                    })
-                    .attr("stroke", "black")
-                    .attr("stroke-width", 5);
+    // health_chart_svg.selectAll("rect")
+    //                 .data(dataset)
+    //                 .enter()
+    //                 .append("rect")
+    //                 .attr("x", function(d, i){
+    //                   return (i * 100) + 5;
+    //                 })
+    //                 .attr("y", function(d){
+    //                   return h - ((d * 3) - 3);
+    //                 })
+    //                 .attr("width", 90)
+    //                 .attr("height", function(d){
+    //                   return d * 3;
+    //                 })
+    //                 .attr("fill", function(d ,i){
+    //                   return bar_colors[i];
+    //                 })
+    //                 .attr("stroke", "black")
+    //                 .attr("stroke-width", 2)
 
+    // health_chart_svg.selectAll("text")
+    //                 .data(dataset)
+    //                 .enter()
+    //                 .append("text")
+    //                 .text(function(d) {
+    //                   return d + "%";
+    //                 })
+    //                 .attr("x", function(d, i) {
+    //                   return (i * 100) + 25;
+    //                 })
+    //                 .attr("y", function(d) {
+    //                   return h - (d * 3);
+    //                 });
+    //
+    //======================================================
 
+    var w = 300;
+    var h = 250;
+    // radius = Math.min(w, h) / 2;
 
+    // var color = d3.scale.category20();
 
+    // var pie = d3.layout.pie()
+    //           .sort(null);
 
+    // var arc = d3.svg.arc()
+    //           .innerRadius(radius - 100)
+    //           .outerRadius(radius - 50);
 
+    // var svg = d3.select("#health_chart")
+    //           .append("svg")
+    //           .attr("width", w)
+    //           .attr("height", h)
+    //           .attr("transform", "translate(150,120)");
 
+    // var path = svg.selectAll("path")
+    //           .data(pie(dataset))
+    //           .enter()
+    //           .append("path")
+    //           .attr("fill", "steelblue")
+    //           .attr("d", arc);
 
+    // var health_chart_svg = d3.select("#health-chart").append("svg");
+    // health_chart_svg.attr("width", w).attr("height", h)
 
+    // var arc = d3.svg.arc()
+    //              .innerRadius(50)
+    //              .outerRadius(100)
+    //              .startAngle(0)
+    //              .endAngle(dataset[2] / 50 * Math.PI);
 
+    // health_chart_svg.selectAll("path")
+    //              .data(dataset)
+    //              .enter()
+    //              .append("path")
+    //              .attr("d", arc)
+    //              .innerRadius(50)
+    //              .outerRadius(100)
+    //              .startAngle(function(d, i){
+    //               return dataset[i] / 50
+    //              })
+    //              .endAngle(function(d, i){
+    //               dataset[i + 1] / 50 * Math.PI
+    //              })
+    //              .attr("transform", "translate( 150,120)")
+    //              .attr("fill", "steelblue");
 
+  // radius = Math.min(w, h) / 2;
+
+// var color = d3.scale.category20();
+
+var pie = d3.layout.pie()
+    .sort(null);
+
+var arc = d3.svg.arc()
+    .innerRadius(100)
+    .outerRadius(40);
+
+var svg = d3.select("#health-chart").append("svg")
+    .attr("width", w)
+    .attr("height", h)
+    .append("g")
+    .attr("transform", "translate(150, 120)");
+
+var path = svg.selectAll("path")
+    .data(pie(dataset))
+    .enter()
+    .append("path")
+    .attr("fill", function(d, i) { return bar_colors[i]; })
+    .attr("d", arc);
 
 
     // var circles = health_chart_svg.selectAll("circle").data(dataset).enter().append("circle");

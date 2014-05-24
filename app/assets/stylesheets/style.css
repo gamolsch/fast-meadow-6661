@@ -5,3 +5,19 @@ div.bar {
   background-color: steelblue;
   margin-right: 2px;
 }
+
+div#health-chart {
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  background-image:
+     linear-gradient(
+     salmon, white
+     );
+  /*background-color: salmon;*/
+  color: white;
+  font-family: Helvetica;
+  width: 275px;
+  padding: 4px;
+}
+
+
