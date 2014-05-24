@@ -37,9 +37,9 @@ ActiveRecord::Schema.define(version: 20140522225046) do
 
   create_table "storages", force: true do |t|
     t.string   "name"
+    t.boolean  "hazardous"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "hazardous"
   end
 
   create_table "transactions", force: true do |t|
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20140522225046) do
     t.integer  "item_id"
     t.string   "action"
     t.integer  "ammount_changed"
+    t.integer  "storage_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

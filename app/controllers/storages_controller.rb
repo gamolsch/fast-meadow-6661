@@ -1,10 +1,15 @@
 class StoragesController < ApplicationController
+  include UsersHelper
   before_action :set_storage, only: [:show, :edit, :update, :destroy]
 
   # GET /storages
   # GET /storages.json
   def index
     @storages = Storage.all
+    @transactions = []
+    Storage.all.each do |loc|
+      @transactions << Transaction.where(item_id: Item.where(category_id: Category.where(id: loc.id))).last(5).reverse
+    end
   end
 
   # GET /storages/1

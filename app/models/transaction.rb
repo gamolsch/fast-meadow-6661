@@ -1,6 +1,7 @@
 class Transaction < ActiveRecord::Base
   belongs_to    :item
   belongs_to    :user
+  belongs_to    :storage
 
   def how_long_ago
     time_back =  Time.now - self.created_at

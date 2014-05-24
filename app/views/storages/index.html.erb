@@ -1,19 +1,30 @@
 <h1>Your Storages</h1>
 
-<section>
-  <h1>Gatorade Lab</h1>
-  <p>Put your d3 goodness here!</p>
-  <a href="/storages/1"><button>Checkout Storage</button></a>
-  <a href="/items/new"><button>Add Items</button></a>
-  <div class='recent-activity'>
-    <h1>Recent Activity</h1>
-    <p>4 minutes ago | Andrew Younge has added a Pineapple into the Gatorade Lab</p>
-    <p>20 minutes ago | George Amolsch has removed Orange Flavor from the Gatorade Lab</p>
-    <p>3 hours ago | Jonathon Nordquist has added a Pineapple into the Gatorade Lab</p>
-  </div>
-</section>
+<% @storages.each do |storage| %>
+  <section>
 
-<section>
+    <h3><%= storage.name %></h3>
+
+    <p>Put your d3 goodness here!</p>
+
+    <button><%= link_to 'Checkout Storage', storage_path(storage.id) %></button>
+    <a href="/items/new"><button>Add Items</button></a>
+    <div class='recent-activity'>
+      <h1>Recent Activity</h1>
+      <div class='feed'>
+        <% storage.transactions.last(3).reverse.each do |trans| %>
+          <p><%= trans.how_long_ago %> | <%= trans.get_actor.first_name %> <%= trans.get_actor.last_name %> <%= trans.action %> <%= link_to trans.get_item.name, item_path(trans.get_item.id) %> to <%= link_to storage.name, storage_path(storage.id) %></p>
+
+        <% end %>
+
+      </div>
+    </div>
+  </section>
+
+
+<% end %>
+
+<!-- <section>
   <h1>Gatorade Lab</h1>
   <p>Put your d3 goodness here!</p>
   <button>Checkout Storage</button>
@@ -37,7 +48,7 @@
     <p>20 minutes ago | George Amolsch has removed Orange Flavor from the Gatorade Lab</p>
     <p>3 hours ago | Jonathon Nordquist has added a Pineapple into the Gatorade Lab</p>
   </div>
-</section>
+</section> -->
 
 
 <!-- Used for development purposes only -->
