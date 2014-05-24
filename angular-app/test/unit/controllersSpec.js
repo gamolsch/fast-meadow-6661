@@ -3,17 +3,16 @@
 /* jasmine specs for controllers go here */
 
 describe('controllers', function(){
-  beforeEach(module('myApp.controllers'));
+  beforeEach(module('searchApp'));
 
-  it('should ....', inject(function($controller) {
-    //spec body
-    var myCtrl1 = $controller('MyCtrl1', { $scope: {} });
-    expect(myCtrl1).toBeDefined();
+  it('should have a ItemListController', inject(function($controller) {
+    var myItemListController = $controller('ItemListController', { $scope: {} });
+    expect(myItemListController).toBeDefined();
   }));
 
-  it('should ....', inject(function($controller) {
-    //spec body
-    var myCtrl2 = $controller('MyCtrl2', { $scope: {} });
-    expect(myCtrl2).toBeDefined();
+  xit('should return an array of Items', inject(function($controller) {
+    var scope = {}
+    var myItemListController = $controller('ItemListController', { $scope: scope });
+    // expect scope.items to return an array of Items
   }));
 });
