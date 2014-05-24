@@ -64,6 +64,7 @@ $(document).ready(function(){
     var w = 400;
     var h = 400;
     var health_chart_svg = d3.select("#health-chart").append("svg");
+    var bar_colors = ["red", "yellow", "green"]
     health_chart_svg.attr("width", w).attr("height", h);
 
     health_chart_svg.selectAll("rect")
@@ -71,15 +72,22 @@ $(document).ready(function(){
                     .enter()
                     .append("rect")
                     .attr("x", function(d, i){
-                      return i * 60;
+                      return (i * 100) + 5;
                     })
                     .attr("y", function(d){
-                      return h - (d * 3);
+                      return h - ((d * 3) - 3);
                     })
-                    .attr("width", 50)
+                    .attr("width", 90)
                     .attr("height", function(d){
                       return d * 3;
-                    });
+                    })
+                    .attr("fill", function(d ,i){
+                      return bar_colors[i];
+                    })
+                    .attr("stroke", "black")
+                    .attr("stroke-width", 5);
+
+
 
 
 
