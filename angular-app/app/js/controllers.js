@@ -2,10 +2,8 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', [])
-  .controller('MyCtrl1', ['$scope', function($scope) {
+var searchApp = angular.module('searchApp', []);
 
-  }])
-  .controller('MyCtrl2', ['$scope', function($scope) {
-
-  }]);
+searchApp.controller('ItemListController', ['$scope', function($scope) {
+  $scope.items = [];
+}])
