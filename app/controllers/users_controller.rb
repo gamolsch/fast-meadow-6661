@@ -3,8 +3,9 @@ class UsersController < ApplicationController
 
   def home
     @transactions = Transaction.last(5).reverse
-    # @transactions = create_transaction_string
-    p @transactions
+    @expired_percent = Item.expired_percent
+    @almost_expired = Item.almost_expired_percent
+    @not_pending_expired = Item.not_pending_expired
   end
 
 end
