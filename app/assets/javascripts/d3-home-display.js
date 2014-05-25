@@ -60,15 +60,10 @@ $(document).ready(function(){
 
   d3.select("#health-chart")
       .append("text")
-      .attr("transform", "translate(-115,25)")
+      .attr("transform", "translate(-75, 75)")
       .style("font-family", "sans-serif")
       .attr("fill", "red")
       .text(labels[0]);
-
-
-
-
-
 
     // If you want an amazingly kick ass bar chart, look here
     // ======================================================
