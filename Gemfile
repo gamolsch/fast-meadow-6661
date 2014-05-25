@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
+gem 'jekyll'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -22,6 +23,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
+# D3
+# gem "d3-rails"
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
@@ -41,11 +44,18 @@ gem 'unicorn', '~> 4.8.3'
 # Adds functionality for static asset serving and logging
 gem 'rails_12factor', group: :production
 
+group :development, :test do
+  gem "pry"
+  gem "pry-nav"
+end
+
 group :test do
 	gem 'rspec-rails', '~> 2.14.2'
 	gem 'capybara', '~> 2.2.1'
 	gem 'launchy', '~> 2.4.2'
 end
+
+gem 'whenever', '~> 0.9.2', :require => false
 
 # ruby "2.1.0"
 

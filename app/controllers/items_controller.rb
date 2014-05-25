@@ -4,12 +4,15 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
+    @expired_percent = Item.expired_percent
+    @almost_expired = Item.almost_expired_percent
+    @not_pending_expired = Item.not_pending_expired
   end
 
   # GET /items/1
   # GET /items/1.json
   def show
+    @item = Item.find(params[:id])
   end
 
   # GET /items/new
@@ -24,11 +27,13 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
+    p "=================================================="
+    p params
     @item = Item.new(item_params)
 
     respond_to do |format|
       if @item.save
-        format.html { redirect_to @item, notice: 'Item was successfully created.' }
+        format.html { redirect_to @item, notice: 'Item was successfully added to inventory.' }
         format.json { render :show, status: :created, location: @item }
       else
         format.html { render :new }
@@ -69,6 +74,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:storage, :hazardous, :manufacturer, :name, :lot_number, :manufactured_on, :expired_on)
+      params.require(:item).permit(:manufacturer, :name, :lot_number, :manufactured_on, :expired_on, :unit_of_measure)
     end
 end

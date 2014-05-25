@@ -1,11 +1,11 @@
 require 'spec_helper'
 
 describe Storage do
-
-	let(:storage) { Storage.create(name: "Gatorade Lab") }
+	let(:storage) {Storage.create(name: "Gatorade Lab", hazardous: false)}
+	let(:category) {Category.create(storage_id: storage.id)}
 
 ############################################################
-# 			The following tests are ATTRIBUTE tests							#
+# 			The following tests are ATTRIBUTE tests						 #
 ############################################################
 
 	it("should return correct name") do

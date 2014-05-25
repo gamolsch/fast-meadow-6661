@@ -1,0 +1,34 @@
+<div class='container'>
+
+  <header>
+    <h1>Harpoon</h1>  
+    <h2>Inventory Management For Humans</h2>
+  </header>
+
+  <!-- TODO: Needs to properly hold User -->
+  <form action="/home">
+    <label for="email">Email:</label>
+    <input type="text" name='user[email]'>
+
+    <label for="password">Password</label>
+    <input type="password" name='user[password]'>
+
+    <input type="submit" value="Login">
+  </form>
+
+</div>
+
+
+<!-- Used for development purposes only -->
+
+<style>
+  .container {
+    margin-left: 40%;
+    margin-right: 40%;
+  }
+
+  form > * {
+    display: block;
+  }
+
+</style>

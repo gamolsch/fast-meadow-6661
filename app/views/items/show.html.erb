@@ -1,39 +1,42 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Storage:</strong>
-  <%= @item.storage %>
-</p>
+<h3>Item #<%= @item.id %></h3>
 
-<p>
-  <strong>Hazardous:</strong>
-  <%= @item.hazardous %>
-</p>
+<section style='border: 1px dashed gray; padding: 20px;'>
+  <p>
+    <strong>Manufacturer:</strong>
+    <%= @item.manufacturer %>
+  </p>
 
-<p>
-  <strong>Manufacturer:</strong>
-  <%= @item.manufacturer %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @item.name %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @item.name %>
-</p>
+  <p>
+    <strong>Lot number:</strong>
+    <%= @item.lot_number %>
+  </p>
 
-<p>
-  <strong>Lot number:</strong>
-  <%= @item.lot_number %>
-</p>
+  <p>
+    <strong>Manufactured on:</strong>
+    <%= @item.manufactured_on %>
+  </p>
 
-<p>
-  <strong>Manufactured on:</strong>
-  <%= @item.manufactured_on %>
-</p>
+  <p>
+    <strong>Expired on:</strong>
+    <%= @item.expired_on %>
+  </p>
+</section>
 
-<p>
-  <strong>Expired on:</strong>
-  <%= @item.expired_on %>
-</p>
+<section style="border: 1px dashed gray; margin: 20px 0;padding:20px;">
+  <h3>SHOW ME TRANSACTIONS DONE TO THIS ITEM:</h3>
+
+  <% Transaction.where(item_id: @item.id).each do |trans| %>
+    <p><%= trans.how_long_ago %> | <%= trans.get_actor.first_name %> <%= trans.get_actor.last_name %> <%= trans.action %> <%= link_to trans.get_item.name, item_path(trans.get_item.id) %> to <%= link_to trans.storage.name, storage_path(trans.storage.id) %></p>
+
+  <% end %>
+</section>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
