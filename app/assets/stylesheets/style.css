@@ -7,14 +7,14 @@ div.bar {
 }
 
 div#health-chart {
-  border: 1px solid lightgray;
+  /*border: 1px solid lightgray;*/
   border-radius: 8px;
   background-image:
      linear-gradient(
-     salmon, white
+     E9E5E0, white
      );
   /*background-color: salmon;*/
-  color: white;
+  color: gray;
   font-family: Helvetica;
   width: 275px;
   padding: 4px;

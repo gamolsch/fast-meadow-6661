@@ -17,6 +17,7 @@
   </div>
 </section>
 
+
 <section class="overall-health">
   <h3>Global Inventory Status</h3>
 
@@ -24,19 +25,7 @@
     <p>Expired Total</p>
   </div>
 
-  <p hidden id="expired_percent"><%= @expired_percent.round(2) %></p>
-  <p hidden id="almost_expired"><%= @almost_expired.round(2) %></p>
-  <p hidden id="not_pending_expired"><%= @not_pending_expired.round(2) %></p>
-</section>
-
-<section class='recent-activity'>
-  <h1>Recent Activity</h1>
-  <div class='feed'>
-    <% @transactions.each do |trans| %>
-    <p><%= trans.how_long_ago %> | <%= trans.get_actor.first_name %> <%= trans.get_actor.last_name %> <%= trans.action %> <%= link_to trans.get_item.name, item_path(trans.get_item.id) %> to <%= link_to trans.get_item.category.storage.name, storage_path(trans.get_item.category.storage.id) %></p>
-    <% end %>
-  </div>
-</section>
+  <div hidden id="health_percentages"><%= @health_percentages %></div>
 
 <section class='inventory'>
   <h1>Inventory</h1>
@@ -45,6 +34,7 @@
   </div>
   <a href="/storages"><button style="width:700px;margin:auto;">Manage Storage</button></a>
 </section>
+
 
 <!-- Used for development purposes only -->
 

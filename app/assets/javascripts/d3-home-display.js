@@ -1,72 +1,80 @@
 $(document).ready(function(){
-//Width and height
-      // var w = 300;
-      // var h = 300;
+  dataset = $.parseJSON($("#health_percentages").text()).dataset;
+  console.log(dataset)
+  labels = ["expired", "not expired", "uninspired"]
+  // Ring chart attempt
 
-      var dataset = [];
-      dataset.push($("#expired_percent").text())
-      dataset.push($("#almost_expired").text())
-      dataset.push($("#not_pending_expired").text())
-      console.log(dataset)
+  var w = 300;
+  var h = 250;
 
-      // var outerRadius = w / 2;
-      // var innerRadius = 0;
-      // var arc = d3.svg.arc()
-      //         .innerRadius(innerRadius)
-      //         .outerRadius(outerRadius);
+  var health_chart_svg = d3.select("#health-chart").append("svg");
+  health_chart_svg.attr("width", w).attr("height", h);
 
-      // var pie = d3.layout.pie();
+  var cScale = d3.scale.linear().domain([0, 100]).range([0, 2 * Math.PI]);
 
-      // //Easy colors accessible via a 10-step ordinal scale
-      // var color = d3.scale.category10();
+  // vis = d3.select("#health-chart").append("svg");
+  var arc = d3.svg.arc()
+      .innerRadius(40)
+      .outerRadius(100)
+      .startAngle(function(d){return cScale(d[0]);})
+      .endAngle(function(d){return cScale(d[1]);});
 
-      // //Create SVG element
-      // var svg = d3.select("body")
-      //       .append("svg")
-      //       .attr("width", w)
-      //       .attr("height", h);
+  health_chart_svg.selectAll("path")
+      .data(dataset)
+      .enter()
+      .append("path")
+      .attr("d", arc)
+      .style("fill", function(d){return d[2];})
+      .attr("transform", "translate(150, 125)");
 
-      // //Set up groups
-      // var arcs = svg.selectAll("g.arc")
-      //         .data(pie(dataset))
-      //         .enter()
-      //         .append("g")
-      //         .attr("class", "arc")
-      //         .attr("transform", "translate(" + outerRadius + "," + outerRadius + ")");
+  var outer_arc = d3.svg.arc()
+      .innerRadius(100)
+      .outerRadius(101)
+      .startAngle(cScale(0))
+      .endAngle(cScale(100));
 
-      // //Draw arc paths
-      // arcs.append("path")
-      //     .attr("fill", function(d, i) {
-      //       return color(i);
-      //     })
-      //     .attr("d", arc);
+  health_chart_svg.append("path")
+      .attr("d", outer_arc)
+      .attr("transform", "translate(150, 125)");
 
-      // //Labels
-      // arcs.append("text")
-      //     .attr("transform", function(d) {
-      //       return "translate(" + arc.centroid(d) + ")";
-      //     })
-      //     .attr("text-anchor", "middle")
-      //     .text(function(d) {
-      //       return d.value;
-      //     });
+  var inner_arc = d3.svg.arc()
+      .innerRadius(39)
+      .outerRadius(40)
+      .startAngle(cScale(0))
+      .endAngle(cScale(100))
+
+  health_chart_svg.append("path")
+      .attr("d", inner_arc)
+      .attr("transform", "translate(150, 125)");
+
+  var center_fill = d3.svg.arc()
+      .innerRadius(0)
+      .outerRadius(39)
+      .startAngle(cScale(0))
+      .endAngle(cScale(100))
+
+  health_chart_svg.append("path")
+      .attr("d", center_fill)
+      .attr("transform", "translate(150, 125)")
+      .attr("fill", "steelblue");
+
+  d3.select("#health-chart")
+      .append("text")
+      .attr("transform", "translate(-115,25)")
+      .style("font-family", "sans-serif")
+      .attr("fill", "red")
+      .text(labels[0]);
 
 
-  // d3.select("#health-chart").selectAll("div")
-  //   .data(dataset)
-  //   .enter()
-  //   .append("div")
-  //   .attr("class", "bar")
-  //   .style("height", function(d) {
-  //     return d + "px";
-  //   });
+
+
+
 
     // If you want an amazingly kick ass bar chart, look here
     // ======================================================
     // var w = 300;
     // var h = 250;
     // var health_chart_svg = d3.select("#health-chart").append("svg");
-    var bar_colors = ["red", "yellow", "green"]
     // health_chart_svg.attr("width", w).attr("height", h);
 
     // health_chart_svg.selectAll("rect")
@@ -105,90 +113,6 @@ $(document).ready(function(){
     //
     //======================================================
 
-    var w = 300;
-    var h = 250;
-    // radius = Math.min(w, h) / 2;
-
-    // var color = d3.scale.category20();
-
-    // var pie = d3.layout.pie()
-    //           .sort(null);
-
-    // var arc = d3.svg.arc()
-    //           .innerRadius(radius - 100)
-    //           .outerRadius(radius - 50);
-
-    // var svg = d3.select("#health_chart")
-    //           .append("svg")
-    //           .attr("width", w)
-    //           .attr("height", h)
-    //           .attr("transform", "translate(150,120)");
-
-    // var path = svg.selectAll("path")
-    //           .data(pie(dataset))
-    //           .enter()
-    //           .append("path")
-    //           .attr("fill", "steelblue")
-    //           .attr("d", arc);
-
-    // var health_chart_svg = d3.select("#health-chart").append("svg");
-    // health_chart_svg.attr("width", w).attr("height", h)
-
-    // var arc = d3.svg.arc()
-    //              .innerRadius(50)
-    //              .outerRadius(100)
-    //              .startAngle(0)
-    //              .endAngle(dataset[2] / 50 * Math.PI);
-
-    // health_chart_svg.selectAll("path")
-    //              .data(dataset)
-    //              .enter()
-    //              .append("path")
-    //              .attr("d", arc)
-    //              .innerRadius(50)
-    //              .outerRadius(100)
-    //              .startAngle(function(d, i){
-    //               return dataset[i] / 50
-    //              })
-    //              .endAngle(function(d, i){
-    //               dataset[i + 1] / 50 * Math.PI
-    //              })
-    //              .attr("transform", "translate( 150,120)")
-    //              .attr("fill", "steelblue");
-
-  // radius = Math.min(w, h) / 2;
-
-// var color = d3.scale.category20();
-
-var pie = d3.layout.pie()
-    .sort(null);
-
-var arc = d3.svg.arc()
-    .innerRadius(100)
-    .outerRadius(40);
-
-var svg = d3.select("#health-chart").append("svg")
-    .attr("width", w)
-    .attr("height", h)
-    .append("g")
-    .attr("transform", "translate(150, 120)");
-
-var path = svg.selectAll("path")
-    .data(pie(dataset))
-    .enter()
-    .append("path")
-    .attr("fill", function(d, i) { return bar_colors[i]; })
-    .attr("d", arc);
-
-
-    // var circles = health_chart_svg.selectAll("circle").data(dataset).enter().append("circle");
-    // circles.attr("cx", function(d, i){
-    //               return (i * 50) + 25;
-    //               })
-    //               .attr("cy", h/2)
-    //               .attr("r", function(d){
-    //                 return d;
-    //               });
 
 });
 
