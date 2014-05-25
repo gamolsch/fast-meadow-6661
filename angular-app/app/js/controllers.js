@@ -11,6 +11,7 @@ angular.module('searchApp')
 angular.module('searchApp')
 .controller('ItemListController', function ($scope, Item) {
 
+	// $scope.orderProp = 'name';
 	$scope.items = Item.query();
 
 	// $scope.create = function(manufacturer, name, lot_number, manufactured_on, expired_on, unit_of_measure) {

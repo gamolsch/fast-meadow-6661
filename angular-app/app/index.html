@@ -28,12 +28,49 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div ng-controller='ItemListController'>
-      <h1>Hello Angular!</h1>
-      <ul ng-repeat='item in items'>
-        <li>{{ item.name }} | {{ item.manufacturer }}</li>
-      </ul>
+    <div class='container'>
+      <header>
+        <h2 style="width: 50%;display:inline"><a href="/home">Harpoon</a></h2>
+        <h4 style="margin-right:10%;display:inline;float:right"><a href="/#douche">Sir Kel Insisted His Name Be Here</a></h4>
+      </header>
+
+      <div class='search-bar'>
+        <label for='search'>Search:</label>
+        <input name='search' ng-model="search">
+      </div>
+
+      <div class='search-options'>
+        <p>Search Options:</p>
+        <select ng-model='orderProp'>
+          <option value='name'>Name</option>
+          <option value='manufacturer'>Manufacturer</option>
+        </select>
+      </div>
+
+      <div class='item-list' ng-controller='ItemListController'>
+        <h1>Hello Angular!</h1>
+        <ul ng-repeat='item in items | filter:search | orderBy:orderProp'>
+          <li>{{ item.name }} | {{ item.manufacturer }}</li>
+        </ul>
+      </div>
+
+      <footer style="margin-top:20%">
+        <h3 style="display:inline">© Project Harpoon</h3>
+        <h3 style="display:inline;float:right"><a href="#">Meet the Dev Team</a></h3>
+      </footer>
     </div>
+
+    <style type="text/css">
+
+      header, footer,.container,
+      .item-list, .search-options,
+      .search-bar {
+        border: 1px dashed gray;
+        padding: 20px;
+        margin: 20px;
+      }
+
+    </style>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

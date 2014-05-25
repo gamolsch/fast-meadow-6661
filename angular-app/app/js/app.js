@@ -5,7 +5,7 @@ angular.module('searchApp', ['ngResource'])
   .config(function ($routeProvider) {
   	$routeProvider
   	  .when('/', {
-  	  	templateUrl: 'views/main.html',
+  	  	templateUrl: 'partials/main.html',
   	  	controller: 'ItemListController'
   	  })
   	  .otherwise({
