@@ -55,6 +55,4 @@ end
 
 gem 'whenever', '~> 0.9.2', :require => false
 
-# ruby "2.1.0"
-
 
