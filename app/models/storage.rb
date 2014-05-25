@@ -1,9 +1,10 @@
 class Storage < ActiveRecord::Base
+
+  CAPACITY = 8_192
+
   has_many :categories
   has_many :items, through: :categories
   has_many :transactions
 
-	def size
-      self.items.length
-  end
+  validates :name, presence: true
 end
