@@ -1,5 +1,7 @@
 class SearchController < ApplicationController
-  def search
-    render layout: 'ng-search'
+
+  # GET /items.json
+  def index
+    render json: Item.all
   end
 end

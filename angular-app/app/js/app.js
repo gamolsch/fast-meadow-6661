@@ -6,24 +6,24 @@ angular.module('searchApp', ['ngResource'])
   	$routeProvider
   	  .when('/', {
   	  	templateUrl: 'views/main.html',
-  	  	controller: 'MainCtrl'
+  	  	controller: 'ItemListController'
   	  })
   	  .otherwise({
   	  	redirectTo: '/'
   	  });
   });
 
-angular.module('searchApp', [])
-  .controller('ItemListController', function ($scope) {
-	$scope.items = [
-    {'name': 'Nexus S',
-     'snippet': 'Fast just got faster with Nexus S.'},
-    {'name': 'Motorola XOOM™ with Wi-Fi',
-     'snippet': 'The Next, Next Generation tablet.'},
-    {'name': 'MOTOROLA XOOM™',
-     'snippet': 'The Next, Next Generation tablet.'}
-  ];
-});
+// angular.module('searchApp', [])
+//   .controller('ItemListController', function ($scope) {
+// 	$scope.items = [
+//     {'name': 'Nexus S',
+//      'snippet': 'Fast just got faster with Nexus S.'},
+//     {'name': 'Motorola XOOM™ with Wi-Fi',
+//      'snippet': 'The Next, Next Generation tablet.'},
+//     {'name': 'MOTOROLA XOOM™',
+//      'snippet': 'The Next, Next Generation tablet.'}
+//   ];
+// });
 
 // Declare app level module which depends on filters, and services
 
