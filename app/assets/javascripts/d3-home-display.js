@@ -1,69 +1,78 @@
 $(document).ready(function(){
-  dataset = $.parseJSON($("#health_percentages").text()).dataset;
-  console.log(dataset)
-  labels = ["expired", "not expired", "uninspired"]
-  // Ring chart attempt
+   global_percent_data = $.parseJSON($("#health_percentages").text()).global_percent_data;
+   specific_percent_data = $.parseJSON($("#health_percentages_by_location").text()).by_location;
+   locations = $.parseJSON($("#storages").text()).location;
+   overall_percentage = $.parseJSON($("#overall_percentage").text()).location_total
 
-  var w = 300;
-  var h = 250;
+  console.log(global_percent_data)
+  console.log(specific_percent_data)
+  console.log(locations)
+  console.log(overall_percentage)
 
-  var health_chart_svg = d3.select("#health-chart").append("svg");
-  health_chart_svg.attr("width", w).attr("height", h);
+  // console.log(dataset)
+  // labels = ["expired", "not expired", "uninspired"]
+  // // Ring chart attempt
 
-  var cScale = d3.scale.linear().domain([0, 100]).range([0, 2 * Math.PI]);
+  // var w = 300;
+  // var h = 250;
+
+  // var health_chart_svg = d3.select("#health-chart").append("svg");
+  // health_chart_svg.attr("width", w).attr("height", h);
+
+  // var cScale = d3.scale.linear().domain([0, 100]).range([0, 2 * Math.PI]);
 
   // vis = d3.select("#health-chart").append("svg");
-  var arc = d3.svg.arc()
-      .innerRadius(40)
-      .outerRadius(100)
-      .startAngle(function(d){return cScale(d[0]);})
-      .endAngle(function(d){return cScale(d[1]);});
+  // var arc = d3.svg.arc()
+  //     .innerRadius(40)
+  //     .outerRadius(100)
+  //     .startAngle(function(d){return cScale(d[0]);})
+  //     .endAngle(function(d){return cScale(d[1]);});
 
-  health_chart_svg.selectAll("path")
-      .data(dataset)
-      .enter()
-      .append("path")
-      .attr("d", arc)
-      .style("fill", function(d){return d[2];})
-      .attr("transform", "translate(150, 125)");
+  // health_chart_svg.selectAll("path")
+  //     .data(dataset)
+  //     .enter()
+  //     .append("path")
+  //     .attr("d", arc)
+  //     .style("fill", function(d){return d[2];})
+  //     .attr("transform", "translate(150, 125)");
 
-  var outer_arc = d3.svg.arc()
-      .innerRadius(100)
-      .outerRadius(101)
-      .startAngle(cScale(0))
-      .endAngle(cScale(100));
+  // var outer_arc = d3.svg.arc()
+  //     .innerRadius(100)
+  //     .outerRadius(101)
+  //     .startAngle(cScale(0))
+  //     .endAngle(cScale(100));
 
-  health_chart_svg.append("path")
-      .attr("d", outer_arc)
-      .attr("transform", "translate(150, 125)");
+  // health_chart_svg.append("path")
+  //     .attr("d", outer_arc)
+  //     .attr("transform", "translate(150, 125)");
 
-  var inner_arc = d3.svg.arc()
-      .innerRadius(39)
-      .outerRadius(40)
-      .startAngle(cScale(0))
-      .endAngle(cScale(100))
+  // var inner_arc = d3.svg.arc()
+  //     .innerRadius(39)
+  //     .outerRadius(40)
+  //     .startAngle(cScale(0))
+  //     .endAngle(cScale(100))
 
-  health_chart_svg.append("path")
-      .attr("d", inner_arc)
-      .attr("transform", "translate(150, 125)");
+  // health_chart_svg.append("path")
+  //     .attr("d", inner_arc)
+  //     .attr("transform", "translate(150, 125)");
 
-  var center_fill = d3.svg.arc()
-      .innerRadius(0)
-      .outerRadius(39)
-      .startAngle(cScale(0))
-      .endAngle(cScale(100))
+  // var center_fill = d3.svg.arc()
+  //     .innerRadius(0)
+  //     .outerRadius(39)
+  //     .startAngle(cScale(0))
+  //     .endAngle(cScale(100))
 
-  health_chart_svg.append("path")
-      .attr("d", center_fill)
-      .attr("transform", "translate(150, 125)")
-      .attr("fill", "steelblue");
+  // health_chart_svg.append("path")
+  //     .attr("d", center_fill)
+  //     .attr("transform", "translate(150, 125)")
+  //     .attr("fill", "steelblue");
 
-  d3.select("#health-chart")
-      .append("text")
-      .attr("transform", "translate(-75, 75)")
-      .style("font-family", "sans-serif")
-      .attr("fill", "red")
-      .text(labels[0]);
+  // d3.select("#health-chart")
+  //     .append("text")
+  //     .attr("transform", "translate(-75, 75)")
+  //     .style("font-family", "sans-serif")
+  //     .attr("fill", "red")
+  //     .text(labels[0]);
 
     // If you want an amazingly kick ass bar chart, look here
     // ======================================================

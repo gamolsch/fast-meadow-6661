@@ -37,4 +37,26 @@ class Item < ActiveRecord::Base
     (expired_chemicals / total_chemicals.count.to_f) * 100
   end
 
+  def self.percent_of_total(location)
+    total_chemicals = Storage.find(location).items.count
+    total_at_location = total_chemicals.to_f / Item.count.to_f
+  end
+
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
