@@ -16,3 +16,12 @@
 /log/*.log
 /tmp
 .env
+
+# No .DS_Store, please!
+.DS_Store
+/angular-app/.DS_Store
+/angular-app/app/.DS_Store
+/angular-app/test/.DS_Store
+/angular-app/test/spec/.DS_Store
+/db/.DS_Store
+
