@@ -1,5 +1,4 @@
-  // ========================================================
-  // Highcharts code goes here
+
 $(function () {
 
   global_percent_data = $.parseJSON($("#health_percentages").text()).global;
@@ -12,7 +11,7 @@ $(function () {
           color: colors[0],
           drilldown: {
                   name: locations[0],
-                  categories: ['Expired', 'Expiring In Less Than Two Weeks', 'Not Pending Expired'],
+                  categories: ['Expired', 'Expiring Soon', 'Live'],
                   data: specific_percent_data[0],
                   color: colors[0]
               }
@@ -21,16 +20,16 @@ $(function () {
               color: colors[1],
               drilldown: {
                   name: locations[1],
-                  categories: ['Expired', 'Expiring In Less Than Two Weeks', 'Not Pending Expired'],
+                  categories: ['Expired', 'Expiring Soon', 'Not Pending'],
                   data: specific_percent_data[1],
                   color: colors[1]
               }
           }, {
               y: overall_percentage[2],
-              color: locations[2],
+              color: colors[2],
               drilldown: {
                   name: locations[2],
-                  categories: ['Expired', 'Expiring In Less Than Two Weeks', 'Not Pending Expired'],
+                  categories: ['Expired', 'Expiring Soon', 'Not Pending'],
                   data: specific_percent_data[2],
                   color: colors[2]
               }
@@ -39,7 +38,7 @@ $(function () {
               color: colors[3],
               drilldown: {
                   name: locations[3],
-                  categories: ['Expired', 'Expiring In Less Than Two Weeks', 'Not Peinding Expired'],
+                  categories: ['Expired', 'Expiring Soon', 'Not Pending'],
                   data: specific_percent_data[3],
                   color: colors[3]
               }
@@ -48,7 +47,7 @@ $(function () {
                     color: colors[4],
                     drilldown: {
                         name: locations[4],
-                        categories: ['Expired', 'Expiring In Less Than Two Weeks', 'Not Peinding Expired'],
+                        categories: ['Expired', 'Expiring Soon', 'Not Pending'],
                         data: specific_percent_data[4],
                         color: colors[4]
                     }
@@ -78,16 +77,15 @@ $(function () {
 
 
       $('#health-chart').highcharts({
+            credits: {
+                enabled: false
+            },
+
             chart: {
                 type: 'pie'
             },
             title: {
-                text: 'Browser market share, April, 2011'
-            },
-            yAxis: {
-                title: {
-                    text: 'Total percent market share'
-                }
+                text: 'Global Inventory Status'
             },
             plotOptions: {
                 pie: {
@@ -99,18 +97,14 @@ $(function () {
               valueSuffix: '%'
             },
             series: [{
-                name: 'Browsers',
+                name: 'Storages',
                 data: storageData,
                 size: '60%',
                 dataLabels: {
-                    formatter: function() {
-                        return this.y > 5 ? this.point.name : null;
-                    },
-                    color: 'white',
-                    distance: -30
+                  enabled: false
                 }
             }, {
-                name: 'Versions',
+                name: 'Storages',
                 data: versionsData,
                 size: '80%',
                 innerSize: '60%',
@@ -122,8 +116,6 @@ $(function () {
                 }
             }]
         });
-
-
 
 
 

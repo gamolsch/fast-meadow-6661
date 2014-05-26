@@ -7,12 +7,13 @@ class UsersController < ApplicationController
     storages = {:location => []}
     overall_percentage = {:location_total => []}
     Storage.all.each do |loc|
-      new_loc = []
       storages[:location] << loc.name
-      overall_percentage[:location_total] << Item.percent_of_total(loc.id)
-      new_loc << Item.expired_percent_by_location(loc.id)
-      new_loc << Item.almost_expired_percent_by_location(loc.id)
-      new_loc << Item.not_pending_expired_percent_by_location(loc.id)
+      overall_percent = Item.percent_of_total(loc.id).round(2)
+      overall_percentage[:location_total] << overall_percent
+      new_loc = []
+      new_loc << (Item.expired_percent_by_location(loc.id) * overall_percent / 100).round(2)
+      new_loc << (Item.almost_expired_percent_by_location(loc.id) * overall_percent / 100).round(2)
+      new_loc << (Item.not_pending_expired_percent_by_location(loc.id) * overall_percent / 100).round(2)
       health_percentages_by_location[:by_location] << new_loc
     end
     @overall_percentage = overall_percentage.to_json
@@ -20,6 +21,7 @@ class UsersController < ApplicationController
     @storages = storages.to_json
     @not_pending_expired = Item.not_pending_expired
     @health_percentages = health_percentages.to_json
+    @transactions = Transaction.last(5).reverse
   end
 
 end

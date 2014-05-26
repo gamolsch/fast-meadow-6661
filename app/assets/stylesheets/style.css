@@ -9,14 +9,14 @@ div.bar {
 div#health-chart {
   /*border: 1px solid lightgray;*/
   border-radius: 3px;
-  background-image:
+  /*background-image:
      linear-gradient(
      #E9E5E0, #E9E5E0
-     );
+     );*/
   /*background-color: salmon;*/
   /*color: gray;*/
   font-family: Helvetica;
-  width: 650px;
+  /*width: 700px;*/
   padding: 4px;
 }
 
