@@ -43,6 +43,18 @@ class Item < ActiveRecord::Base
     total_at_location = (total_chemicals.to_f / Item.count.to_f) * 100
   end
 
+  def self.current_amount(item)
+    current_amount = 0
+    Transaction.where(item_id: item).each do |x|
+      if x.action == "added"
+        current_amount += x.ammount_changed
+      elsif x.action == "updated"
+        current_amount -= x.ammount_changed
+      end
+    end
+    return current_amount
+  end
+
 end
 
 

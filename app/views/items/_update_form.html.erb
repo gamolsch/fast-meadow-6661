@@ -11,6 +11,10 @@
     </div>
   <% end %>
 
+  <div id="current-amount" hidden>
+    <%= @current_amount %>
+  </div>
+
   <div class="field">
     <%= f.hidden_field :manufacturer %>
   </div>
@@ -23,7 +27,7 @@
 
   <div class="field">
     <%= f.label "Amount changed" %>
-    <%= text_field_tag :ammount_changed %>
+    <%= text_field_tag :ammount_changed, @current_amount %>
   </div>
 
   <div class="actions">

@@ -22,6 +22,9 @@ class ItemsController < ApplicationController
 
   # GET /items/1/edit
   def edit
+    @current_amount = Item.current_amount(@item.id)
+    p "============================================="
+    p @current_amount
   end
 
   # POST /items
@@ -46,7 +49,7 @@ class ItemsController < ApplicationController
   def update
     respond_to do |format|
       if @item.update(item_params)
-        Transaction.create(user_id: 1, item_id: @item.id, action: "updated", ammount_changed: params[:ammount_changed], location_id: 1)
+        Transaction.create(user_id: 1, item_id: @item.id, action: "updated", ammount_changed: params[:ammount_changed], storage_id: 1)
         # Will need to have item storage id as well, no way to get this without category implemented and available to the Item object.
         format.html { redirect_to @item, notice: 'Item was successfully updated.' }
         format.json { render :show, status: :ok, location: @item }
