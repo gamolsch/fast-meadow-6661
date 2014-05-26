@@ -2,7 +2,7 @@
 var searchApp = angular.module('searchApp', []);
 
 angular.module('searchApp', ['ngResource'])
-  .config(function ($routeProvider) {
+  .config(['$routeProvider', function ($routeProvider) {
   	$routeProvider
   	  .when('/', {
   	  	templateUrl: 'partials/main.html',
@@ -11,7 +11,7 @@ angular.module('searchApp', ['ngResource'])
   	  .otherwise({
   	  	redirectTo: '/'
   	  });
-  });
+  }]);
 
 // angular.module('searchApp', [])
 //   .controller('ItemListController', function ($scope) {
