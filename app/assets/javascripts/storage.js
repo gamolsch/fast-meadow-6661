@@ -46,9 +46,9 @@
 //   });
 // });
 $(function () {
-  Highcharts.setOptions({
-      colors: ['#333', '#444', '#555']
-    });
+  // Highcharts.setOptions({
+  //     colors: ['#333', '#444', '#555']
+  //   });
         $('.gatorade_chart').highcharts({
             chart: {
                 type: 'column'
