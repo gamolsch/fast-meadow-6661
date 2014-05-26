@@ -4,10 +4,14 @@ var searchApp = angular.module('searchApp', []);
 angular.module('searchApp', ['ngResource'])
   .config(function ($routeProvider) {
   	$routeProvider
-  	  .when('/', {
-  	  	templateUrl: 'partials/main.html',
-  	  	controller: 'ItemListController'
+  	  .when('/stage', {
+  	  	templateUrl: 'partials/items-stage.html',
+  	  	controller: 'StageController'
   	  })
+      .when('/', {
+        templateUrl: 'partials/main.html',
+        controller: 'ItemListController'
+      })
   	  .otherwise({
   	  	redirectTo: '/'
   	  });
