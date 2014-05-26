@@ -1,12 +1,21 @@
 require 'spec_helper'
 
 describe Storage do
-	let(:storage) {Storage.create(name: "Gatorade Lab", hazardous: false)}
-	let(:category) {Category.create(storage_id: storage.id)}
+	let(:storage)  {Storage.new(name: "Gatorade Lab", hazardous: false)}
+	let(:category) {Category.new(storage_id: storage.id)}
 
 ############################################################
 # 			The following tests are ATTRIBUTE tests						 #
 ############################################################
+
+	it "should be valid" do
+		expect(storage).to be_valid
+	end
+
+	it "should be invalid without a name" do
+		storage.name = nil
+		expect(storage).not_to be_valid
+	end
 
 	it("should return correct name") do
 		expect(storage.name).to eq("Gatorade Lab")
@@ -16,50 +25,43 @@ describe Storage do
 		expect(Storage::CAPACITY).to eq(8_192)
 	end
 
-	it "should be valid with a name" do
-		expect(storage.name).to be_valid
-	end
-
-	it "should be invalid without a name" do
-		storage.name = nil
-		expect(storage.name).not_to be_valid
-	end
-
 #ENDTEST
 
 ############################################################
 # 			The following tests are ASSOCIATION tests							#
 ############################################################
 
-	it("should return an array of items") do
-		first_item, second_item, third_item = [ Item.new, Item.new, Item.new ]
+	xit("should return an array of items") do
+		first_item, second_item, third_item = Array.new(3) { Item.new(unit_of_measure: "mL") }
 		storage.items << [first_item, second_item, third_item]
 
 		expect( Array(storage.items) ).to match_array([first_item, second_item, third_item])
 	end
 
 	it "should return an array of categories" do
-		first_category, second_category = [Category.new, Category.new]
-		storage.colors << [first_category, second_category]
+		first_category, second_category = Array.new(2) { Category.new }
+		storage.categories << [first_category, second_category]
 
 		expect(storage.categories).to match_array([first_category, second_category])
 	end
 
-	describe "#get_number_of_items" do
-			it("should return the storage size") do
-				first_item, second_item, third_item = [ Item.new, Item.new, Item.new ]
-				storage.items << [first_item, second_item, third_item]
+	describe "#item_size" do
+			it "should return 0 by default" do
+				expect(storage.item_size).to eq(0)
+		  end
 
-				expect(storage.get_number_of_items).to eq(3)
-		  	end
+		  xit "should return 3 when 3 items are added" do
+			end
+	end
+
+	describe "#category_size" do
+		it "should return 0 by default" do
+			expect(storage.category_size).to eq(0)
 		end
 
-	describe "#get_number_of_categories" do
-		it "should return the correct number" do
-			first_category, second_category = [ Category.new, Category.new ]
-			storage.colors << [first_category, second_category]
-
-			expect(storage.get_number_of_colors).to eq(2)
+		it "should return 5 when 5 categories are added" do
+			storage.categories << Array.new(5) { Category.new }
+			expect(storage.category_size).to eq(5)
 		end
 	end
 

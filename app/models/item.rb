@@ -2,7 +2,7 @@ class Item < ActiveRecord::Base
   belongs_to :category
   has_many   :transactions
 
-  validates :unit_of_measure, presence: :true
+  # validates :unit_of_measure, presence: :true
 
   scope :expired, -> { where(["expired_on < ?", Time.now]) }
   scope :almost_expired, -> { where(expired_on: Time.now..14.days.from_now) }
