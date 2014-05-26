@@ -1,9 +1,16 @@
+$(document).ready(function(){
+// console.log($("#health_percentages_by_location").val())
+if ($("#overall_percentage").length){
 
 $(function () {
+  global_percent_data = $.parseJSON($("#health_percentages").text()).global_percent_data;
+  specific_percent_data = $.parseJSON($("#health_percentages_by_location").text()).by_location;
+  locations = $.parseJSON($("#storages").text()).location;
+  overall_percentage = $.parseJSON($("#overall_percentage").text()).location_total
 
   global_percent_data = $.parseJSON($("#health_percentages").text()).global;
 
-      var colors = Highcharts.getOptions().colors,
+  var colors = Highcharts.getOptions().colors,
         categories = locations,
         name = 'Global Reagent Health',
         data = [{
@@ -116,43 +123,6 @@ $(function () {
                 }
             }]
         });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // Highcharts.setOptions({
-  //   colors: ['red', 'yellow', 'green']
-  // });
-  // $('#health-chart').highcharts({
-  //   chart: {
-  //       type: 'pie'
-  //   },
-  //   title: {
-  //       text: 'Global Reagent Health'
-  //   },
-  //   plotOptions: {
-  //       pie: {
-  //           shadow: true
-  //       }
-  //   },
-  //   series: [{
-  //       name: 'Browsers',
-  //       data: [["Expired", global_percent_data[0][1]],["Expiring In < Two Weeks",global_percent_data[1][1]],["Not Pending Expired",global_percent_data[2][1]]],
-  //       // data: global_percent_data,
-  //       size: '90%',
-  //       innerSize: '40%',
-  //       showInLegend:true
-  //   }]
-  // });
-});
+    });
+  }
+})

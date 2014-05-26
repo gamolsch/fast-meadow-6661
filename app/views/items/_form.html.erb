@@ -29,6 +29,23 @@
     <%= f.radio_button(:unit_of_measure, "g") %>
     <%= f.label("Grams") %><br>
   </div>
+    <div class="field">
+    <%= label :ammount_changed, "Amount Added" %><br>
+    <%= text_field_tag :ammount_changed %>
+  </div>
+  <div class="field">
+    <%= radio_button_tag(:storage, 1) %>
+    <%= f.label("Gatorade Lab, Hazardous") %>
+    <%= radio_button_tag(:storage, 2) %>
+    <%= f.label("Gatorade Lab, Non-Hazardous") %>
+    <%= radio_button_tag(:storage, 3) %>
+    <%= f.label("Gatorade Lab, Main Inventory") %>
+    <%= radio_button_tag(:storage, 4) %>
+    <%= f.label("Pilot Plant, Hazardous") %>
+    <%= radio_button_tag(:storage, 5) %>
+    <%= f.label("Pilot Plant, Non-Hazardous") %>
+  </div>
+  <br />
   <div class="field">
     <%= f.label :manufactured_on %><br>
     <%= f.date_select :manufactured_on, :order => [:month, :day, :year] %>

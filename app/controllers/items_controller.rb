@@ -27,12 +27,11 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
-    p "=================================================="
-    p params
     @item = Item.new(item_params)
-
+    # Will have to have a way to get the category_id in the item
     respond_to do |format|
       if @item.save
+        Transaction.create(user_id: 1, item_id: @item.id, action: "added", ammount_changed: params[:ammount_changed], storage_id: params[:storage])
         format.html { redirect_to @item, notice: 'Item was successfully added to inventory.' }
         format.json { render :show, status: :created, location: @item }
       else
@@ -47,6 +46,8 @@ class ItemsController < ApplicationController
   def update
     respond_to do |format|
       if @item.update(item_params)
+        Transaction.create(user_id: 1, item_id: @item.id, action: "updated", ammount_changed: params[:ammount_changed], location_id: 1)
+        # Will need to have item storage id as well, no way to get this without category implemented and available to the Item object.
         format.html { redirect_to @item, notice: 'Item was successfully updated.' }
         format.json { render :show, status: :ok, location: @item }
       else
