@@ -9,14 +9,14 @@ class Storage < ActiveRecord::Base
   validates :name, presence: true
 
   def get_optimization_number
-    number = self.items.size
-    number_of_colors = Math.sqrt(number).floor
-    return 8 if number_of_colors > 8
-    return number_of_colors
+    storage_size = items.size
+    optimal_value = Math.sqrt(storage_size).floor
+    return 8 if optimal_value > 8
+    return optimal_value
   end
 
   def create_new_color?
-    current_size = self.categories.size
+    current_size = categories.size
     ideal_size = get_optimization_number
 
     current_size < ideal_size
