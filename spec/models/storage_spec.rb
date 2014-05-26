@@ -45,21 +45,23 @@ describe Storage do
 		expect(storage.categories).to match_array([first_category, second_category])
 	end
 
-	describe "#get_number_of_items" do
-			it("should return the storage size") do
-				first_item, second_item, third_item = [ Item.new, Item.new, Item.new ]
-				storage.items << [first_item, second_item, third_item]
+	describe "#item_size" do
+			it "should return 0 by default" do
+				expect(storage.item_size).to eq(0)
+		  end
 
-				expect(storage.get_number_of_items).to eq(3)
-		  	end
+		  xit "should return 3 when 3 items are added" do
+			end
+	end
+
+	describe "#category_size" do
+		it "should return 0 by default" do
+			expect(storage.category_size).to eq(0)
 		end
 
-	describe "#get_number_of_categories" do
-		it "should return the correct number" do
-			first_category, second_category = [ Category.new, Category.new ]
-			storage.categories << [first_category, second_category]
-
-			expect(storage.get_number_of_categories).to eq(2)
+		it "should return 5 when 5 categories are added" do
+			storage.categories << Array.new(5) { Category.new }
+			expect(storage.category_size).to eq(5)
 		end
 	end
 
