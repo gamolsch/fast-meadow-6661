@@ -1,0 +1,36 @@
+<%= form_for(@item) do |f| %>
+  <% if @item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+      <ul>
+      <% @item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div id="current-amount" hidden>
+    <%= @current_amount %>
+  </div>
+
+  <div class="field">
+    <%= f.hidden_field :manufacturer %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :name %>
+  </div>
+
+  <div id="slider">
+  </div>
+
+  <div class="field">
+    <%= f.label "Amount changed" %>
+    <%= text_field_tag :ammount_changed, @current_amount %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit id: "submit_change" %>
+  </div>
+<% end %>

@@ -1,5 +1,5 @@
 <section class='flash-message'>
-  <button style="width:700px;margin:auto;">Please let us know what you think and how we can improve the site by clicking here</button>
+  <button style="width:580px;margin:auto;">Please let us know what you think and how we can improve the site by clicking here</button>
 </section>
 
 <section class='search'>
@@ -33,7 +33,7 @@
   <h1>Recent Activity</h1>
   <div class='feed'>
     <% @transactions.each do |trans| %>
-    <p><%= trans.how_long_ago %> | <%= trans.get_actor.first_name %> <%= trans.get_actor.last_name %> <%= trans.action %> <%= link_to trans.get_item.name, item_path(trans.get_item.id) %> to <%= link_to trans.get_item.category.storage.name, storage_path(trans.get_item.category.storage.id) %></p>
+    <p class="activity"><span><%= trans.how_long_ago %></span> | <%= trans.get_actor.first_name %> <%= trans.get_actor.last_name %> <%= trans.action %> <%= link_to trans.get_item.name, item_path(trans.get_item.id) %> to <%= link_to trans.storage.name, storage_path(trans.storage.id) %></p>
     <% end %>
   </div>
 </section>
@@ -44,24 +44,5 @@
   <div style="border: 1px solid black;margin-top: 10px; margin-bottom: 10px">
     <p>Put some cool data here.</p>
   </div>
-  <a href="/storages"><button style="width:700px;margin:auto;">Manage Storage</button></a>
+  <a href="/storages"><button>Manage Storage</button></a>
 </section>
-
-
-<!-- Used for development purposes only -->
-
-<style>
-
-  section {
-    border: 1px dashed gray;
-    padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  section div, section h1, section form {
-    text-align: left;
-  }
-
-</style>

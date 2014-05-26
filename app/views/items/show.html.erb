@@ -32,7 +32,7 @@
 <section style="border: 1px dashed gray; margin: 20px 0;padding:20px;">
   <h3>SHOW ME TRANSACTIONS DONE TO THIS ITEM:</h3>
 
-  <% Transaction.where(item_id: @item.id).each do |trans| %>
+  <% Transaction.where(item_id: @item.id).reverse.each do |trans| %>
     <p><%= trans.how_long_ago %> | <%= trans.get_actor.first_name %> <%= trans.get_actor.last_name %> <%= trans.action %> <%= link_to trans.get_item.name, item_path(trans.get_item.id) %> to <%= link_to trans.storage.name, storage_path(trans.storage.id) %></p>
 
   <% end %>
