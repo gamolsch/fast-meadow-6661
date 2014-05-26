@@ -16,7 +16,7 @@ searchApp.config(function ($routeProvider) {
     $routeProvider
       .when('/stage', {
         templateUrl: 'partials/items-stage.html',
-        controller: 'ItemStageController'
+        controller: 'ItemStagingController'
       })
       .otherwise({
         redirectTo: '/'
