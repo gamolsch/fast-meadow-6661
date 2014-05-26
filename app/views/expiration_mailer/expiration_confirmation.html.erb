@@ -8,7 +8,9 @@
     <p>
       The samples that have expired today are <br>
       <% @items.each do |item| %>
-      <%= item.name %>
+        <% if Time.now > item.expired_on %>
+          <%= item.expired_on %>
+        <% end %>
       <% end %>
     </p>
   </body>
