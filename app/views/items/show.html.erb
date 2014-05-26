@@ -27,6 +27,9 @@
     <strong>Expired on:</strong>
     <%= @item.expired_on %>
   </p>
+
+  <p>
+    <%= @remaining %> <%=  @item.unit_of_measure %> Remaining
 </section>
 
 <section style="border: 1px dashed gray; margin: 20px 0;padding:20px;">
@@ -38,5 +41,7 @@
   <% end %>
 </section>
 
+<% if @remaining != 0 %>
 <%= link_to 'Edit', edit_item_path(@item) %> |
+<% end %>
 <%= link_to 'Back', items_path %>

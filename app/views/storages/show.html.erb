@@ -7,44 +7,9 @@
   <p class='btn-danger low'>Help! Help!</p>
 </div>
 
+<% @items.each do |item| %>
 <div class='item'>
-  <h4>Pineapple Sunrise : Takasago</h4>
-  <p class='btn-success high'>Nah, man. I'm totally good.</p>
+  <h4><%= item.name %>: <%= item.manufacturer %></h4>
+  <div class='btn-success'>Nah, man. I'm totally good.</div>
 </div>
-
-<div class='item'>
-  <h4>Pineapple Sunrise : Takasago</h4>
-  <p class='btn-success high'>Nah, man. I'm totally good.</p>
-</div>
-
-<div class='item'>
-  <h4>Pineapple Sunrise : Takasago</h4>
-  <p class='btn-success high'>Nah, man. I'm totally good.</p>
-</div>
-
-<div class='item'>
-  <h4>Pineapple Sunrise : Takasago</h4>
-  <p class='btn-success high'>That looks good, huh?</p>
-</div>
-
-<!-- USED FOR DEVELOPMENT PURPOSES ONLY -->
-
-<style type="text/css">
-
-  .low {
-    width: 200px;
-    height: 25px;
-  }
-
-  .high {
-    width: 700px;
-    height: 25px;
-  }
-
-  .item {
-    border: 1px dashed pink;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-</style>
+<% end %>

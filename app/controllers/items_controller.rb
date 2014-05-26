@@ -13,6 +13,7 @@ class ItemsController < ApplicationController
   # GET /items/1.json
   def show
     @item = Item.find(params[:id])
+    @remaining = Item.current_amount(params[:id])
   end
 
   # GET /items/new
@@ -23,8 +24,6 @@ class ItemsController < ApplicationController
   # GET /items/1/edit
   def edit
     @current_amount = Item.current_amount(@item.id)
-    p "============================================="
-    p @current_amount
   end
 
   # POST /items

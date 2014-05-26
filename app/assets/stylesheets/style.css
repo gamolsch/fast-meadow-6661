@@ -24,7 +24,7 @@ div#health-chart {
      );*/
   /*background-color: salmon;*/
   /*color: gray;*/
-  font-family: Helvetica;
+  font-family: `;
   /*width: 700px;*/
   padding: 4px;
 }
@@ -69,5 +69,30 @@ div.gatorade_chart {
   float: right;
   width: 350px;
 }
+
+.low {
+    width: 200px;
+    height: 25px;
+  }
+
+  .high {
+    width: 700px;
+    height: 25px;
+  }
+
+  .item {
+    border: 1px dashed pink;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  div.btn-success {
+    height: 140px;
+  }
+
+  div.recent-activity {
+    float: bottom;
+    width: 520px;
+  }
 
 

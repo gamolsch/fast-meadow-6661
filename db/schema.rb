@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 20140526143336) do
     t.datetime "updated_at"
     t.integer  "category_id"
     t.string   "code"
+    t.string   "unit_of_measure"
+
   end
 
   create_table "storages", force: true do |t|
