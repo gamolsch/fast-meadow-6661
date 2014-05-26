@@ -12,15 +12,25 @@ class Storage < ActiveRecord::Base
     if can_be_added?
       suggested_color = (create_new_color?) ? get_new_color : get_existing_color
       suggested_code = suggested_color.get_code
-      suggested_code.update_attributes(items_params)
-      suggested_code
+
+      new_item = Item.create(items_params)
+      suggested_color.items << new_item
+      new_item.code = suggested_code
+      new_item.save
+
+      new_item
     end
   end
 
+  def item_size
+    items.count
+  end
+
   def get_optimization_number
-    storage_size = items.size
+    storage_size = item_size
     optimal_value = Math.sqrt(storage_size).floor
     return 8 if optimal_value > 8
+    return 1 if optimal_value == 0
     return optimal_value
   end
 
@@ -28,7 +38,6 @@ class Storage < ActiveRecord::Base
     current_size = categories.size
     ideal_size = get_optimization_number
 
-    return true if ideal_size.zero?
     current_size < ideal_size
   end
 
@@ -46,11 +55,11 @@ class Storage < ActiveRecord::Base
   end
 
   def get_existing_color
-    Array(categories).min{ |c1,c2| c1.items.size <=> c2.items.size }
+    Array(categories).min{ |c1,c2| c1.item_size <=> c2.item_size }
   end
 
   def can_be_added?
-    storage_size = items.size
+    storage_size = item_size
     (storage_size + 1) < Storage::CAPACITY
   end
 
@@ -59,6 +68,4 @@ class Storage < ActiveRecord::Base
   def items_params
      params.require(:items).permit(:manufacturer, :name, :manufactured_on, :expired_on, :lot_number, :unit_of_measure)
   end
-
-
 end

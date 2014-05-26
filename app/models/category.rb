@@ -11,11 +11,10 @@ class Category < ActiveRecord::Base
   	all_codes = Category::AllCodes
 
   	available_codes = all_codes - existing_codes
-  	new_code = available_codes.sample
+  	available_codes.sample
+  end
 
-  	return nil if new_code.nil?
-    new_item = Item.create(code: new_code)
-  	items << new_item
-    new_item
+  def item_size
+    items.count
   end
 end
