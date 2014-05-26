@@ -50,7 +50,20 @@
     </script>
 
     <!-- LOAD partials -->
-    <div ng-view=""></div>
+    <div class='container'>
+      <header>
+        <h2 style="width: 50%;display:inline"><a href="/home">Harpoon</a></h2>
+        <h4 style="margin-right:10%;display:inline;float:right"><a href="/#douche">Sir Kel Insisted His Name Be Here</a></h4>
+      </header>
+
+      <div ng-view=""></div>
+
+      <footer style="margin-top:20%">
+        <h3 style="display:inline">© Project Harpoon</h3>
+        <h3 style="display:inline;float:right"><a href="#">Meet the Dev Team</a></h3>
+      </footer>
+    </div>
+
 
     <!-- build:js scripts/plugins.js -->
     <script src="bower_components/jquery/jquery.js"></script>
