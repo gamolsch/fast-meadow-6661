@@ -30,11 +30,18 @@ class Storage < ActiveRecord::Base
     new_color = available_colors.sample
 
     return nil if new_color.nil?
-    Category.create(color: new_color)
+    new_category = Category.create(storage_id: id, color: new_color)
+    categories << new_category
+    new_category
   end
 
   def get_existing_color
     Array(categories).min{ |c1,c2| c1.items.size <=> c2.items.size }
+  end
+
+  def can_be_added?
+    storage_size = items.size
+    (storage_size + 1) < Storage::CAPACITY
   end
 
 end

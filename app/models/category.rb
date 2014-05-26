@@ -14,6 +14,8 @@ class Category < ActiveRecord::Base
   	new_code = available_codes.sample
 
   	return nil if new_code.nil?
-  	Item.create(code: new_code)
+    new_item = Item.create(code: new_code)
+  	items << new_item
+    new_item
   end
 end
