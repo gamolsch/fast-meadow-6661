@@ -1,20 +1,26 @@
 'use strict';
-var searchApp = angular.module('searchApp', []);
+var searchApp = angular.module('searchApp', ['ngResource']);
 
-angular.module('searchApp', ['ngResource'])
-  .config(function ($routeProvider) {
+searchApp.config(function ($routeProvider) {
   	$routeProvider
-  	  .when('/stage', {
-  	  	templateUrl: 'partials/items-stage.html',
-  	  	controller: 'StageController'
-  	  })
       .when('/', {
-        templateUrl: 'partials/main.html',
+        templateUrl: 'partials/search.html',
         controller: 'ItemListController'
       })
   	  .otherwise({
   	  	redirectTo: '/'
   	  });
+  });
+
+searchApp.config(function ($routeProvider) {
+    $routeProvider
+      .when('/stage', {
+        templateUrl: 'partials/items-stage.html',
+        controller: 'ItemStageController'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
   });
 
 // angular.module('searchApp', [])
