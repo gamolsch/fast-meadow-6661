@@ -15,6 +15,7 @@ class StoragesController < ApplicationController
   # GET /storages/1
   # GET /storages/1.json
   def show
+    @items = Item.last(5)
   end
 
   # GET /storages/new

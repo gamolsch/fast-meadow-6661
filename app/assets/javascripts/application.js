@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery.ui.all
 //= require jquery_ujs
-//= require turbolinks
 //= require d3.min
 //= require d3-home-display
 //= require_tree .

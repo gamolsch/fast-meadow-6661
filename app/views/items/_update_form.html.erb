@@ -11,9 +11,8 @@
     </div>
   <% end %>
 
-  <div id="current-amount" hidden>
-    <%= @current_amount %>
-  </div>
+  <p>Amount Remaining: <span  id="current-amount"><%= @current_amount %></span> <%= @item.unit_of_measure %></p>
+
 
   <div class="field">
     <%= f.hidden_field :manufacturer %>
