@@ -13,18 +13,23 @@
   </form>
 
   <div class='description'>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In congue auctor suscipit. Proin id enim vulputate, eleifend sapien at, aliquet elit. Phasellus in porttitor lectus, sed ultrices mi. Quisque bibendum, tortor at tempus sagittis, lectus odio auctor lorem, vitae fermentum nulla ante quis purus. Donec lacinia arcu vel tempus sagittis. Nunc posuere odio ipsum, vel cursus neque volutpat et. Ut consequat orci urna. Nunc non felis eu neque mollis laoreet euismod eu lectus. Donec eu consectetur metus. Duis laoreet tempus elementum. Integer auctor quis felis vitae sagittis. Ut ultrices tellus lectus, et hendrerit sapien mattis eget.</p>
+    <p>Inventories are necessary for a firm to operate efficiently and almost all business transactions involve the delivery of a product or service in exchange for currency. For this reason, inventory management is a very important part of core operations activities. Most retail businesses and wholesale organizations acquire most of their revenue through the sale of merchandise (inventory). In order for business and supply chains to run effectively, and efficiently they must meet all the listed requirements for effective inventory management. Some of the main concerns are the level of customer service and the cost of ordering, storing, and carrying inventory. Therefore, in order to be a successful and profitable company, inventory management must be managed wisely.</p>
   </div>
 </section>
 
-<section class="overall-health">
-  <h3>Global Inventory Status</h3>
-  <p><%= @expired_percent.round(2) %></p>
-  <p><%= @almost_expired.round(2) %></p>
-  <p><%= @not_pending_expired.round(2) %></p>
-</section>
 
-<section class='recent-activity'>
+<section class="overall-health">
+
+  <div id="health-chart">
+    <p>Expired Total</p>
+  </div>
+
+  <div hidden id="health_percentages"><%= @health_percentages %></div>
+  <div hidden id="health_percentages_by_location"><%= @health_percentages_by_location %></div>
+  <div hidden id="storages"><%= @storages %></div>
+  <div hidden id="overall_percentage"><%= @overall_percentage %></div>
+
+  <section class='recent-activity'>
   <h1>Recent Activity</h1>
   <div class='feed'>
     <% @transactions.each do |trans| %>
@@ -33,6 +38,7 @@
   </div>
 </section>
 
+
 <section class='inventory'>
   <h1>Inventory</h1>
   <div style="border: 1px solid black;margin-top: 10px; margin-bottom: 10px">
@@ -40,6 +46,7 @@
   </div>
   <a href="/storages"><button style="width:700px;margin:auto;">Manage Storage</button></a>
 </section>
+
 
 <!-- Used for development purposes only -->
 
