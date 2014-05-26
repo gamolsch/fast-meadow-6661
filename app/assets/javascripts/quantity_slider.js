@@ -12,8 +12,17 @@ $(document).ready(function(){
 
     $("#ammount_changed").on('input', function () {
       var value = this.value;
-      console.log(value);
-      $("#slider").slider({values: [maxInventory - value]});
+      console.log(maxInventory)
+      // console.log(value)
+      if(value > parseInt(maxInventory)){
+        $("#submit_change").prop("disabled", true)
+        $("#ammount_changed").css("background-color", "red");
+        $("#slider").slider({values: [0]})
+      }else{
+        $("#ammount_changed").css("background-color", "white");
+        $("#submit_change").prop("disabled", false)
+        $("#slider").slider({values: [maxInventory - value]});
+      }
     });
   }
 
