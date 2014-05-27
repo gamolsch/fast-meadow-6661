@@ -4,7 +4,7 @@ if($("#health-chart").length){
 
 $(function(){
 
-  var itemData = $.parseJSON($("#item_values").text());
+  var itemData = $.parseJSON($("#item_values").text()).values;
   console.log(itemData)
   var dataset = [
                 [5, 20], [480, 90], [250, 50], [100, 33], [330, 95],
@@ -19,19 +19,19 @@ $(function(){
                 .style("background-color", "white");
 
             svg.selectAll("circle")
-                .data(dataset)
+                .data(itemData)
                 .enter()
                 .append("circle")
                 .attr("cx", function(d) {
-                            return d[0];
-                       })
-                       .attr("cy", function(d) {
                             return d[1];
                        })
-                       .attr("r", 5)
-                       .attr("id", function(d){
-                        return "sampleid" + d[0].toString() + d[1].toString()})
-                        .attr("class", "sample");  // Adds id, won't be necessary in final implementation, will get value for id from the JSON and will id each element uniquely
+                .attr("cy", function(d) {
+                     return d[0] * 400;
+                })
+                .attr("r", 5)
+                // .attr("id", function(d){
+                //  return "sampleid" + d[0].toString() + d[1].toString()})
+                //  .attr("class", "sample");  // Adds id, won't be necessary in final implementation, will get value for id from the JSON and will id each element uniquely
 
             var rectangles = [[10, 0, 2, 190], [10, 190, 500, 2]]  // Variables for drawing x and y axis
 

@@ -22,13 +22,14 @@ class UsersController < ApplicationController
     @not_pending_expired = Item.not_pending_expired
     # @health_percentages = health_percentages.to_json
     @transactions = Transaction.last(5).reverse
-    @item_values = {values: []}
+    item_values = {:values => []}
     Item.all.each do |item|
       item_vals = []
       item_vals << item.calc_percent_of_total_remaining
       item_vals << item.calc_time_to_expiration
-      @item_values[:values] << item_vals.to_json
+      item_values[:values] << item_vals
     end
+    @item_values = item_values.to_json
   end
 
 end
