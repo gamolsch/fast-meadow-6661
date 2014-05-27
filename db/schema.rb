@@ -29,13 +29,12 @@ ActiveRecord::Schema.define(version: 20140526143336) do
     t.string   "lot_number"
     t.date     "manufactured_on"
     t.date     "expired_on"
+    t.string   "unit_of_measure"
+    t.string   "color"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "category_id"
     t.string   "code"
-    t.string   "color"
-    t.string   "unit_of_measure"
-
   end
 
   create_table "storages", force: true do |t|

@@ -55,6 +55,10 @@ class Item < ActiveRecord::Base
     return current_amount
   end
 
+  def self.calc_percent_of_total_remaining(item)
+    ((item.transactions.first.ammount_changed.to_f - Item.current_amount(item.id.to_f)) / item.transactions.first.ammount_changed.to_f).round(2)
+  end
+
 end
 
 
