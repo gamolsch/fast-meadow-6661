@@ -14,6 +14,7 @@ angular.module('searchApp')
   // $scope.items = [];
 
   $scope.items = Item.query();
+  $scope.removedItems = [];
 
   $scope.create = function(name) {
 
@@ -25,14 +26,23 @@ angular.module('searchApp')
     });
   };
 
+  $scope.remove = function(item) {
+    $scope.items.splice($scope.items.indexOf(item), 1);
+    $scope.removedItems.push(item);
+    console.log(item);
+  }
+
   $scope.delete = function(id, item) {
 
     // Testing!
     // $scope.items.splice(index, 1);
+    console.log("Deleting...")
+
 
     // Not deleting visual particle correctly due to filter
     Item.delete( {itemID: id}, function() {
-      $scope.items.splice($scope.items.indexOf(item), 1);
+      $scope.removedItems.splice($scope.removedItems.indexOf(item), 1);
+      console.log("Deleted!")
     });
   };
 

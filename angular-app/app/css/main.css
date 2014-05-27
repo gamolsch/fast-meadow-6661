@@ -23,3 +23,11 @@ body {
 footer {
   clear: both;
 }
+
+header, footer,.container,
+.item-list, .search-options,
+.search-bar {
+  border: 1px dashed gray;
+  padding: 20px;
+  margin: 20px;
+}

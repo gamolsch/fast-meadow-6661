@@ -37,7 +37,7 @@
       <!--- USER LISTS -->
 
       <div class='form-list'>
-        <h1>Create Item:</h1>
+        <p>Create new Item:</p>
         <form ng-submit="create(name)">
           <fieldset>
             <label for='name'>Name:</label>
@@ -49,33 +49,31 @@
       </div>
 
       <div class='item-list'>
-
+        <p>Life-cycle</p>
         <!-- SEARCH BAR -->
         <label for='search'>Search:</label>
         <input name='search' ng-model="search">
 
         <!-- ITEMS LIST -->
         <ul>
-          <li ng-repeat='item in items | filter:search'>{{ item.name }}| <a href="" title='delete' ng-click='delete(item.id, item)'>Delete</a></li>
+          <li ng-repeat='item in items | filter:search'>index: {{ $index }} | id: {{item.id}} | {{ item.name }}| <a href="" title='remove' ng-click='remove(item)'>Remove</a></li>
         </ul>
+      </div>
+
+      <div>
+        <p>Graveyard</p>
+        <ul>
+          <li ng-repeat='removedItem in removedItems'>
+            index: {{ $index }} | id: {{ item.id }} | {{ removedItem.name }} | <a href="" title='delete' ng-click='delete(removedItem.id, removedItem)'>Delete All</a>
+          </li>
+        </ul>
+
       </div>
 
       <footer style="margin-top:20%">
         <hr>
       </footer>
     </div>
-
-    <style type="text/css">
-
-      header, footer,.container,
-      .item-list, .search-options,
-      .search-bar {
-        border: 1px dashed gray;
-        padding: 20px;
-        margin: 20px;
-      }
-
-    </style>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
