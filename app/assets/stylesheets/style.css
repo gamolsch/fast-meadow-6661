@@ -1,3 +1,8 @@
+body {
+  background: #323A46;
+  color: #eee;
+}
+
 div.bar {
   display: inline-block;
   width: 20px;
@@ -10,10 +15,13 @@ img {
   margin-top: 20px;
 }
 
-button {
+button, input {
   width: 200px;
+  color: #111;
 /*  border-radius: 3px;*/
 }
+
+
 
 div#health-chart {
   /*border: 1px solid lightgray;*/
@@ -30,7 +38,7 @@ div#health-chart {
 }
 
 section {
-  border: 1px solid lightgray;
+/*  border: 1px solid lightgray;*/
   padding: 20px;
   margin-top: 20px;
   margin-bottom: 20px;

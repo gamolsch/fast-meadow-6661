@@ -47,7 +47,7 @@ class Item < ActiveRecord::Base
     current_amount = 0
     Transaction.where(item_id: item).each do |x|
       if x.action == "added"
-        current_amount += x.ammount_changed
+          current_amount += x.ammount_changed
       elsif x.action == "updated"
         current_amount -= x.ammount_changed
       end

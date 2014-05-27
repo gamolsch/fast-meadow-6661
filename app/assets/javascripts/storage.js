@@ -104,11 +104,11 @@ $(function () {
             title: {
                 text: 'Health Levels'
             },
-            subtitle: {
-                text: 'Source: Wikipedia.org'
-            },
+            // subtitle: {
+            //     text: 'Source: Wikipedia.org'
+            // },
             xAxis: {
-                categories: ['Africa'],
+                categories: ['Health Level'],
                 title: {
                     text: null
                 }
@@ -116,15 +116,15 @@ $(function () {
             yAxis: {
                 min: 0,
                 title: {
-                    text: 'Population (millions)',
-                    align: 'high'
+                    // text: 'Population (millions)',
+                    // align: 'high'
                 },
                 labels: {
-                    overflow: 'justify'
+                    // overflow: 'justify'
                 }
             },
             tooltip: {
-                valueSuffix: ' millions'
+                // valueSuffix: ' millions'
             },
             plotOptions: {
                 bar: {
@@ -150,12 +150,6 @@ $(function () {
             series: [{
                 name: 'Year 1800',
                 data: [107]
-            }, {
-                name: 'Year 1900',
-                data: [133]
-            }, {
-                name: 'Year 2008',
-                data: [973]
             }]
         });
     });
