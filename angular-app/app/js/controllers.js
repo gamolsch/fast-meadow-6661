@@ -32,6 +32,14 @@ angular.module('searchApp')
     console.log(item);
   }
 
+  $scope.clearGraveyard = function() {
+    console.log("Clearing Graveyard...");
+
+    angular.forEach($scope.removedItems, function(item, index) {
+      $scope.delete(item.id, item);
+    });
+  };
+
   $scope.delete = function(id, item) {
 
     // Testing!
