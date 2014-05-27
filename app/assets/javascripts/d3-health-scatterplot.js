@@ -22,8 +22,6 @@ $(function(){
                             return d[1] + 10;
                        })
                 .attr("cy", function(d) {
-                    console.log(d[0])
-                    console.log((1 - d[0]) * 400)
                      return (1 - d[0]) * 400;
                 })
                 .attr("r", 5)
@@ -34,9 +32,9 @@ $(function(){
                   shift_down = 255 - color_shift
                   return "rgb(" + shift_down + "," + color_shift  + ", 0)"
                 })
-                // .attr("id", function(d){
-                //  return "sampleid" + d[0].toString() + d[1].toString()})
-                //  .attr("class", "sample");  // Adds id, won't be necessary in final implementation, will get value for id from the JSON and will id each element uniquely
+                .attr("id", function(d){
+                 return "sampleid-" + d[2].toString()})
+                 .attr("class", "sample");  // Adds id, won't be necessary in final implementation, will get value for id from the JSON and will id each element uniquely
 
             var rectangles = [[10, 0, 2, 400], [10, 400, 800, 2]]  // Variables for drawing x and y axis
 
@@ -61,11 +59,9 @@ $(function(){
                     return d[0]
                 })
                 .attr("y", function(d, i){
-                    // console.log(d, i)
                     return d[1]
                 })
                 .attr("width", function(d, i){
-                    // console.log(d, i)
                     return d[2]
                 })
                 .attr("height", function(d, i){
