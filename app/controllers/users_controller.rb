@@ -24,4 +24,7 @@ class UsersController < ApplicationController
     @transactions = Transaction.last(5).reverse
   end
 
+  def dashboard
+    render 'dashboard', layout: false
+  end
 end
