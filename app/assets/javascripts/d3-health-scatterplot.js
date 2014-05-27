@@ -8,10 +8,21 @@ $(function(){
   console.log(itemData)
             w = 810
             h = 410
+            circRadius = 5
+            var xScale = d3.scale.linear()
+                .domain([0, d3.max(itemData, function(d){ return d[1] })])
+                .range([0, w]);
+
+            var yScale = d3.scale.linear()
+                .domain([0, d3.max(itemData, function(d){ return d[0] })])
+                .range([0, w]);
+
             var svg = d3.select("#health-chart")
                 .append("svg")
                 .attr("width", w)
                 .attr("height", h)
+                .call(d3.behavior.zoom().scaleExtent([1, 8]).on("zoom", zoom))
+                .append("g")
                 .style("background-color", "white");
 
             svg.selectAll("circle")
@@ -24,7 +35,7 @@ $(function(){
                 .attr("cy", function(d) {
                      return (1 - d[0]) * 400;
                 })
-                .attr("r", 5)
+                .attr("r", circRadius)
                 .attr("fill", function(d){
                   var time_concern = Math.floor((d[1] / 1000) * 255)
                   var remaining_concern = Math.floor(d[0] * 255)
@@ -70,9 +81,14 @@ $(function(){
 
             $(document).ready(function(){
                 $(".sample").on("click", function(){
-                    alert("Something happened.")
+                    // alert("Something happened.")
                 });
             });
+
+            function zoom() {
+              svg.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")")
+            }
+
 
 })
 
