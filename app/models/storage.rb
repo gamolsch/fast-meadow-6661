@@ -16,6 +16,7 @@ class Storage < ActiveRecord::Base
       new_item = Item.create(items_params)
       suggested_color.items << new_item
       new_item.code = suggested_code
+      new_item.color = Category.find( new_item.category_id ).color
       new_item.save
 
       new_item

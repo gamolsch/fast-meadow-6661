@@ -7,6 +7,7 @@ class CreateItems < ActiveRecord::Migration
       t.date :manufactured_on
       t.date :expired_on
       t.string   :unit_of_measure
+      t.string :color
 
       t.timestamps
     end
