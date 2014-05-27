@@ -1,3 +1,4 @@
+require 'Date'
 class Item < ActiveRecord::Base
   belongs_to :category
   has_many   :transactions
@@ -59,8 +60,13 @@ class Item < ActiveRecord::Base
     ((item.transactions.first.ammount_changed.to_f - Item.current_amount(item.id.to_f)) / item.transactions.first.ammount_changed.to_f).round(2)
   end
 
-end
+  def self.calc_time_to_expiration(item)
+    date = DateTime.strptime(item.expired_on.to_s, "%Y-%m-%d")
+    now = DateTime.now
+    (date - now).to_i
 
+  end
+end
 
 
 
