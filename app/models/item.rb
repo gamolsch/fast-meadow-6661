@@ -57,7 +57,7 @@ class Item < ActiveRecord::Base
   end
 
   def calc_percent_of_total_remaining
-    ((self.transactions.first.ammount_changed.to_f - self.current_amount) / self.transactions.first.ammount_changed.to_f).round(2)
+    ((self.current_amount) / self.transactions.first.ammount_changed.to_f).round(2)
   end
 
   def calc_time_to_expiration

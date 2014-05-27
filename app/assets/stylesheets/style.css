@@ -1,6 +1,6 @@
 body {
-  background: #323A46;
-  color: #eee;
+  background: #F1F1F1;
+  color: #000;
 }
 
 div.bar {
@@ -21,7 +21,24 @@ button, input {
 /*  border-radius: 3px;*/
 }
 
+form  {
+  border: 1px solid lightgray;
+  padding: 20px;
+  border-radius: 4px;
+}
 
+  .storage {
+    border: 1px solid gray;
+    width: 200px;
+    height: 200px;
+  }
+
+  .draggable {
+    background-color: pink;
+    width: 200px;
+    height: 20px;
+    margin: 100px;
+  }
 
 div#health-chart {
   /*border: 1px solid lightgray;*/
@@ -35,6 +52,19 @@ div#health-chart {
   font-family: `;
   /*width: 700px;*/
   padding: 4px;
+}
+
+#form_data {
+  width: 600px;
+  height: 1000px;
+}
+
+.field {
+  float: left;
+  width: 220px;
+  margin-right: 50px;
+  /*padding-right: 20px;*/
+  /*border: solid 1px lightgray;*/
 }
 
 section {

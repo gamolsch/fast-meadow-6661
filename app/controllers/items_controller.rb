@@ -19,6 +19,10 @@ class ItemsController < ApplicationController
   # GET /items/new
   def new
     @item = Item.new
+    @manuf = []
+    Item.select(:manufacturer).distinct.reorder(:manufacturer).each do |manu|
+      @manuf << manu.manufacturer
+    end
   end
 
   # GET /items/1/edit

@@ -6,10 +6,6 @@ $(function(){
 
   var itemData = $.parseJSON($("#item_values").text()).values;
   console.log(itemData)
-  var dataset = [
-                [5, 20], [480, 90], [250, 50], [100, 33], [330, 95],
-                [410, 12], [475, 44], [25, 67], [85, 21], [220, 88]
-              ];
             w = 810
             h = 410
             var svg = d3.select("#health-chart")
@@ -36,8 +32,6 @@ $(function(){
                   var remaining_concern = Math.floor(d[0] * 255)
                   color_shift = time_concern + remaining_concern
                   shift_down = 255 - color_shift
-                  // console.log(time_concern)
-                  // console.log(remaining_concern);
                   return "rgb(" + shift_down + "," + color_shift  + ", 0)"
                 })
                 // .attr("id", function(d){
