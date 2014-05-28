@@ -16,12 +16,18 @@ class UsersController < ApplicationController
       new_loc << (Item.not_pending_expired_percent_by_location(loc.id) * overall_percent / 100).round(2)
       health_percentages_by_location[:by_location] << new_loc
     end
-    @overall_percentage = overall_percentage.to_json
-    @health_percentages_by_location = health_percentages_by_location.to_json
-    @storages = storages.to_json
-    @not_pending_expired = Item.not_pending_expired
-    @health_percentages = health_percentages.to_json
+    # @not_pending_expired = Item.not_pending_expired
+
     @transactions = Transaction.last(5).reverse
+    item_values = {:values => []}
+    Item.all.each do |item|
+      item_vals = []
+      item_vals << item.calc_percent_of_total_remaining
+      item_vals << item.calc_time_to_expiration
+      item_vals << item.id
+      item_values[:values] << item_vals
+    end
+    @item_values = item_values.to_json
   end
 
 end

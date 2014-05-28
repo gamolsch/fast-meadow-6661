@@ -1,3 +1,4 @@
+require 'Date'
 class Item < ActiveRecord::Base
   belongs_to :category
   has_many   :transactions
@@ -43,9 +44,9 @@ class Item < ActiveRecord::Base
     total_at_location = (total_chemicals.to_f / Item.count.to_f) * 100
   end
 
-  def self.current_amount(item)
+  def current_amount
     current_amount = 0
-    Transaction.where(item_id: item).each do |x|
+    Transaction.where(item_id: self.id).each do |x|
       if x.action == "added"
           current_amount += x.ammount_changed
       elsif x.action == "updated"
@@ -55,12 +56,17 @@ class Item < ActiveRecord::Base
     return current_amount
   end
 
-  def self.calc_percent_of_total_remaining(item)
-    ((item.transactions.first.ammount_changed.to_f - Item.current_amount(item.id.to_f)) / item.transactions.first.ammount_changed.to_f).round(2)
+  def calc_percent_of_total_remaining
+    ((self.current_amount) / self.transactions.first.ammount_changed.to_f).round(2)
   end
 
-end
+  def calc_time_to_expiration
+    date = DateTime.strptime(self.expired_on.to_s, "%Y-%m-%d")
+    now = DateTime.now
+    (date - now).to_i
 
+  end
+end
 
 
 

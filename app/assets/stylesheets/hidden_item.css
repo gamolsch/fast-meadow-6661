@@ -1,0 +1,14 @@
+#item_info {
+  display: none;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  background-color: white;
+  bottom: -100px;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  border: 3px ridge black;
+  border-radius: 8px;
+}

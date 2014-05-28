@@ -10,27 +10,19 @@
       </ul>
     </div>
   <% end %>
-
+<div id="form_data">
   <div class="field">
-    <%= f.label :manufacturer %><br>
-    <%= f.text_field :manufacturer %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :lot_number %><br>
-    <%= f.text_field :lot_number %>
-  </div>
-  <div class="field">
-    <%= f.radio_button(:unit_of_measure, "ml") %>
+    <%= f.label :manufacturer %>
+    <%= f.select :manufacturer, options_for_select(@manuf) %><br><br>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br><br>
+    <%= f.label :lot_number %>
+    <%= f.text_field :lot_number %><br><br>
     <%= f.label("Milliliters") %>
-    <%= f.radio_button(:unit_of_measure, "g") %>
-    <%= f.label("Grams") %><br>
-  </div>
-    <div class="field">
-    <%= label :ammount_changed, "Amount Added" %><br>
+    <%= f.radio_button(:unit_of_measure, "ml") %>
+    <%= f.label("Grams") %>
+    <%= f.radio_button(:unit_of_measure, "g") %><br><br>
+    <%= label :ammount_changed, "Amount Added" %>
     <%= text_field_tag :ammount_changed %>
   </div>
   <div class="field">
@@ -57,4 +49,5 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+</div>
 <% end %>
