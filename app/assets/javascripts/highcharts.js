@@ -88,7 +88,9 @@ $(function () {
             },
 
             chart: {
-                type: 'pie'
+                type: 'pie',
+                width: 800,
+                height: 500
             },
             title: {
                 text: 'Global Inventory Status'
