@@ -30,4 +30,7 @@ class UsersController < ApplicationController
     @item_values = item_values.to_json
   end
 
+  def dashboard
+    render 'dashboard', layout: false
+  end
 end
