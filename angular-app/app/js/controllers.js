@@ -15,13 +15,13 @@ angular.module('searchApp')
   $scope.removedItems = [];
 
   $scope.change = function() {
-    console.log($scope.expired)
-    // if $scope.expired is true
-    // do this
-    // else
-    // do that
-    // end
-  }
+    if($scope.expired === true) {
+      $scope.items = Item.query({expired: true});
+    }
+    else {
+      $scope.items = Item.query({expired: false});
+    };
+  };
 
   $scope.create = function(name) {
     Item.save({name: name}, function(item) {

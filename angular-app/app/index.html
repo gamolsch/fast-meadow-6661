@@ -48,7 +48,7 @@
 
         <!-- ITEMS LIST -->
         <h3 ng-bind="items.length"></h3>
-        <input type='checkbox' ng-model='expired' ng-change='change()'/>
+        <input type='checkbox' ng-model='expired' ng-click='change()'/>
 
         <ul>
           <li ng-repeat='item in items | filter:search'>index: {{ $index }} | id: {{ item.id }} | {{ item.name }}| <a href="" title='delete' ng-click='delete(item.id, item)'>Delete</a></li>
