@@ -11,76 +11,48 @@
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link rel="stylesheet" href="css/main.css">
 </head>
   <body ng-app="searchApp">
-    <!--[if lt IE 7]>
-      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-    <![endif]-->
-
-    <!--[if lt IE 9]>
-      <script src="bower_components/es5-shim/es5-shim.js"></script>
-      <script src="bower_components/json3/lib/json3.min.js"></script>
-    <![endif]-->
-
-    <!-- Add your site or application content here -->
-    <div class="container">
+    <div class="container" ng-controller="ItemListController">
       <header>
-        <h2 style="width: 50%;display:inline"><a href="/"><img src="/assets/harpoon.png" width="200px"></a></h2>
+        <h2 style="width: 50%;display:inline"><a href="/home">Harpoon</a></h2>
+        <h4 style="margin-right:10%;display:inline;float:right"><a href="/#douche">Sir Kel Insisted His Name Be Here</a></h4>
       </header>
 
-      <div class="search-bar">
+      <div class="form-list">
+        <p>Create new Item:</p>
+        <form ng-submit="create(name)">
+          <fieldset>
+            <label for="name">Name:</label>
+            <input type="text" ng-model="name" name="name" placeholder="Natural Orange Flavor">
+
+            <button type="submit">Create!</button>
+          </fieldset>
+        </form>
+      </div>
+
+      <br>
+
+      <div class="item-list">
+        <p>Life-cycle</p>
+
         <label for="search">Search:</label>
         <input name="search" ng-model="search">
-      </div>
 
-      <div class="search-options">
-        <p>Search Options:</p>
-        <select ng-model="orderProp">
-          <option value="name">Name</option>
-          <option value="manufacturer">Manufacturer</option>
-        </select>
-      </div>
+        <h3 ng-bind="items.length"></h3>
+        <input type="checkbox" ng-model="expired" ng-click="change()">
 
-      <div class="item-list" ng-controller="ItemListController">
-        <h1>Hello Angular!</h1>
-        <ul ng-repeat="item in items | filter:search | orderBy:orderProp">
-          <li>Name: {{ item.name }}</li>
-          <li>Manufactuer: {{ item.manufacturer }}</li>
-          <li>Code: {{ item.code }} </li>
-          <li>Color: {{ item.color }}</li>
+        <ul>
+          <li ng-repeat="item in items | filter:search">index: {{ $index }} | id: {{ item.id }} | {{ item.name }}| <a href="" title="delete" ng-click="delete(item.id, item)">Delete</a></li>
         </ul>
       </div>
 
       <footer style="margin-top:20%">
-        <h3 style="display:inline">© Project Harpoon</h3>
-        <h3 style="display:inline;float:right"><a href="#">Meet the Dev Team</a></h3>
+        <hr>
       </footer>
     </div>
-
-    <style type="text/css">
-
-      header, footer,.container,
-      .item-list, .search-options,
-      .search-bar {
-        border: 1px dashed gray;
-        padding: 20px;
-        margin: 20px;
-      }
-
-    </style>
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src='//www.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
-
-
 
     <script src="scripts/488e3e7a.plugins.js"></script>
 
