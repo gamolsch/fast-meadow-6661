@@ -21,9 +21,9 @@ $(function(){
                 .append("svg")
                 .attr("width", w)
                 .attr("height", h)
+                .style("background-color", "white")
                 .call(d3.behavior.zoom().scaleExtent([1, 8]).on("zoom", zoom))
-                .append("g")
-                .style("background-color", "white");
+                .append("g");
 
             svg.selectAll("circle")
                 .data(itemData)
@@ -44,7 +44,7 @@ $(function(){
                   return "rgb(" + shift_down + "," + color_shift  + ", 0)"
                 })
                 .attr("id", function(d){
-                 return "sampleid-" + d[2].toString()})
+                 return d[2].toString()})
                  .attr("class", "sample");  // Adds id, won't be necessary in final implementation, will get value for id from the JSON and will id each element uniquely
 
             var rectangles = [[10, 0, 2, 400], [10, 400, 800, 2]]  // Variables for drawing x and y axis
@@ -79,16 +79,28 @@ $(function(){
                     return d[3]
                 });
 
-            $(document).ready(function(){
-                $(".sample").on("click", function(){
-                    // alert("Something happened.")
-                });
-            });
-
             function zoom() {
               svg.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")")
             }
 
+            $(document).ready(function(){
+                $(".sample").on("click", function(){
+                    $("#item_info").toggle();
+                    $.post("/items/ajaxget",
+                    {id: $(this).attr("id")},
+                    function(data){
+                        console.log(data)
+                        $("#manufacturer").text(data.manufacturer)
+                        $("#item_name").text(data.name)
+                        $("#lot_no").text(data.lot_number)
+                        $("#man_date").text(data.manufactured_on)
+                        $("#exp_date").text(data.expired_on)
+
+
+                        // console.log(parsedData)
+                    })
+                });
+            });
 
 })
 

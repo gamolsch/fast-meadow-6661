@@ -5,6 +5,10 @@
 <section class='search'>
   <h1>Welcome to Harpoon</h1>
 
+  <div id="item_info">
+    <%= render 'view_item' %>
+  </div>
+
   <form action="/search">
     <label for="query">Search:</label>
     <input type="text" name='query'>

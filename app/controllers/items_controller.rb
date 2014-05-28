@@ -9,11 +9,26 @@ class ItemsController < ApplicationController
     @not_pending_expired = Item.not_pending_expired
   end
 
+  def ajaxget
+    item = Item.find(params[:id])
+    @item_info = {
+      manufacturer: item.manufacturer,
+      name: item.name,
+      lot_number: item.lot_number,
+      manufactured_on: item.manufactured_on,
+      expired_on: item.expired_on
+    }
+    respond_to do |format|
+      format.json { render :json => @item_info}
+    end
+
+  end
+
   # GET /items/1
   # GET /items/1.json
   def show
     @item = Item.find(params[:id])
-    @remaining = Item.current_amount(params[:id])
+    @remaining = Item.find(params[:id]).current_amount
   end
 
   # GET /items/new
