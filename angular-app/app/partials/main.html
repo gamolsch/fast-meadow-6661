@@ -1,27 +1,29 @@
-<div class='form-list'>
-  <p>Create new Item:</p>
-  <form ng-submit="create(name)">
-    <fieldset>
-      <label for='name'>Name:</label>
-      <input type='text' ng-model="name" name="name" placeholder='Natural Orange Flavor' />
+<div class='container' ng-controller='ItemListController'>
+  <div class='form-list'>
+    <p>Create new Item:</p>
+    <form ng-submit="create(name)">
+      <fieldset>
+        <label for='name'>Name:</label>
+        <input type='text' ng-model="name" name="name" placeholder='Natural Orange Flavor' />
 
-      <button type='submit'>Create!</button>
-    </fieldset>
-  </form>
-</div>
+        <button type='submit'>Create!</button>
+      </fieldset>
+    </form>
+  </div>
 
-<br>
+  <br>
 
-<div class='item-list'>
-  <p>Life-cycle</p>
+  <div class='item-list'>
+    <p>Life-cycle</p>
 
-  <label for='search'>Search:</label>
-  <input name='search' ng-model="search">
+    <label for='search'>Search:</label>
+    <input name='search' ng-model="search">
 
-  <h3 ng-bind="items.length"></h3>
-  <input type='checkbox' ng-model='expired' ng-click='change()'/>
+    <h3 ng-bind="items.length"></h3>
+    <input type='checkbox' ng-model='expired' ng-click='change()'/>
 
-  <ul>
-    <li ng-repeat='item in items | filter:search'>index: {{ $index }} | id: {{ item.id }} | {{ item.name }}| <a href="" title='delete' ng-click='delete(item.id, item)'>Delete</a></li>
-  </ul>
+    <ul>
+      <li ng-repeat='item in items | filter:search'>index: {{ $index }} | id: {{ item.id }} | {{ item.name }}| <a href="" title='delete' ng-click='delete(item.id, item)'>Delete</a></li>
+    </ul>
+  </div>
 </div>
