@@ -20,7 +20,10 @@
     <input name='search' ng-model="search">
 
     <h3 ng-bind="items.length"></h3>
-    <input type='checkbox' ng-model='expired' ng-click='requery()'/>
+    <div class='slideThree'>
+      <input type='checkbox' value="None" id="slideThree" name="check" ng-model='expired' ng-click='requery()'/>
+      <label for="slideThree"></label>
+    </div>
 
     <ul>
       <li ng-repeat='item in items | filter:search'><span data-color='{{ item.color }}' class="color-label">{{ item.code }}</span> {{ item.name }}| <a href="" title='delete' ng-click='delete(item)'>Delete</a></li>

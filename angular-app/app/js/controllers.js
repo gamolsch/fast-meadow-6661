@@ -2,19 +2,21 @@
 
 /* Controllers */
 
-angular.module('searchApp')
+var searchApp = angular.module('searchApp');
+
+searchApp
 .factory('Item', ['$resource', function ($resource) {
 	return $resource('/api/items/:itemID');
 }]);
 
-angular.module('searchApp')
+searchApp
 .controller('ItemListController', ['$scope', 'Item', function ($scope, Item) {
 
+  // Default Properties
   $scope.expired = true
   $scope.items = Item.query({expired: $scope.expired});
 
   $scope.requery = function() {
-    console.log("Running requery...");
     $scope.items = Item.query({expired: $scope.expired});
   };
 
@@ -42,7 +44,8 @@ angular.module('searchApp')
 
   $scope.delete = function(item) {
     Item.delete( {itemID: item.id}, function() {
-      $scope.items.splice($scope.items.indexOf(item), 1);
+      var index = $scope.items.indexOf(item);
+      $scope.items.splice(index, 1);
     });
   };
 
