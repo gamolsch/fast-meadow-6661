@@ -22,18 +22,26 @@ class Item < ActiveRecord::Base
   end
 
   def self.expired_percent_by_location(location)
+    p "========================================================="
+    p "expired"
+    p location
     total_chemicals = Storage.find(location).items
+    p total_chemicals.count
     expired_chemicals = total_chemicals.where(["expired_on < ?", Time.now]).count.to_f
     (expired_chemicals / total_chemicals.count.to_f) * 100
   end
 
   def self.almost_expired_percent_by_location(location)
+    p "almost_expired"
+    p location
     total_chemicals = Storage.find(location).items
     expired_chemicals = total_chemicals.where(expired_on: Time.now..14.days.from_now).count.to_f
     (expired_chemicals / total_chemicals.count.to_f) * 100
   end
 
   def self.not_pending_expired_percent_by_location(location)
+    p "not pending"
+    p location
     total_chemicals = Storage.find(location).items
     expired_chemicals = total_chemicals.where(expired_on: 14.days.from_now..100000.years.from_now).count.to_f
     (expired_chemicals / total_chemicals.count.to_f) * 100

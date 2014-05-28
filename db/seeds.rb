@@ -40,37 +40,38 @@ csv_text = File.read("db/mainDB-inventory.csv")
 
 User.create!(first_name: "Jimmy", last_name: "James")
 
-426.times do |x|
-  storage = rand(5) + 1
-  Transaction.create!(user_id: 1, item_id: x + 1, action: "added", ammount_changed: 1000, created_at: (20 * (x + 1)).minutes.ago, storage_id: storage)
-  # Transaction.create!(user_id: 1, item_id: x + 1, action: "removed", ammount_changed: (1..100), created_at: (40 * (x + 1)).minutes.ago, storage_id: x + 1)
-  # Transaction.create!(user_id: 1, item_id: x + 1, action: "expired", ammount_changed: (1..100), created_at: (60 * (x + 1)).minutes.ago, storage_id: x + 1)
-  4.times do
-    p Transaction.create!(user_id: 1, item_id: x + 1, action: "updated", ammount_changed: 1 + rand(100), created_at: (80 * (x + 1)).minutes.ago, storage_id: storage)
-  end
-end
-
-# p CSV.parse(csv_text, headers: true).each do |row|
-#   @gat_haz.add(manufacturer: row[1], name: row[2], lot_number: row[3], manufactured_on: convert_date_format(row[4]), expired_on: convert_date_format(row[5]), unit_of_measure: "ml")
+# 426.times do |x|
+#   storage = rand(5) + 1
+#   Transaction.create!(user_id: 1, item_id: x + 1, action: "added", ammount_changed: 1000, created_at: (20 * (x + 1)).minutes.ago, storage_id: storage)
+#   # Transaction.create!(user_id: 1, item_id: x + 1, action: "removed", ammount_changed: (1..100), created_at: (40 * (x + 1)).minutes.ago, storage_id: x + 1)
+#   # Transaction.create!(user_id: 1, item_id: x + 1, action: "expired", ammount_changed: (1..100), created_at: (60 * (x + 1)).minutes.ago, storage_id: x + 1)
+#   4.times do
+#     p Transaction.create!(user_id: 1, item_id: x + 1, action: "updated", ammount_changed: 1 + rand(100), created_at: (80 * (x + 1)).minutes.ago, storage_id: storage)
+#   end
 # end
 
 CSV.parse(csv_text, headers: true).each do |row|
-  @gat_main.add(manufacturer: row[1], name: row[2], lot_number: row[3], manufactured_on: convert_date_format(row[4]), expired_on: convert_date_format(row[5]), unit_of_measure: "ml")
+
+  given_name = row[0]
+  p "===================================="
+  p given_name
+  item_params = {manufacturer: row[1], name: row[2], lot_number: row[3], manufactured_on: convert_date_format(row[4]), expired_on: convert_date_format(row[5]), unit_of_measure: "ml"}
+
+  case given_name
+    when "Gatorade Lab, Hazardous"
+      p "Gatorade Lab, Hazardous"
+      @gat_haz.add(item_params)
+    when "Gatorade Lab, Non-Hazardous"
+      p "Gatorade Lab, Non-Hazardous"
+      @gat_nonhaz.add(item_params)
+    when "Gatorade Lab, Main Inventory"
+      p "Gatorade Lab, Main Inventory"
+      @gat_main.add(item_params)
+    when "Pilot Plant, Hazardous"
+      p "Pilot Plant, Hazardous"
+      @pilot_haz.add(item_params)
+    when "Pilot Plant, Non-Hazardous"
+      p "Pilot Plant, Non-Hazardous"
+      @pilot_nonhaz.add(item_params)
+  end
 end
-
-# CSV.parse(csv_text, headers: true).each do |row|
-#   @pilot_haz.add(manufacturer: row[1], name: row[2], lot_number: row[3], manufactured_on: convert_date_format(row[4]), expired_on: convert_date_format(row[5]), unit_of_measure: "ml")
-# end
-
-# CSV.parse(csv_text, headers: true).each do |row|
-#   @pilot_nonhaz.add(manufacturer: row[1], name: row[2], lot_number: row[3], manufactured_on: convert_date_format(row[4]), expired_on: convert_date_format(row[5]), unit_of_measure: "ml")
-# end
-
-# CSV.parse(csv_text, headers: true).each do |row|
-#   @gat_nonhaz.add(manufacturer: row[1], name: row[2], lot_number: row[3], manufactured_on: convert_date_format(row[4]), expired_on: convert_date_format(row[5]), unit_of_measure: "ml")
-# end
-
-
-
-
-

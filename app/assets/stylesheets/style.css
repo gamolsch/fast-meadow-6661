@@ -21,7 +21,7 @@ button, input {
   color: #111;
 }
 
-form  {
+form {
   border: 1px solid lightgray;
   padding: 20px;
   border-radius: 4px;
@@ -148,6 +148,12 @@ a {
   margin-top: 0px;
   padding: 30px 10px 0px 0px;
   border-radius: 4px;
+  height: 500px;
+}
+
+fieldset {
+  width: 100px;
+  height: 500px;
 }
 
 /*.remove-list {
