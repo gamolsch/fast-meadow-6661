@@ -40,8 +40,8 @@ angular.module('searchApp')
     });
   };
 
-  $scope.delete = function(id, item) {
-    Item.delete( {itemID: id}, function() {
+  $scope.delete = function(item) {
+    Item.delete( {itemID: item.id}, function() {
       $scope.items.splice($scope.items.indexOf(item), 1);
     });
   };

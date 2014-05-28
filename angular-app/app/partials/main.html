@@ -23,7 +23,7 @@
     <input type='checkbox' ng-model='expired' ng-click='requery()'/>
 
     <ul>
-      <li data-color='{{ item.color }}' ng-repeat='item in items | filter:search'>CODE: {{ item.code }} | {{ item.name }}| <a href="" title='delete' ng-click='delete(item.id, item)'>Delete</a></li>
+      <li data-color='{{ item.color }}' ng-repeat='item in items | filter:search'>CODE: {{ item.code }} | {{ item.name }}| <a href="" title='delete' ng-click='delete(item)'>Delete</a></li>
     </ul>
 
     <!-- USED FOR DEVELOPMENT -->
