@@ -106,9 +106,9 @@ input[type=checkbox] {
 }
 
 .slideThree:after {
-  content: 'Expired';
+  content: 'All Items';
   font: 12px/26px Arial, sans-serif;
-  color: red;
+  color: #00bf00;
   position: absolute;
   right: 10px;
   z-index: 0;
@@ -117,9 +117,9 @@ input[type=checkbox] {
 }
 
 .slideThree:before {
-  content: 'All Items';
+  content: 'Expired';
   font: 12px/26px Arial, sans-serif;
-  color: #00bf00;
+  color: red;
   position: absolute;
   left: 10px;
   z-index: 0;
