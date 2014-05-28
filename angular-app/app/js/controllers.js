@@ -13,13 +13,8 @@ angular.module('searchApp')
   $scope.expired = true
   $scope.items = Item.query({expired: $scope.expired});
 
-  $scope.change = function() {
-    if($scope.expired === true) {
-      $scope.items = Item.query({expired: true});
-    }
-    else {
-      $scope.items = Item.query({expired: false});
-    };
+  $scope.requery = function() {
+    $scope.items = Item.query({expired: $scope.expired});
   };
 
   $scope.create = function(name) {

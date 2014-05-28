@@ -1,10 +1,7 @@
 <section class='search'>
-  <h1>Welcome to Harpoon</h1>
-
   <div id="item_info">
     <%= render 'view_item' %>
   </div>
-
   <div class='content'>
     <div class='description'>
       <p>Inventories are necessary for a firm to operate efficiently and almost all business transactions involve the delivery of a product or service in exchange for currency. For this reason, inventory management is a very important part of core operations activities. Most retail businesses and wholesale organizations acquire most of their revenue through the sale of merchandise (inventory).</p></div><div class='description'><p>In order for business and supply chains to run effectively, and efficiently they must meet all the listed requirements for effective inventory management. Some of the main concerns are the level of customer service and the cost of ordering, storing, and carrying inventory. Therefore, in order to be a successful and profitable company, inventory management must be managed wisely.</p>
@@ -12,28 +9,17 @@
   </div>
 </section>
 
-
 <section class="overall-health">
-
   <div id="health-chart">
-    <p>Expired Total</p>
+    <h1>Inventory Healthiness</h1>
+    <p>What do you think these green dots mean?</p>
   </div>
 
-
-  <div hidden id="item_values"><%= @item_values %></div>
-
-  <section class='recent-activity'>
-  <h1>Recent Activity</h1>
-  <div class='feed'>
-    <% @transactions.each do |trans| %>
-    <p class="activity"><span><%= trans.how_long_ago %></span> | <%= trans.get_actor.first_name %> <%= trans.get_actor.last_name %> <%= trans.action %> <%= link_to trans.get_item.name, item_path(trans.get_item.id) %> to <%= link_to trans.storage.name, storage_path(trans.storage.id) %></p>
-    <% end %>
+  <div hidden id="item_values">
+    <%= @item_values %>
   </div>
 </section>
 
 <section class='inventory'>
-  <h1>Overview:</h1>
-  <div style="border: 1px solid black;margin-top: 10px; margin-bottom: 10px">
-    <p><a href="/dashboard">Dashboard</a></p>
-  </div>
+  <%= link_to 'Dashboard', dashboard_path %>
 </section>
