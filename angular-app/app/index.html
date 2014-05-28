@@ -17,14 +17,11 @@
     <!-- endbuild -->
 </head>
   <body ng-app='searchApp'>
-
     <div class='container' ng-controller='ItemListController'>
       <header>
         <h2 style="width: 50%;display:inline"><a href="/home">Harpoon</a></h2>
         <h4 style="margin-right:10%;display:inline;float:right"><a href="/#douche">Sir Kel Insisted His Name Be Here</a></h4>
       </header>
-
-      <!--- USER LISTS -->
 
       <div class='form-list'>
         <p>Create new Item:</p>
@@ -42,11 +39,10 @@
 
       <div class='item-list'>
         <p>Life-cycle</p>
-        <!-- SEARCH BAR -->
+
         <label for='search'>Search:</label>
         <input name='search' ng-model="search">
 
-        <!-- ITEMS LIST -->
         <h3 ng-bind="items.length"></h3>
         <input type='checkbox' ng-model='expired' ng-click='change()'/>
 
@@ -55,29 +51,10 @@
         </ul>
       </div>
 
-      <!-- <div>
-        <p>Graveyard</p>
-        <ul>
-          <li ng-repeat='removedItem in removedItems'>
-            index: {{ $index }} | id: {{ item.id }} | {{ removedItem.name }} | <a href="" title='delete' ng-click='delete(removedItem.id, removedItem)'>Delete All</a>
-          </li>
-        </ul>
-      </div> -->
-
       <footer style="margin-top:20%">
         <hr>
       </footer>
     </div>
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src='//www.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
-
-
 
     <!-- build:js scripts/plugins.js -->
     <script src="bower_components/jquery/jquery.js"></script>

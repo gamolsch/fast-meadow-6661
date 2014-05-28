@@ -12,7 +12,6 @@ angular.module('searchApp')
 
   $scope.expired = true
   $scope.items = Item.query({expired: $scope.expired});
-  $scope.removedItems = [];
 
   $scope.change = function() {
     if($scope.expired === true) {
@@ -29,15 +28,9 @@ angular.module('searchApp')
     });
   };
 
-  $scope.remove = function(item) {
-    $scope.items.splice($scope.items.indexOf(item), 1);
-    $scope.removedItems.push(item);
-    console.log(item);
-  }
-
   $scope.delete = function(id, item) {
     Item.delete( {itemID: id}, function() {
-      $scope.removedItems.splice($scope.removedItems.indexOf(item), 1);
+      $scope.items.splice($scope.items.indexOf(item), 1);
     });
   };
 
