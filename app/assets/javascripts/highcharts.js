@@ -6,9 +6,8 @@ $(function () {
   global_percent_data = $.parseJSON($("#health_percentages").text()).global_percent_data;
   specific_percent_data = $.parseJSON($("#health_percentages_by_location").text()).by_location;
   locations = $.parseJSON($("#storages").text()).location;
-  overall_percentage = $.parseJSON($("#overall_percentage").text()).location_total
-
-  global_percent_data = $.parseJSON($("#health_percentages").text()).global;
+  overall_percentage = $.parseJSON($("#overall_percentage").text()).location_total;
+  // global_percent_data = $.parseJSON($("#health_percentages").text()).global;
 
   var colors = Highcharts.getOptions().colors,
         categories = locations,
@@ -89,7 +88,9 @@ $(function () {
             },
 
             chart: {
-                type: 'pie'
+                type: 'pie',
+                width: 800,
+                height: 500
             },
             title: {
                 text: 'Global Inventory Status'
