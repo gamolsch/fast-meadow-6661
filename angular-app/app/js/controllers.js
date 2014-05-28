@@ -17,6 +17,13 @@ angular.module('searchApp')
     $scope.items = Item.query({expired: $scope.expired});
   };
 
+  $scope.colorAssign = function() {
+    $.each($('li'), function(index, listedItem) {
+      var givenColor = $(listedItem).data('color')
+      $(listedItem).css('background-color', givenColor)
+    });
+  }
+
   $scope.create = function(name) {
     Item.save({name: name}, function(item) {
       $scope.items.push(item);
