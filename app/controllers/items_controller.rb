@@ -20,17 +20,16 @@ class ItemsController < ApplicationController
       trans_info: []
     }
 
-    # item.transactions do |trans|
-    #   spec_trans_info = []
-    #   binding.pry
-    #   spec_trans_info << trans.how_long_ago
-    #   spec_trans_info << trans.get_actor.first_name
-    #   spec_trans_info << trans.get_actor.actor_last_name
-    #   spec_trans_info << trans.action
-    #   spec_trans_info << trans.get_item.name
-    #   spec_trans_info << trans.storage.name
-    #   @item_info.trans_info << spec_trans_info
-    # end
+    item.transactions.each do |trans|
+      spec_trans_info = []
+      spec_trans_info << trans.how_long_ago
+      spec_trans_info << trans.get_actor.first_name
+      spec_trans_info << trans.get_actor.last_name
+      spec_trans_info << trans.action
+      spec_trans_info << trans.get_item.name
+      spec_trans_info << trans.storage.name
+      @item_info[:trans_info] << spec_trans_info
+    end
     p @item_info
     respond_to do |format|
       format.json { render :json => @item_info}

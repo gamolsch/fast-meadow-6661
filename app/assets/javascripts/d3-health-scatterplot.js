@@ -95,6 +95,9 @@ $(function(){
                         $("#lot_no").text(data.lot_number)
                         $("#man_date").text(data.manufactured_on)
                         $("#exp_date").text(data.expired_on)
+                        for(var i = 0; i < data.trans_info.length; i++){
+                            $("#recent_transactions").append("<p>" + data.trans_info[i][0] + " | " + data.trans_info[i][1] + " " + data.trans_info[i][2] + " " + data.trans_info[i][3] + " " + data.trans_info[i][4]  + " to " + data.trans_info[i][5] + "</p>")
+                        }
 
 
                         // console.log(parsedData)
