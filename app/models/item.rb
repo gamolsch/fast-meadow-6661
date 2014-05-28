@@ -72,7 +72,6 @@ class Item < ActiveRecord::Base
     date = DateTime.strptime(self.expired_on.to_s, "%Y-%m-%d")
     now = DateTime.now
     (date - now).to_i
-
   end
 end
 

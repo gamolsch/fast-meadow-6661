@@ -26,7 +26,7 @@
     </div>
 
     <ul>
-      <li ng-repeat='item in items | filter:search'><span data-color='{{ item.color }}' class="color-label">{{ item.code }}</span> {{ item.name }}| <a href="" title='delete' ng-click='delete(item)'>Delete</a></li>
+      <li ng-repeat='item in items | filter:search'><span data-color='{{ item.color }}' class="color-label">{{ item.code }}</span> {{ item.name }} <a href="" title='delete' ng-click='delete(item)'><i class="fa fa-times"></i></a></li>
     </ul>
 
     <!-- USED FOR DEVELOPMENT -->
