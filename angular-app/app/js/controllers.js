@@ -20,20 +20,15 @@ searchApp
     $scope.items = Item.query({expired: $scope.expired});
   };
 
-  $scope.colorAssign = function() {
-    console.log("BEGIN color assign...")
-
+  $scope.updateColors = function() {
     // AFTER query, run this function:
     window.setInterval( function() {
       $.each($('.color-label'), function(index, colorLabel) {
-        console.log("SET given color...")
         var givenColor = $(colorLabel).data('color')
         $(colorLabel).css('background-color', givenColor)
       });
     }, 100);
     // END
-
-    console.log("END color assign")
   };
 
   $scope.create = function(name) {
