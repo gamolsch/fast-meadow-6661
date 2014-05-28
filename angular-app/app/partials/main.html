@@ -23,11 +23,26 @@
     <input type='checkbox' ng-model='expired' ng-click='requery()'/>
 
     <ul>
-      <li data-color='{{ item.color }}' ng-repeat='item in items | filter:search'>CODE: {{ item.code }} | {{ item.name }}| <a href="" title='delete' ng-click='delete(item)'>Delete</a></li>
+      <li ng-repeat='item in items | filter:search'><span data-color='{{ item.color }}' class="color-label">{{ item.code }}</span> {{ item.name }}| <a href="" title='delete' ng-click='delete(item)'>Delete</a></li>
     </ul>
 
     <!-- USED FOR DEVELOPMENT -->
-    <div hidden ng-init='colorAssign()'></div>
+      <style type="text/css">
+
+        span {
+
+          color: white;
+
+          /* Font needs to be thicker for labels*/
+          -webkit-text-fill-color: white;
+          -webkit-text-stroke-width: 0.5px;
+          -webkit-text-stroke-color: black;
+        }
+
+      </style>
+
+      <div hidden ng-init='colorAssign()'></div>
+    <!-- END DEVELOP -->
 
   </div>
 </div>

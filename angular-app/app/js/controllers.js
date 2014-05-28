@@ -23,10 +23,10 @@ angular.module('searchApp')
 
     // AFTER query, run this function:
     window.setInterval( function() {
-      $.each($('li'), function(index, listedItem) {
+      $.each($('.color-label'), function(index, colorLabel) {
         console.log("SET given color...")
-        var givenColor = $(listedItem).data('color')
-        $(listedItem).css('background-color', givenColor)
+        var givenColor = $(colorLabel).data('color')
+        $(colorLabel).css('background-color', givenColor)
       });
     }, 100);
     // END
