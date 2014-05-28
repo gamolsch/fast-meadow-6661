@@ -7,25 +7,25 @@ class SearchController < ApplicationController
 
   # GET /items.json
   def index
-    render json: Item.all
+    if params[:expired] == "true"
+      render json: Item.expired.all
+    else
+      render json: Item.all
+    end
   end
 
   # POST /api/items.json
   def create
-    puts "Processing!"
     @item = Item.new(item_params)
 
     if @item.save
-      puts "Created!"
       render json: @item, status: :ok
     else
-      puts "Error!"
       render json: @item.errors, status: :unprocessable_entity
     end
   end
 
   def destroy
-    puts "Destroying!"
     @item.destroy
     head :no_content
   end

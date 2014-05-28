@@ -11,23 +11,13 @@
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css({.tmp,app}) css/main.css -->
     <link rel="stylesheet" href="css/main.css">
     <!-- endbuild -->
 </head>
   <body ng-app='searchApp'>
-    <!--[if lt IE 7]>
-      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-    <![endif]-->
 
-    <!--[if lt IE 9]>
-      <script src="bower_components/es5-shim/es5-shim.js"></script>
-      <script src="bower_components/json3/lib/json3.min.js"></script>
-    <![endif]-->
-
-    <!-- Add your site or application content here -->
     <div class='container' ng-controller='ItemListController'>
       <header>
         <h2 style="width: 50%;display:inline"><a href="/home">Harpoon</a></h2>
@@ -48,6 +38,8 @@
         </form>
       </div>
 
+      <br>
+
       <div class='item-list'>
         <p>Life-cycle</p>
         <!-- SEARCH BAR -->
@@ -55,20 +47,22 @@
         <input name='search' ng-model="search">
 
         <!-- ITEMS LIST -->
+        <h3 ng-bind="items.length"></h3>
+        <input type='checkbox' ng-model='expired' ng-change='change()'/>
+
         <ul>
-          <li ng-repeat='item in items | filter:search'>index: {{ $index }} | id: {{item.id}} | {{ item.name }}| <a href="" title='remove' ng-click='remove(item)'>Remove</a></li>
+          <li ng-repeat='item in items | filter:search'>index: {{ $index }} | id: {{ item.id }} | {{ item.name }}| <a href="" title='delete' ng-click='delete(item.id, item)'>Delete</a></li>
         </ul>
       </div>
 
-      <div>
+      <!-- <div>
         <p>Graveyard</p>
         <ul>
           <li ng-repeat='removedItem in removedItems'>
             index: {{ $index }} | id: {{ item.id }} | {{ removedItem.name }} | <a href="" title='delete' ng-click='delete(removedItem.id, removedItem)'>Delete All</a>
           </li>
         </ul>
-
-      </div>
+      </div> -->
 
       <footer style="margin-top:20%">
         <hr>

@@ -6,12 +6,12 @@ body {
 }
 
 .item-list {
-  float: left;
+  /*float: left;*/
   margin-left: 300px;
 }
 
 .form-list {
-  float: left;
+  /*float: left;*/
   padding: 20px;
   border: 1px dashed gray;
 }
