@@ -23,35 +23,11 @@
       <label for="slideThree"></label>
     </div>
 
-    <ul>
+    <ul class='inventory-list'>
       <li ng-repeat='item in items | filter:search'><span data-color='{{ item.color }}' class="color-label">{{ item.code }}</span> {{ item.name }} <a href="" title='delete' ng-click='delete(item)'><i class="fa fa-times"></i></a></li>
     </ul>
 
     <!-- USED FOR DEVELOPMENT -->
-      <style type="text/css">
-
-        .color-label {
-
-          color: white;
-
-          /* Font needs to be thicker for labels*/
-/*          -webkit-text-fill-color: white;
-          -webkit-text-stroke-width: 0.5px;
-          -webkit-text-stroke-color: black;*/
-          text-shadow:
-            -1px -1px 0 black,
-            -1px -1px 0 black,
-            -1px 1px 0 black,
-            1px 1px 0 black;
-        }
-
-        ul {
-          list-style-type: none;
-          padding-left: 0;
-        }
-
-      </style>
-
       <div hidden ng-init='updateColors()'></div>
     <!-- END DEVELOP -->
 

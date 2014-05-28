@@ -24,6 +24,7 @@ searchApp
     // AFTER query, run this function:
     window.setInterval( function() {
       $.each($('.color-label'), function(index, colorLabel) {
+        console.log("Please hire me! We don't understand how to implement thenable promises!")
         var givenColor = $(colorLabel).data('color')
         $(colorLabel).css('background-color', givenColor)
       });
