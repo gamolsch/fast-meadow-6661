@@ -14,15 +14,25 @@ angular.module('searchApp')
   $scope.items = Item.query({expired: $scope.expired});
 
   $scope.requery = function() {
+    console.log("Running requery...");
     $scope.items = Item.query({expired: $scope.expired});
   };
 
   $scope.colorAssign = function() {
-    $.each($('li'), function(index, listedItem) {
-      var givenColor = $(listedItem).data('color')
-      $(listedItem).css('background-color', givenColor)
-    });
-  }
+    console.log("BEGIN color assign...")
+
+    // AFTER query, run this function:
+    window.setInterval( function() {
+      $.each($('li'), function(index, listedItem) {
+        console.log("SET given color...")
+        var givenColor = $(listedItem).data('color')
+        $(listedItem).css('background-color', givenColor)
+      });
+    }, 100);
+    // END
+
+    console.log("END color assign")
+  };
 
   $scope.create = function(name) {
     Item.save({name: name}, function(item) {

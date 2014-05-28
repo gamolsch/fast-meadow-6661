@@ -22,11 +22,12 @@
     <h3 ng-bind="items.length"></h3>
     <input type='checkbox' ng-model='expired' ng-click='requery()'/>
 
-    <!-- USED FOR DEVELOPMENT -->
-    <input type='checkbox' ng-click='colorAssign()'>
-
     <ul>
       <li data-color='{{ item.color }}' ng-repeat='item in items | filter:search'>CODE: {{ item.code }} | {{ item.name }}| <a href="" title='delete' ng-click='delete(item.id, item)'>Delete</a></li>
     </ul>
+
+    <!-- USED FOR DEVELOPMENT -->
+    <div hidden ng-init='colorAssign()'></div>
+
   </div>
 </div>
