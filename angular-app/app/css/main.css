@@ -4,30 +4,3 @@ body {
     color: #333;
     padding-top: 40px;
 }
-
-.item-list {
-  /*float: left;*/
-  margin-left: 300px;
-}
-
-.form-list {
-  /*float: left;*/
-  padding: 20px;
-  border: 1px dashed gray;
-}
-
-.remove-list {
-  float: right;
-}
-
-footer {
-  clear: both;
-}
-
-header, footer,.container,
-.item-list, .search-options,
-.search-bar {
-  border: 1px dashed gray;
-  padding: 20px;
-  margin: 20px;
-}
