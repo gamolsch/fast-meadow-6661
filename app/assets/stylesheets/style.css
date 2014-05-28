@@ -1,5 +1,6 @@
 body {
   background: #F1F1F1;
+  font-family: 'Open Sans', sans-serif;
   color: #000;
 }
 
@@ -18,7 +19,6 @@ img {
 button, input {
   width: 200px;
   color: #111;
-/*  border-radius: 3px;*/
 }
 
 form  {
@@ -40,17 +40,18 @@ form  {
     margin: 100px;
   }
 
+.content {
+  width: 800px;
+}
+
+.description {
+  float: left;
+  padding: 20px;
+  width: 355px;
+}
+
 div#health-chart {
-  /*border: 1px solid lightgray;*/
   border-radius: 3px;
-  /*background-image:
-     linear-gradient(
-     #E9E5E0, #E9E5E0
-     );*/
-  /*background-color: salmon;*/
-  /*color: gray;*/
-  font-family: `;
-  /*width: 700px;*/
   padding: 4px;
 }
 
@@ -63,12 +64,9 @@ div#health-chart {
   float: left;
   width: 220px;
   margin-right: 50px;
-  /*padding-right: 20px;*/
-  /*border: solid 1px lightgray;*/
 }
 
 section {
-/*  border: 1px solid lightgray;*/
   padding: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -83,7 +81,6 @@ section div, section h1, section form {
 p.activity {
   width: 640px;
   height: 25px;
-  font-family: sans-serif;
   font-size: 0.900em;
   border-radius: 3px;
   margin-bottom: 4px;
@@ -133,4 +130,78 @@ div.gatorade_chart {
     width: 520px;
   }
 
+a {
+  text-decoration: none;
+}
 
+.item-list {
+  /*float: right;*/
+  width: 100px;
+  padding: 30px 0px 30px 30px;
+  margin: 0px;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+}
+
+.form-list {
+  float: left;
+  margin-top: 0px;
+  padding: 30px 10px 0px 0px;
+  border-radius: 4px;
+}
+
+/*.remove-list {
+  float: left;
+  padding: 10px 10px 0px 0px;
+  margin-top: 10px;
+  border-radius: 4px;
+}*/
+
+footer {
+  clear: both;
+}
+
+header, footer, .container, .search-options, .search-bar {
+  border-bottom: 1px solid lightgray;
+  padding: 20px;
+  margin: 0px;
+}
+
+ul li {
+  position: relative;
+  float: right;
+  list-style-type: none;
+  font-size: 6px;
+  height: 15px;
+  padding: 9px 0px;
+  border-bottom: 1px solid #e6e7e8;
+}
+
+.color_label {
+  position: relative;
+  float: left;
+  width: 24px;
+  height: 34px;
+}
+
+.inner_color {
+  background: #4C5D75;
+  width: 16px;
+  height: 16px;
+  margin: 9px 0px;
+}
+
+p#graveyard {
+  margin-left: 40px;
+}
+
+h2 {
+  display: inline;
+  float: left;
+}
+
+h4 {
+  font-weight: bold;
+  display: inline;
+  float: right
+}

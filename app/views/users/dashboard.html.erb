@@ -1,8 +1,4 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -13,12 +9,13 @@
     <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 </head>
   <body ng-app="searchApp">
     <div class="container" ng-controller="ItemListController">
       <header>
-        <h2 style="width: 50%;display:inline"><a href="/home">Harpoon</a></h2>
-        <h4 style="margin-right:10%;display:inline;float:right"><a href="/#douche">Sir Kel Insisted His Name Be Here</a></h4>
+        <h2><a href="/home">Harpoon</a></h2>
+        <h4><a href="/#inventory-mgt">Inventory Management for Humans</a></h4>
       </header>
 
       <div class="form-list">
@@ -43,13 +40,14 @@
 
         <h3 ng-bind="items.length"></h3>
         <input type="checkbox" ng-model="expired" ng-click="change()">
-
         <ul>
-          <li ng-repeat="item in items | filter:search">index: {{ $index }} | id: {{ item.id }} | {{ item.name }}| <a href="" title="delete" ng-click="delete(item.id, item)">Delete</a></li>
+          <li class="item-row" ng-repeat="item in items | filter:search">
+            <div class="inner_color"></div><div class="list_item">
+            index: {{ $index }} | id: {{ item.id }} | {{ item.name }}| <a href="" title="delete" ng-click="delete(item.id, item)">Delete</a></div></li>
         </ul>
       </div>
 
-      <footer style="margin-top:20%">
+      <footer style="margin-top:40px">
         <hr>
       </footer>
     </div>

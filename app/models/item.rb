@@ -57,7 +57,7 @@ class Item < ActiveRecord::Base
   end
 
   def calc_percent_of_total_remaining
-    if self.transactions.count  < 1
+    if self.transactions.count  > 1
       return ((self.current_amount) / self.transactions.first.ammount_changed.to_f).round(2)
     else
       return self.current_amount
