@@ -11,15 +11,13 @@
     </form>
   </div>
 
-  <br>
-
   <div class='item-list'>
-    <p>Life-cycle</p>
 
     <label for='search'>Search:</label>
     <input name='search' ng-model="search">
 
-    <h3 ng-bind="items.length"></h3>
+    <p>Number of Items: <span ng-bind="items.length"></span></p>
+
     <div class='slideThree'>
       <input type='checkbox' value="None" id="slideThree" name="check" ng-model='expired' ng-click='requery()'/>
       <label for="slideThree"></label>
@@ -32,7 +30,7 @@
     <!-- USED FOR DEVELOPMENT -->
       <style type="text/css">
 
-        span {
+        .color-label {
 
           color: white;
 
