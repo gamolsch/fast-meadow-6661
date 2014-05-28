@@ -1,0 +1,32 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title></title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+  <body ng-app="searchApp">
+    <div class="container" ng-controller="ItemListController">
+      <header>
+        <%= link_to(image_tag("harpoon.png", alt: "Harpoon", title: "Harpoon", size: '200x38'), "/") %>
+      </header>
+
+      <%= yield %>
+
+
+      <footer style="margin-top:20%">
+        <hr>
+      </footer>
+    </div>
+
+    <script src="scripts/488e3e7a.plugins.js"></script>
+    <script src="scripts/8e735035.modules.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

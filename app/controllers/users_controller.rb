@@ -31,6 +31,6 @@ class UsersController < ApplicationController
   end
 
   def dashboard
-    render 'dashboard', layout: false
+    render 'dashboard', layout: 'ng-dashboard'
   end
 end

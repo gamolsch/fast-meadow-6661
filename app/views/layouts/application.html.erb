@@ -13,16 +13,13 @@
 
 <div class='container'>
   <header>
-  	<h2 style="width: 50%;display:inline"><a href="/"><img src="/assets/harpoon.png" width="200px"></a></h2>
+  	 <%= link_to(image_tag("harpoon.png", alt: "Harpoon", title: "Harpoon", size: '200x38'), "/") %>
   </header>
 
-  <div class='body'>
-    <%= yield %>
-  </div>
+  <%= yield %>
 
-  <footer style="margin-top:20%">
-  	<h3 style="display:inline">© Project Harpoon</h3>
-  	<h3 style="display:inline;float:right"><a href="#">Meet the Dev Team</a></h3>
+  <footer>
+    <hr>
   </footer>
 </div>
 
