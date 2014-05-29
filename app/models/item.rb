@@ -9,10 +9,6 @@ class Item < ActiveRecord::Base
   scope :almost_expired, -> { where(expired_on: Time.now..14.days.from_now) }
   scope :not_expired, -> { where(expired_on: 14.days.from_now..100000.years.from_now) }
 
-  def storage
-    Storage.find(Category.find(category_id).storage_id).name
-  end
-
   def self.expired_percent
     (expired.count.to_f / Item.count.to_f) * 100
   end

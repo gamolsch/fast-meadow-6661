@@ -13,7 +13,7 @@ class Storage < ActiveRecord::Base
       suggested_color = (create_new_color?) ? get_new_color : get_existing_color
       suggested_code = suggested_color.get_code
 
-      p new_item = Item.create(items_params)
+      new_item = Item.create(items_params)
       suggested_color.items << new_item
       new_item.code = suggested_code
       new_item.color = Category.find( new_item.category_id ).color

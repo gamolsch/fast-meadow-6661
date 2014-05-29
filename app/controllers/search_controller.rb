@@ -18,8 +18,19 @@ class SearchController < ApplicationController
   def create
     @item = Item.new(item_params)
 
-    if @item.save
+    if @item.valid?
+
       # TODO: Add the Item to the given Storage (provided by User)
+
+      p "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+      p params[:storage]
+      p "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+
+      storage = Storage.find_by(name: params[:storage])
+      storage.add(item_params)
+
+      #END TODO
+
       render json: @item, status: :ok
     else
       render json: @item.errors, status: :unprocessable_entity
@@ -39,6 +50,6 @@ class SearchController < ApplicationController
 
   def item_params
     # TODO: Include all relevant parameters
-    params.permit(:name, :manufacturer, :lot_number, :amount, :manufactured_on, :expired_on)
+    params.permit(:name, :manufacturer, :lot_number, :amount, :manufactured_on, :expired_on, :storage)
   end
 end
