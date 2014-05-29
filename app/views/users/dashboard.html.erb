@@ -1,4 +1,8 @@
 <!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -9,62 +13,70 @@
     <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="css/main.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+
+    <!-- CDN source CSS -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
 </head>
   <body ng-app="searchApp">
-    <div class="container" ng-controller="ItemListController">
+    <div class="container">
       <header>
-        <h2><a href="/home">Harpoon</a></h2>
-        <h4><a href="/#inventory-mgt">Inventory Management for Humans</a></h4>
+        <a href="/" id="header-title"><h1>Inventory For Humans</h1></a>
       </header>
 
-      <div class="form-list">
-        <p>Create new Item:</p>
-        <form ng-submit="create(name)">
-          <fieldset>
-            <label for="name">Name:</label>
-            <input type="text" ng-model="name" name="name" placeholder="Natural Orange Flavor">
-            <label for="manufacturer">Manufacturer:</label>
-            <input type="text" ng-model="manufacturer" name="manufacturer" placeholder="Pepsico">
-            <label for="lot_number">Lot Number:</label>
-            <input type="text" ng-model="lot_number" name="lot_number" placeholder="E456789">
-            <label for="amount">Amount:</label>
-            <input type="text" ng-model="amount" name="amount" placeholder="0.00">
-            <label for="manufactured_on">Manufactured On:</label>
-            <input type="text" ng-model="manufactured_on" name="manufactured_on" placeholder="mm/dd/yyyy">
-            <label for="expired_on">Expires On:</label>
-            <input type="text" ng-model="expired_on" name="expired_on" placeholder="05/30/2015">
-            <label for="storage">Storage Location:</label>
-            <select name="storage" ng-model="storage">
-              <option value="Gatorade Lab, Hazardous">Gatorade Lab, Hazardous</option>
-              <option value="Gatorade Lab, Non-Hazardous">Gatorade Lab, Non-Hazardous</option>
-              <option value="Gatorade Lab, Main Inventory">Gatorade Lab, Main Inventory</option>
-              <option value="Pilot Plant, Hazardous">Pilot Plant, Hazardous</option>
-              <option value="Pilot Plant, Non-Hazardous">Pilot Plant, Non-Hazardous</option>
-            </select>
-            <button type="submit">Create!</button>
-          </fieldset>
-        </form>
+      <div class='container' ng-controller='ItemListController'>
+
+        <div class="form-list">
+          <form id="item-form" ng-submit="create(name, manufacturer, lot_number, amount, manufactured_on, expired_on, storage)">
+            <fieldset>
+              <label for="name">Name:</label>
+              <input type="text" ng-model="name" name="name" placeholder="Natural Orange Flavor"><br>
+              <label for="manufacturer">Manufacturer:</label>
+              <input type="text" ng-model="manufacturer" name="manufacturer" placeholder="Pepsico"><br>
+              <label for="lot_number">Lot Number:</label>
+              <input type="text" ng-model="lot_number" name="lot_number" placeholder="E456789"><br>
+              <label for="amount">Amount:</label>
+              <input type="text" ng-model="amount" name="amount" placeholder="0.00"><br>
+              <label for="manufactured_on">Manufactured On:</label>
+              <input type="text" ng-model="manufactured_on" name="manufactured_on" placeholder="mm/dd/yyyy"><br>
+              <label for="expired_on">Expires On:</label>
+              <input type="text" ng-model="expired_on" name="expired_on" placeholder="05/30/2015"><br>
+              <label for="storage">Storage Location:</label>
+              <select name="storage" ng-model="storage">
+                <option value="Gatorade Lab, Hazardous" >Gatorade Lab, Hazardous</option>
+                <option value="Gatorade Lab, Non-Hazardous">Gatorade Lab, Non-Hazardous</option>
+                <option value="Gatorade Lab, Main Inventory">Gatorade Lab, Main Inventory</option>
+                <option value="Pilot Plant, Hazardous">Pilot Plant, Hazardous</option>
+                <option value="Pilot Plant, Non-Hazardous">Pilot Plant, Non-Hazardous</option>
+              </select><br>
+              <button type="submit">Create!</button>
+              <button type="reset">Reset!</button>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class='item-list'>
+          <div id="main-search"><label for='search'>Search:</label>
+          <input id="search-btn" name='search' ng-model="search"></div>
+
+          <div id="wrapper-total-items"><span>Total Items: </span><span id="total-items" ng-bind="items.length"></span></div>
+
+          <div class='slideThree'>
+            <input type='checkbox' value="None" id="slideThree" name="check" ng-model='expired' ng-click='requery()'/>
+            <label for="slideThree"></label>
+          </div>
+
+          <ul class='inventory-list'>
+            <li ng-repeat='item in items | filter:search'><span data-color='{{ item.color }}' class="color-label">{{ item.code }}</span> {{ item.name }} <a href="" title='delete' ng-click='delete(item)'><i class="fa fa-times"></i></a></li>
+          </ul>
+
+          <div hidden ng-init='updateColors()'></div>
+        </div>
       </div>
 
-      <br>
 
-      <div class="item-list">
-        <p>Life-cycle</p>
-
-        <label for="search">Search:</label>
-        <input name="search" ng-model="search">
-
-        <h3 ng-bind="items.length"></h3>
-        <input type="checkbox" ng-model="expired" ng-click="change()">
-        <ul>
-          <li class="item-row" ng-repeat="item in items | filter:search">
-            <div class="inner_color"></div><div class="list_item">
-            index: {{ $index }} | id: {{ item.id }} | {{ item.name }}| <a href="" title="delete" ng-click="delete(item.id, item)">Delete</a></div></li>
-        </ul>
-      </div>
-
-      <footer style="margin-top:40px">
+      <footer style="margin-top:20%">
         <hr>
       </footer>
     </div>
@@ -76,35 +88,3 @@
     <script src="js/scripts.js"></script>
 </body>
 </html>
-<!--
-<div class='container' ng-controller='ItemListController'>
-  <div class='form-list'>
-    <p>Create new Item:</p>
-    <form ng-submit="create(name)">
-      <fieldset>
-        <label for='name'>Name:</label>
-        <input type='text' ng-model="name" name="name" placeholder='Natural Orange Flavor' />
-
-        <button type='submit'>Create!</button>
-      </fieldset>
-    </form>
-  </div>
-
-  <br>
-
-  <div class='item-list'>
-    <p>Life-cycle</p>
-
-    <label for='search'>Search:</label>
-    <input name='search' ng-model="search">
-
-    <h3 ng-bind="items.length"></h3>
-    <input type='checkbox' ng-model='expired' ng-click='change()'/>
-
-    <ul>
-      <li ng-repeat='item in items | filter:search'>color: {{ item.color }} code: {{ item.code }} | {{ item.name }}| <a href="" title='delete' ng-click='delete(item.id, item)'>Delete</a></li>
-    </ul>
-  </div>
-</div>
-
- -->
