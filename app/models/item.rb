@@ -1,4 +1,3 @@
-require 'Date'
 class Item < ActiveRecord::Base
   belongs_to :category
   has_many   :transactions
@@ -73,24 +72,9 @@ class Item < ActiveRecord::Base
   end
 
   def calc_time_to_expiration
+    require 'Date'
     date = DateTime.strptime(self.expired_on.to_s, "%Y-%m-%d")
     now = DateTime.now
     (date - now).to_i
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
