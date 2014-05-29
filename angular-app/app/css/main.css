@@ -4,14 +4,16 @@ body {
     background-attachment: fixed;
     font-family: 'Open Sans', sans-serif;
     color: #333;
+    font-size: 1.3em;
 }
 
 .container {
   margin: 0 auto;
   overflow-y: scroll;
-  width: 1000px;
+  width: 1100px;
   background: #E8E5E1;
   border-radius: 4px;
+  margin-left: 40px;
 }
 
 #header-title {
@@ -24,7 +26,6 @@ a {
   margin: 0px auto;
   overflow-y: scroll;
   width: 800px;
-  background: #f1f1f1;
   border-radius: 4px;
 }
 
@@ -82,4 +83,68 @@ header, footer, .search-options, .search-bar {
 
 .fa-times { color: red; }
 
+/*================== form */
+fieldset {
+border: 2px solid lightgray;
+border-radius: 3px;
+padding: 30px;
+}
 
+form#item-form {
+margin-right: 80px;
+}
+
+#item-form input, #search-btn {
+  width: 160px;
+  padding: 7px;
+  border-radius: 4px;
+  float: right;
+  line-height: 1.1em;
+}
+
+#search-btn {
+  float: none;
+}
+
+form#item-form label {
+line-height: 2.1em;
+}
+
+div.slideThree {
+float: right;
+position: absolute;
+left: 710px;
+top: 275px;
+}
+
+ul.inventory-list {
+  margin-right: 110px;
+  margin-top: -250px;
+  width: 500px;
+}
+
+total-items {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 110%;
+  border: 2px solid lightgray;
+
+}
+
+#wrapper-total-items {
+ width: auto;
+float: right;
+padding: 10px;
+margin-right: 300px;
+margin-top: 20px;
+font-weight: bold;
+font-size: 130%;
+}
+
+#main-search {
+  margin-top: 25px;
+}
+
+#main-search input {
+  margin-left: 10px;
+}

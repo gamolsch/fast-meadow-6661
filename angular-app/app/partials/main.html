@@ -1,38 +1,38 @@
 <div class='container' ng-controller='ItemListController'>
 
   <div class="form-list">
-    <form ng-submit="create(name, manufacturer, lot_number, amount, manufactured_on, expired_on, storage)">
+    <form id="item-form" ng-submit="create(name, manufacturer, lot_number, amount, manufactured_on, expired_on, storage)">
       <fieldset>
         <label for="name">Name:</label>
-        <input type="text" ng-model="name" name="name" placeholder="Natural Orange Flavor">
+        <input type="text" ng-model="name" name="name" placeholder="Natural Orange Flavor"><br>
         <label for="manufacturer">Manufacturer:</label>
-        <input type="text" ng-model="manufacturer" name="manufacturer" placeholder="Pepsico">
+        <input type="text" ng-model="manufacturer" name="manufacturer" placeholder="Pepsico"><br>
         <label for="lot_number">Lot Number:</label>
-        <input type="text" ng-model="lot_number" name="lot_number" placeholder="E456789">
+        <input type="text" ng-model="lot_number" name="lot_number" placeholder="E456789"><br>
         <label for="amount">Amount:</label>
-        <input type="text" ng-model="amount" name="amount" placeholder="0.00">
+        <input type="text" ng-model="amount" name="amount" placeholder="0.00"><br>
         <label for="manufactured_on">Manufactured On:</label>
-        <input type="text" ng-model="manufactured_on" name="manufactured_on" placeholder="mm/dd/yyyy">
+        <input type="text" ng-model="manufactured_on" name="manufactured_on" placeholder="mm/dd/yyyy"><br>
         <label for="expired_on">Expires On:</label>
-        <input type="text" ng-model="expired_on" name="expired_on" placeholder="05/30/2015">
+        <input type="text" ng-model="expired_on" name="expired_on" placeholder="05/30/2015"><br>
         <label for="storage">Storage Location:</label>
         <select name="storage" ng-model="storage">
-          <option value="Gatorade Lab, Hazardous">Gatorade Lab, Hazardous</option>
+          <option value="Gatorade Lab, Hazardous" >Gatorade Lab, Hazardous</option>
           <option value="Gatorade Lab, Non-Hazardous">Gatorade Lab, Non-Hazardous</option>
           <option value="Gatorade Lab, Main Inventory">Gatorade Lab, Main Inventory</option>
           <option value="Pilot Plant, Hazardous">Pilot Plant, Hazardous</option>
           <option value="Pilot Plant, Non-Hazardous">Pilot Plant, Non-Hazardous</option>
-        </select>
+        </select><br>
         <button type="submit">Create!</button>
       </fieldset>
     </form>
   </div>
 
   <div class='item-list'>
-    <label for='search'>Search:</label>
-    <input name='search' ng-model="search">
+    <div id="main-search"><label for='search'>Search:</label>
+    <input id="search-btn" name='search' ng-model="search"></div>
 
-    <p>Number of Items: <span ng-bind="items.length"></span></p>
+    <div id="wrapper-total-items"><span>Total Items: </span><span id="total-items" ng-bind="items.length"></span></div>
 
     <div class='slideThree'>
       <input type='checkbox' value="None" id="slideThree" name="check" ng-model='expired' ng-click='requery()'/>
