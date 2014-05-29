@@ -1,0 +1,23 @@
+.inventory-list {
+
+  list-style-type: none;
+  padding-left: 0;
+  line-height: 2.4em;
+
+}
+
+.color-label {
+
+  color: white;
+  font-family: monospace;
+  font-size: 1.4em;
+
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+
+  border-radius: 4px;
+  letter-spacing: 1px;
+
+}
