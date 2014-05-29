@@ -39,6 +39,6 @@ class SearchController < ApplicationController
 
   def item_params
     # TODO: Include all relevant parameters
-    params.permit(:name)
+    params.permit(:name, :manufacturer, :lot_number, :amount, :manufactured_on, :expired_on)
   end
 end

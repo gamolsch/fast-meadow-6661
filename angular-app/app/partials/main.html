@@ -1,18 +1,34 @@
 <div class='container' ng-controller='ItemListController'>
-  <div class='form-list'>
-    <p>Create new Item:</p>
-    <form ng-submit="create(name)">
-      <fieldset>
-        <label for='name'>Name:</label>
-        <input type='text' ng-model="name" name="name" placeholder='Natural Orange Flavor' />
 
-        <button type='submit'>Create!</button>
+  <div class="form-list">
+    <form ng-submit="create(name, manufacturer, lot_number, amount, manufactured_on, expired_on)">
+      <fieldset>
+        <label for="name">Name:</label>
+        <input type="text" ng-model="name" name="name" placeholder="Natural Orange Flavor">
+        <label for="manufacturer">Manufacturer:</label>
+        <input type="text" ng-model="manufacturer" name="manufacturer" placeholder="Pepsico">
+        <label for="lot_number">Lot Number:</label>
+        <input type="text" ng-model="lot_number" name="lot_number" placeholder="E456789">
+        <label for="amount">Amount:</label>
+        <input type="text" ng-model="amount" name="amount" placeholder="0.00">
+        <label for="manufactured_on">Manufactured On:</label>
+        <input type="text" ng-model="manufactured_on" name="manufactured_on" placeholder="mm/dd/yyyy">
+        <label for="expired_on">Expires On:</label>
+        <input type="text" ng-model="expired_on" name="expired_on" placeholder="05/30/2015">
+        <label for="storage">Storage Location:</label>
+        <select name="storage" ng-model="storage">
+          <option value="Gatorade Lab, Hazardous">Gatorade Lab, Hazardous</option>
+          <option value="Gatorade Lab, Non-Hazardous">Gatorade Lab, Non-Hazardous</option>
+          <option value="Gatorade Lab, Main Inventory">Gatorade Lab, Main Inventory</option>
+          <option value="Pilot Plant, Hazardous">Pilot Plant, Hazardous</option>
+          <option value="Pilot Plant, Non-Hazardous">Pilot Plant, Non-Hazardous</option>
+        </select>
+        <button type="submit">Create!</button>
       </fieldset>
     </form>
   </div>
 
   <div class='item-list'>
-
     <label for='search'>Search:</label>
     <input name='search' ng-model="search">
 
@@ -27,9 +43,6 @@
       <li ng-repeat='item in items | filter:search'><span data-color='{{ item.color }}' class="color-label">{{ item.code }}</span> {{ item.name }} <a href="" title='delete' ng-click='delete(item)'><i class="fa fa-times"></i></a></li>
     </ul>
 
-    <!-- USED FOR DEVELOPMENT -->
-      <div hidden ng-init='updateColors()'></div>
-    <!-- END DEVELOP -->
-
+    <div hidden ng-init='updateColors()'></div>
   </div>
 </div>

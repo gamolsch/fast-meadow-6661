@@ -9,7 +9,7 @@ body {
 .container {
   margin: 0 auto;
   overflow-y: scroll;
-  width: 800px;
+  width: 1000px;
   background: #E8E5E1;
   border-radius: 4px;
 }
@@ -80,6 +80,6 @@ header, footer, .search-options, .search-bar {
   margin: 9px 0px;
 }
 
-.fa-times {
-  color: red;
-}
+.fa-times { color: red; }
+
+

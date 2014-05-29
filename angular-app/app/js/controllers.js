@@ -32,8 +32,8 @@ searchApp
     // END
   };
 
-  $scope.create = function(name) {
-    Item.save({name: name}, function(item) {
+  $scope.create = function(name, manufacturer, lot_number, amount, manufactured_on, expired_on) {
+    Item.save({name: name, manufacturer: manufacturer, lot_number: lot_number, amount: amount, manufactured_on: manufactured_on, expired_on: expired_on}, function(item) {
       $scope.items.push(item);
     });
   };
